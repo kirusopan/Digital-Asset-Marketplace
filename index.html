@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetHub - Digital Marketplace</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Top Header Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-links">
+                        <a href="become-seller.html"><i class="bi bi-shop"></i> Become a Seller</a>
+                        <a href="help.html"><i class="bi bi-question-circle"></i> Help</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-actions">
+                        <div class="dropdown d-inline-block">
+                            <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-globe"></i> EN
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Spanish</a></li>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                            </ul>
+                        </div>
+                        <!-- <button class="btn btn-sm" id="themeToggle">
+                            <i class="bi bi-moon-stars"></i>
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo">
+                    <i class="bi bi-hexagon-fill"></i>
+                    <span>AssetHub</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <!-- Search Bar -->
+                <div class="search-bar mx-lg-4 my-3 my-lg-0">
+                    <form class="search-form">
+                        <i class="bi bi-search search-icon"></i>
+                        <input type="text" class="form-control" placeholder="Search for assets, templates, graphics...">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-categories">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-palette"></i> UI Kits</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-laptop"></i> Templates</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-images"></i> Graphics</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-badge-3d"></i> Icons</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-fonts"></i> Fonts</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-camera-video"></i> Videos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-music-note"></i> Audio</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-code-slash"></i> Source Code</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="wishlist.html">
+                            <i class="bi bi-heart"></i>
+                            <span class="badge-count">3</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="cart.html">
+                            <i class="bi bi-cart3"></i>
+                            <span class="badge-count">2</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-outline-primary btn-sm" href="login.html">Login</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary btn-sm" href="register.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="mainContent">
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <div class="gradient-overlay"></div>
+                <div class="hero-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row align-items-center min-vh-80">
+                    <div class="col-lg-6 hero-content">
+                        <!-- Badge -->
+                        <div class="hero-badge animate-on-scroll" data-delay="100">
+                            <i class="bi bi-stars"></i>
+                            <span>Premium Digital Assets Marketplace</span>
+                        </div>
+
+                        <!-- Main Heading -->
+                        <h1 class="hero-title animate-on-scroll" data-delay="200">
+                            Discover Premium
+                            <span class="gradient-text">Digital Assets</span>
+                            for Your Projects
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="hero-description animate-on-scroll" data-delay="300">
+                            Browse thousands of high-quality UI kits, templates, graphics, fonts, and more.
+                            Everything you need to bring your creative vision to life.
+                        </p>
+
+                        <!-- Search Bar -->
+                        <div class="hero-search animate-on-scroll" data-delay="400">
+                            <form class="hero-search-form">
+                                <div class="search-input-wrapper">
+                                    <i class="bi bi-search"></i>
+                                    <input type="text" class="form-control"
+                                        placeholder="Search for templates, UI kits, graphics...">
+                                    <button type="submit" class="btn btn-primary">
+                                        <span>Search</span>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Popular Searches -->
+                            <div class="popular-searches">
+                                <span class="label">Popular:</span>
+                                <a href="#" class="search-tag">Dashboard UI</a>
+                                <a href="#" class="search-tag">Landing Page</a>
+                                <a href="#" class="search-tag">Mobile App</a>
+                                <a href="#" class="search-tag">Icons Pack</a>
+                            </div>
+                        </div>
+
+                        <!-- Trust Badges -->
+                        <div class="hero-stats animate-on-scroll" data-delay="500">
+                            <div class="stat-item">
+                                <div class="stat-number">50K+</div>
+                                <div class="stat-label">Digital Assets</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">15K+</div>
+                                <div class="stat-label">Happy Creators</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">4.9/5</div>
+                                <div class="stat-label">Avg Rating</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual -->
+                    <div class="col-lg-6">
+                        <div class="hero-visual">
+                            <!-- Main Featured Card -->
+                            <div class="featured-card main-card animate-float">
+                                <div class="card-image">
+                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop"
+                                        alt="Featured Asset">
+                                    <div class="card-badge">
+                                        <i class="bi bi-fire"></i> Trending
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Modern Dashboard UI Kit</h4>
+                                    <div class="card-meta">
+                                        <div class="rating">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.9</span>
+                                        </div>
+                                        <div class="price">$49</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Cards -->
+                            <div class="featured-card small-card card-1 animate-float-delayed">
+                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=300&h=200&fit=crop"
+                                    alt="UI Kit">
+                                <div class="overlay-info">
+                                    <span class="price-tag">$29</span>
+                                </div>
+                            </div>
+
+                            <div class="featured-card small-card card-2 animate-float-slow">
+                                <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=300&h=200&fit=crop"
+                                    alt="Graphics">
+                                <div class="overlay-info">
+                                    <span class="price-tag">Free</span>
+                                </div>
+                            </div>
+
+                            <div class="featured-card small-card card-3 animate-float-delayed">
+                                <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=300&h=200&fit=crop"
+                                    alt="Template">
+                                <div class="overlay-info">
+                                    <span class="price-tag">$39</span>
+                                </div>
+                            </div>
+
+                            <!-- Decorative Elements -->
+                            <div class="decorator decorator-1">
+                                <i class="bi bi-palette-fill"></i>
+                            </div>
+                            <div class="decorator decorator-2">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                            <div class="decorator decorator-3">
+                                <i class="bi bi-heart-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Pills Section -->
+        <section class="category-pills-section">
+            <div class="container">
+                <div class="category-pills-wrapper">
+                    <div class="category-pill">
+                        <div class="pill-icon">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <div class="pill-content">
+                            <span class="pill-title">UI Kits</span>
+                            <span class="pill-count">12K+ Assets</span>
+                        </div>
+                    </div>
+
+                    <div class="category-pill">
+                        <div class="pill-icon">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+                        <div class="pill-content">
+                            <span class="pill-title">Templates</span>
+                            <span class="pill-count">8K+ Assets</span>
+                        </div>
+                    </div>
+
+                    <div class="category-pill">
+                        <div class="pill-icon">
+                            <i class="bi bi-images"></i>
+                        </div>
+                        <div class="pill-content">
+                            <span class="pill-title">Graphics</span>
+                            <span class="pill-count">15K+ Assets</span>
+                        </div>
+                    </div>
+
+                    <div class="category-pill">
+                        <div class="pill-icon">
+                            <i class="bi bi-badge-3d"></i>
+                        </div>
+                        <div class="pill-content">
+                            <span class="pill-title">Icons</span>
+                            <span class="pill-count">20K+ Assets</span>
+                        </div>
+                    </div>
+
+                    <div class="category-pill">
+                        <div class="pill-icon">
+                            <i class="bi bi-fonts"></i>
+                        </div>
+                        <div class="pill-content">
+                            <span class="pill-title">Fonts</span>
+                            <span class="pill-count">5K+ Assets</span>
+                        </div>
+                    </div>
+
+                    <div class="category-pill">
+                        <div class="pill-icon">
+                            <i class="bi bi-camera-video"></i>
+                        </div>
+                        <div class="pill-content">
+                            <span class="pill-title">Videos</span>
+                            <span class="pill-count">3K+ Assets</span>
+                        </div>
+                    </div>
+
+                    <div class="category-pill">
+                        <div class="pill-icon">
+                            <i class="bi bi-music-note"></i>
+                        </div>
+                        <div class="pill-content">
+                            <span class="pill-title">Audio</span>
+                            <span class="pill-count">2K+ Assets</span>
+                        </div>
+                    </div>
+
+                    <div class="category-pill">
+                        <div class="pill-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <div class="pill-content">
+                            <span class="pill-title">Source Code</span>
+                            <span class="pill-count">4K+ Assets</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h3 class="cta-title">
+                            <i class="bi bi-shop"></i>
+                            Start Selling Your Creative Work Today
+                        </h3>
+                        <p class="cta-description">
+                            Join thousands of creators earning from their designs. Set your own prices, keep up to 70%
+                            commission.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                        <a href="become-seller.html" class="btn btn-light btn-lg">
+                            Become a Seller
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Assets Section -->
+        <section class="featured-assets-section">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header text-center">
+                    <span class="section-badge">
+                        <i class="bi bi-fire"></i> Trending Now
+                    </span>
+                    <h2 class="section-title">Featured Digital Assets</h2>
+                    <p class="section-description">
+                        Handpicked premium assets loved by thousands of creators worldwide
+                    </p>
+                </div>
+
+                <!-- Featured Assets Grid -->
+                <div class="row g-4">
+                    <!-- Asset Card 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="asset-card">
+                            <div class="asset-image">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=300&fit=crop"
+                                    alt="Dashboard UI Kit">
+                                <div class="asset-overlay">
+                                    <button class="btn-wishlist" data-id="1">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn-quick-view" data-id="1">
+                                        <i class="bi bi-eye"></i> Quick View
+                                    </button>
+                                </div>
+                                <span class="asset-badge badge-trending">
+                                    <i class="bi bi-fire"></i> Trending
+                                </span>
+                            </div>
+                            <div class="asset-content">
+                                <div class="asset-category">UI Kits</div>
+                                <h4 class="asset-title">Modern Dashboard UI Kit</h4>
+                                <div class="asset-meta">
+                                    <div class="asset-author">
+                                        <img src="https://i.pravatar.cc/40?img=1" alt="Author">
+                                        <span>John Doe</span>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>4.9</span>
+                                        <span class="rating-count">(256)</span>
+                                    </div>
+                                </div>
+                                <div class="asset-footer">
+                                    <div class="asset-price">
+                                        <span class="current-price">$49</span>
+                                        <span class="original-price">$79</span>
+                                    </div>
+                                    <button class="btn-add-cart btn btn-sm btn-primary">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Asset Card 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="asset-card">
+                            <div class="asset-image">
+                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=300&fit=crop"
+                                    alt="Landing Page">
+                                <div class="asset-overlay">
+                                    <button class="btn-wishlist" data-id="2">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn-quick-view" data-id="2">
+                                        <i class="bi bi-eye"></i> Quick View
+                                    </button>
+                                </div>
+                                <span class="asset-badge badge-new">
+                                    <i class="bi bi-stars"></i> New
+                                </span>
+                            </div>
+                            <div class="asset-content">
+                                <div class="asset-category">Templates</div>
+                                <h4 class="asset-title">SaaS Landing Page Template</h4>
+                                <div class="asset-meta">
+                                    <div class="asset-author">
+                                        <img src="https://i.pravatar.cc/40?img=2" alt="Author">
+                                        <span>Sarah Kim</span>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>5.0</span>
+                                        <span class="rating-count">(189)</span>
+                                    </div>
+                                </div>
+                                <div class="asset-footer">
+                                    <div class="asset-price">
+                                        <span class="current-price">$39</span>
+                                    </div>
+                                    <button class="btn-add-cart btn btn-sm btn-primary">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Asset Card 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="asset-card">
+                            <div class="asset-image">
+                                <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&h=300&fit=crop"
+                                    alt="Icon Pack">
+                                <div class="asset-overlay">
+                                    <button class="btn-wishlist" data-id="3">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn-quick-view" data-id="3">
+                                        <i class="bi bi-eye"></i> Quick View
+                                    </button>
+                                </div>
+                                <span class="asset-badge badge-free">
+                                    <i class="bi bi-gift"></i> Free
+                                </span>
+                            </div>
+                            <div class="asset-content">
+                                <div class="asset-category">Icons</div>
+                                <h4 class="asset-title">500+ Premium Icon Set</h4>
+                                <div class="asset-meta">
+                                    <div class="asset-author">
+                                        <img src="https://i.pravatar.cc/40?img=3" alt="Author">
+                                        <span>Mike Chen</span>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>4.8</span>
+                                        <span class="rating-count">(432)</span>
+                                    </div>
+                                </div>
+                                <div class="asset-footer">
+                                    <div class="asset-price">
+                                        <span class="current-price free">Free</span>
+                                    </div>
+                                    <button class="btn-add-cart btn btn-sm btn-primary">
+                                        <i class="bi bi-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Asset Card 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="asset-card">
+                            <div class="asset-image">
+                                <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400&h=300&fit=crop"
+                                    alt="Mobile App">
+                                <div class="asset-overlay">
+                                    <button class="btn-wishlist" data-id="4">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn-quick-view" data-id="4">
+                                        <i class="bi bi-eye"></i> Quick View
+                                    </button>
+                                </div>
+                                <span class="asset-badge badge-bestseller">
+                                    <i class="bi bi-trophy"></i> Best Seller
+                                </span>
+                            </div>
+                            <div class="asset-content">
+                                <div class="asset-category">UI Kits</div>
+                                <h4 class="asset-title">E-commerce Mobile App UI</h4>
+                                <div class="asset-meta">
+                                    <div class="asset-author">
+                                        <img src="https://i.pravatar.cc/40?img=4" alt="Author">
+                                        <span>Emma Wilson</span>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>4.9</span>
+                                        <span class="rating-count">(521)</span>
+                                    </div>
+                                </div>
+                                <div class="asset-footer">
+                                    <div class="asset-price">
+                                        <span class="current-price">$59</span>
+                                        <span class="original-price">$89</span>
+                                    </div>
+                                    <button class="btn-add-cart btn btn-sm btn-primary">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Asset Card 5 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="asset-card">
+                            <div class="asset-image">
+                                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop"
+                                    alt="Graphics Pack">
+                                <div class="asset-overlay">
+                                    <button class="btn-wishlist" data-id="5">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn-quick-view" data-id="5">
+                                        <i class="bi bi-eye"></i> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="asset-content">
+                                <div class="asset-category">Graphics</div>
+                                <h4 class="asset-title">Abstract 3D Graphics Pack</h4>
+                                <div class="asset-meta">
+                                    <div class="asset-author">
+                                        <img src="https://i.pravatar.cc/40?img=5" alt="Author">
+                                        <span>Alex Rivera</span>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>4.7</span>
+                                        <span class="rating-count">(198)</span>
+                                    </div>
+                                </div>
+                                <div class="asset-footer">
+                                    <div class="asset-price">
+                                        <span class="current-price">$29</span>
+                                    </div>
+                                    <button class="btn-add-cart btn btn-sm btn-primary">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Asset Card 6 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="asset-card">
+                            <div class="asset-image">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop"
+                                    alt="Admin Template">
+                                <div class="asset-overlay">
+                                    <button class="btn-wishlist" data-id="6">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn-quick-view" data-id="6">
+                                        <i class="bi bi-eye"></i> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="asset-content">
+                                <div class="asset-category">Templates</div>
+                                <h4 class="asset-title">Admin Dashboard Template</h4>
+                                <div class="asset-meta">
+                                    <div class="asset-author">
+                                        <img src="https://i.pravatar.cc/40?img=6" alt="Author">
+                                        <span>David Park</span>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>4.8</span>
+                                        <span class="rating-count">(345)</span>
+                                    </div>
+                                </div>
+                                <div class="asset-footer">
+                                    <div class="asset-price">
+                                        <span class="current-price">$69</span>
+                                    </div>
+                                    <button class="btn-add-cart btn btn-sm btn-primary">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Asset Card 7 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="asset-card">
+                            <div class="asset-image">
+                                <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?w=400&h=300&fit=crop"
+                                    alt="Illustration Pack">
+                                <div class="asset-overlay">
+                                    <button class="btn-wishlist" data-id="7">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn-quick-view" data-id="7">
+                                        <i class="bi bi-eye"></i> Quick View
+                                    </button>
+                                </div>
+                                <span class="asset-badge badge-trending">
+                                    <i class="bi bi-fire"></i> Trending
+                                </span>
+                            </div>
+                            <div class="asset-content">
+                                <div class="asset-category">Graphics</div>
+                                <h4 class="asset-title">Modern Illustration Bundle</h4>
+                                <div class="asset-meta">
+                                    <div class="asset-author">
+                                        <img src="https://i.pravatar.cc/40?img=7" alt="Author">
+                                        <span>Lisa Anderson</span>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>5.0</span>
+                                        <span class="rating-count">(287)</span>
+                                    </div>
+                                </div>
+                                <div class="asset-footer">
+                                    <div class="asset-price">
+                                        <span class="current-price">$45</span>
+                                        <span class="original-price">$65</span>
+                                    </div>
+                                    <button class="btn-add-cart btn btn-sm btn-primary">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Asset Card 8 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="asset-card">
+                            <div class="asset-image">
+                                <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=400&h=300&fit=crop"
+                                    alt="Typography Pack">
+                                <div class="asset-overlay">
+                                    <button class="btn-wishlist" data-id="8">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn-quick-view" data-id="8">
+                                        <i class="bi bi-eye"></i> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="asset-content">
+                                <div class="asset-category">Fonts</div>
+                                <h4 class="asset-title">Premium Font Collection</h4>
+                                <div class="asset-meta">
+                                    <div class="asset-author">
+                                        <img src="https://i.pravatar.cc/40?img=8" alt="Author">
+                                        <span>Tom Harris</span>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>4.9</span>
+                                        <span class="rating-count">(412)</span>
+                                    </div>
+                                </div>
+                                <div class="asset-footer">
+                                    <div class="asset-price">
+                                        <span class="current-price">$35</span>
+                                    </div>
+                                    <button class="btn-add-cart btn btn-sm btn-primary">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View All Button -->
+                <div class="text-center mt-5">
+                    <a href="asset-listing.html" class="btn btn-outline-primary btn-lg">
+                        View All Assets
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Grid Section -->
+        <section class="categories-grid-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">
+                        <i class="bi bi-grid"></i> Browse Categories
+                    </span>
+                    <h2 class="section-title">Explore by Category</h2>
+                    <p class="section-description">
+                        Find exactly what you need from our comprehensive collection of digital assets
+                    </p>
+                </div>
+
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <h3 class="category-name">UI Kits</h3>
+                        <p class="category-count">12,450+ Assets</p>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+                        <h3 class="category-name">Templates</h3>
+                        <p class="category-count">8,320+ Assets</p>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-images"></i>
+                        </div>
+                        <h3 class="category-name">Graphics</h3>
+                        <p class="category-count">15,890+ Assets</p>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-badge-3d"></i>
+                        </div>
+                        <h3 class="category-name">Icons</h3>
+                        <p class="category-count">20,150+ Assets</p>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-fonts"></i>
+                        </div>
+                        <h3 class="category-name">Fonts</h3>
+                        <p class="category-count">5,670+ Assets</p>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-camera-video"></i>
+                        </div>
+                        <h3 class="category-name">Videos</h3>
+                        <p class="category-count">3,240+ Assets</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Sellers Section -->
+        <section class="top-sellers-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">
+                        <i class="bi bi-trophy"></i> Top Performers
+                    </span>
+                    <h2 class="section-title">Meet Our Top Sellers</h2>
+                    <p class="section-description">
+                        Talented creators who are making waves in our marketplace
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="seller-card">
+                            <div class="seller-avatar">
+                                <img src="https://i.pravatar.cc/150?img=1" alt="John Doe">
+                                <span class="seller-badge">
+                                    <i class="bi bi-star-fill"></i>
+                                </span>
+                            </div>
+                            <h3 class="seller-name">John Doe</h3>
+                            <p class="seller-title">UI/UX Designer</p>
+                            <div class="seller-stats">
+                                <div class="seller-stat">
+                                    <span class="stat-value">245</span>
+                                    <span class="stat-label">Sales</span>
+                                </div>
+                                <div class="seller-stat">
+                                    <span class="stat-value">4.9</span>
+                                    <span class="stat-label">Rating</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary btn-follow">
+                                <i class="bi bi-plus-circle me-2"></i>Follow
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="seller-card">
+                            <div class="seller-avatar">
+                                <img src="https://i.pravatar.cc/150?img=2" alt="Sarah Kim">
+                                <span class="seller-badge">
+                                    <i class="bi bi-star-fill"></i>
+                                </span>
+                            </div>
+                            <h3 class="seller-name">Sarah Kim</h3>
+                            <p class="seller-title">Graphic Designer</p>
+                            <div class="seller-stats">
+                                <div class="seller-stat">
+                                    <span class="stat-value">189</span>
+                                    <span class="stat-label">Sales</span>
+                                </div>
+                                <div class="seller-stat">
+                                    <span class="stat-value">5.0</span>
+                                    <span class="stat-label">Rating</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary btn-follow">
+                                <i class="bi bi-plus-circle me-2"></i>Follow
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="seller-card">
+                            <div class="seller-avatar">
+                                <img src="https://i.pravatar.cc/150?img=3" alt="Mike Chen">
+                                <span class="seller-badge">
+                                    <i class="bi bi-star-fill"></i>
+                                </span>
+                            </div>
+                            <h3 class="seller-name">Mike Chen</h3>
+                            <p class="seller-title">Icon Designer</p>
+                            <div class="seller-stats">
+                                <div class="seller-stat">
+                                    <span class="stat-value">312</span>
+                                    <span class="stat-label">Sales</span>
+                                </div>
+                                <div class="seller-stat">
+                                    <span class="stat-value">4.8</span>
+                                    <span class="stat-label">Rating</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary btn-follow">
+                                <i class="bi bi-plus-circle me-2"></i>Follow
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="seller-card">
+                            <div class="seller-avatar">
+                                <img src="https://i.pravatar.cc/150?img=4" alt="Emma Wilson">
+                                <span class="seller-badge">
+                                    <i class="bi bi-star-fill"></i>
+                                </span>
+                            </div>
+                            <h3 class="seller-name">Emma Wilson</h3>
+                            <p class="seller-title">Web Developer</p>
+                            <div class="seller-stats">
+                                <div class="seller-stat">
+                                    <span class="stat-value">276</span>
+                                    <span class="stat-label">Sales</span>
+                                </div>
+                                <div class="seller-stat">
+                                    <span class="stat-value">4.9</span>
+                                    <span class="stat-label">Rating</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary btn-follow">
+                                <i class="bi bi-plus-circle me-2"></i>Follow
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">
+                        <i class="bi bi-lightbulb"></i> Simple Process
+                    </span>
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-description">
+                        Get started in minutes and access thousands of premium digital assets
+                    </p>
+                </div>
+
+                <div class="row g-4 steps-container">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-icon">
+                                <i class="bi bi-search"></i>
+                            </div>
+                            <h3 class="step-title">Browse & Search</h3>
+                            <p class="step-description">
+                                Explore our vast collection of digital assets or use our powerful search to find exactly
+                                what you need
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-icon">
+                                <i class="bi bi-cart-check"></i>
+                            </div>
+                            <h3 class="step-title">Choose & Purchase</h3>
+                            <p class="step-description">
+                                Select your license type, add to cart, and complete your purchase securely with our
+                                payment options
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-icon">
+                                <i class="bi bi-download"></i>
+                            </div>
+                            <h3 class="step-title">Download Instantly</h3>
+                            <p class="step-description">
+                                Get immediate access to your purchased assets and download them in your preferred format
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-icon">
+                                <i class="bi bi-rocket-takeoff"></i>
+                            </div>
+                            <h3 class="step-title">Create & Launch</h3>
+                            <p class="step-description">
+                                Use your assets in your projects and bring your creative vision to life with confidence
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <div class="stat-number-big">50K+</div>
+                        <div class="stat-label-big">Digital Assets</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div class="stat-number-big">15K+</div>
+                        <div class="stat-label-big">Happy Customers</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="bi bi-shop"></i>
+                        </div>
+                        <div class="stat-number-big">2.5K+</div>
+                        <div class="stat-label-big">Verified Sellers</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="bi bi-download"></i>
+                        </div>
+                        <div class="stat-number-big">100K+</div>
+                        <div class="stat-label-big">Total Downloads</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">
+                        <i class="bi bi-chat-quote"></i> Reviews
+                    </span>
+                    <h2 class="section-title">What Our Customers Say</h2>
+                    <p class="section-description">
+                        Join thousands of satisfied creators who trust our marketplace
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">"</div>
+                            <div class="testimonial-header">
+                                <img src="https://i.pravatar.cc/80?img=10" alt="Customer" class="testimonial-avatar">
+                                <div class="testimonial-author">
+                                    <div class="author-name">Alex Johnson</div>
+                                    <div class="author-title">Product Designer</div>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-content">
+                                The quality of assets here is outstanding! I've been able to speed up my workflow
+                                significantly. The UI kits are professionally designed and well-documented.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">"</div>
+                            <div class="testimonial-header">
+                                <img src="https://i.pravatar.cc/80?img=11" alt="Customer" class="testimonial-avatar">
+                                <div class="testimonial-author">
+                                    <div class="author-name">Maria Garcia</div>
+                                    <div class="author-title">Freelance Developer</div>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-content">
+                                Best marketplace for digital assets! The download process is instant and the licensing
+                                is crystal clear. Customer support is also very responsive.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">"</div>
+                            <div class="testimonial-header">
+                                <img src="https://i.pravatar.cc/80?img=12" alt="Customer" class="testimonial-avatar">
+                                <div class="testimonial-author">
+                                    <div class="author-name">James Miller</div>
+                                    <div class="author-title">Agency Owner</div>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-content">
+                                We've saved countless hours using templates and UI kits from this platform. The variety
+                                and quality are unmatched. Highly recommend for any creative team!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">
+                        <i class="bi bi-award"></i> Our Features
+                    </span>
+                    <h2 class="section-title">Why Choose AssetHub?</h2>
+                    <p class="section-description">
+                        We provide everything you need for a seamless digital asset experience
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h3 class="feature-title">Quality Guarantee</h3>
+                            <p class="feature-description">
+                                Every asset is carefully reviewed by our team to ensure the highest quality standards
+                                before it goes live
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-lightning-charge"></i>
+                            </div>
+                            <h3 class="feature-title">Instant Download</h3>
+                            <p class="feature-description">
+                                Get immediate access to your purchased assets with our instant download system, no
+                                waiting required
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-file-earmark-text"></i>
+                            </div>
+                            <h3 class="feature-title">Flexible Licensing</h3>
+                            <p class="feature-description">
+                                Choose from multiple license options that fit your project needs, from personal to
+                                commercial use
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-arrow-repeat"></i>
+                            </div>
+                            <h3 class="feature-title">Free Updates</h3>
+                            <p class="feature-description">
+                                Get free lifetime updates for all your purchased assets, ensuring you always have the
+                                latest version
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-headset"></i>
+                            </div>
+                            <h3 class="feature-title">24/7 Support</h3>
+                            <p class="feature-description">
+                                Our dedicated support team is available around the clock to help you with any questions
+                                or issues
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-lock"></i>
+                            </div>
+                            <h3 class="feature-title">Secure Payments</h3>
+                            <p class="feature-description">
+                                All transactions are secured with industry-standard encryption and trusted payment
+                                providers
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Assets Section -->
+        <section class="featured-assets-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">
+                        <i class="bi bi-clock-history"></i> Recently Added
+                    </span>
+                    <h2 class="section-title">Latest Digital Assets</h2>
+                    <p class="section-description">
+                        Discover the newest additions to our marketplace
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="asset-card">
+                            <div class="asset-image">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop"
+                                    alt="Code Template">
+                                <div class="asset-overlay">
+                                    <button class="btn-wishlist" data-id="9">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn-quick-view" data-id="9">
+                                        <i class="bi bi-eye"></i> Quick View
+                                    </button>
+                                </div>
+                                <span class="asset-badge badge-new">
+                                    <i class="bi bi-stars"></i> New
+                                </span>
+                            </div>
+                            <div class="asset-content">
+                                <div class="asset-category">Source Code</div>
+                                <h4 class="asset-title">React Admin Template</h4>
+                                <div class="asset-meta">
+                                    <div class="asset-author">
+                                        <img src="https://i.pravatar.cc/40?img=9" alt="Author">
+                                        <span>Chris Lee</span>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>New</span>
+                                    </div>
+                                </div>
+                                <div class="asset-footer">
+                                    <div class="asset-price">
+                                        <span class="current-price">$79</span>
+                                    </div>
+                                    <button class="btn-add-cart btn btn-sm btn-primary">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="asset-card">
+                            <div class="asset-image">
+                                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop"
+                                    alt="Audio Pack">
+                                <div class="asset-overlay">
+                                    <button class="btn-wishlist" data-id="10">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn-quick-view" data-id="10">
+                                        <i class="bi bi-eye"></i> Quick View
+                                    </button>
+                                </div>
+                                <span class="asset-badge badge-new">
+                                    <i class="bi bi-stars"></i> New
+                                </span>
+                            </div>
+                            <div class="asset-content">
+                                <div class="asset-category">Audio</div>
+                                <h4 class="asset-title">Royalty Free Music Pack</h4>
+                                <div class="asset-meta">
+                                    <div class="asset-author">
+                                        <img src="https://i.pravatar.cc/40?img=13" alt="Author">
+                                        <span>Nina Brown</span>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>New</span>
+                                    </div>
+                                </div>
+                                <div class="asset-footer">
+                                    <div class="asset-price">
+                                        <span class="current-price">$25</span>
+                                    </div>
+                                    <button class="btn-add-cart btn btn-sm btn-primary">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="asset-card">
+                            <div class="asset-image">
+                                <img src="https://images.unsplash.com/photo-1524168272322-bf73616d9cb5?w=400&h=300&fit=crop"
+                                    alt="Video Assets">
+                                <div class="asset-overlay">
+                                    <button class="btn-wishlist" data-id="11">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn-quick-view" data-id="11">
+                                        <i class="bi bi-eye"></i> Quick View
+                                    </button>
+                                </div>
+                                <span class="asset-badge badge-new">
+                                    <i class="bi bi-stars"></i> New
+                                </span>
+                            </div>
+                            <div class="asset-content">
+                                <div class="asset-category">Videos</div>
+                                <h4 class="asset-title">Motion Graphics Bundle</h4>
+                                <div class="asset-meta">
+                                    <div class="asset-author">
+                                        <img src="https://i.pravatar.cc/40?img=14" alt="Author">
+                                        <span>Ryan Cooper</span>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>New</span>
+                                    </div>
+                                </div>
+                                <div class="asset-footer">
+                                    <div class="asset-price">
+                                        <span class="current-price">$99</span>
+                                    </div>
+                                    <button class="btn-add-cart btn btn-sm btn-primary">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="asset-card">
+                            <div class="asset-image">
+                                <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=400&h=300&fit=crop"
+                                    alt="Typography">
+                                <div class="asset-overlay">
+                                    <button class="btn-wishlist" data-id="12">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn-quick-view" data-id="12">
+                                        <i class="bi bi-eye"></i> Quick View
+                                    </button>
+                                </div>
+                                <span class="asset-badge badge-new">
+                                    <i class="bi bi-stars"></i> New
+                                </span>
+                            </div>
+                            <div class="asset-content">
+                                <div class="asset-category">Fonts</div>
+                                <h4 class="asset-title">Designer Font Family</h4>
+                                <div class="asset-meta">
+                                    <div class="asset-author">
+                                        <img src="https://i.pravatar.cc/40?img=15" alt="Author">
+                                        <span>Sophie Martin</span>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>New</span>
+                                    </div>
+                                </div>
+                                <div class="asset-footer">
+                                    <div class="asset-price">
+                                        <span class="current-price">$42</span>
+                                    </div>
+                                    <button class="btn-add-cart btn btn-sm btn-primary">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="asset-listing.html" class="btn btn-outline-primary btn-lg">
+                        Browse All Assets
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3 class="fw-bold mb-2">Get Premium Assets Weekly</h3>
+                    <p class="text-muted mb-0">Subscribe to receive free assets, deals, and updates.</p>
+                </div>
+                <div class="col-lg-6">
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- About -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-hexagon-fill"></i>
+                        <span>AssetHub</span>
+                    </div>
+                    <p class="text-muted mb-3">The premier marketplace for digital assets. Buy and sell UI kits,
+                        templates, graphics, and more.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Marketplace -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Marketplace</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">All Assets</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Free Assets</a></li>
+                        <li><a href="#">Top Sellers</a></li>
+                        <li><a href="#">New Releases</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sell -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Sell</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Become a Seller</a></li>
+                        <li><a href="#">Seller Guide</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Payouts</a></li>
+                        <li><a href="#">Best Practices</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Report Issue</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">License Info</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <p class="mb-0 text-muted">&copy; 2024 AssetHub. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="payment-methods">
+                            <i class="bi bi-credit-card"></i>
+                            <i class="bi bi-paypal"></i>
+                            <span class="text-muted ms-2">Secure Payments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
