@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetHub - Digital Marketplace</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/seller-profile.css">
+</head>
+
+<body>
+
+    <!-- Top Header Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-links">
+                        <a href="become-seller.html"><i class="bi bi-shop"></i> Become a Seller</a>
+                        <a href="help.html"><i class="bi bi-question-circle"></i> Help</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-actions">
+                        <div class="dropdown d-inline-block">
+                            <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-globe"></i> EN
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Spanish</a></li>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-sm" id="themeToggle">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo">
+                    <i class="bi bi-hexagon-fill"></i>
+                    <span>AssetHub</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <!-- Search Bar -->
+                <div class="search-bar mx-lg-4 my-3 my-lg-0">
+                    <form class="search-form">
+                        <i class="bi bi-search search-icon"></i>
+                        <input type="text" class="form-control" placeholder="Search for assets, templates, graphics...">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-categories">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-palette"></i> UI Kits</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-laptop"></i> Templates</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-images"></i> Graphics</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-badge-3d"></i> Icons</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-fonts"></i> Fonts</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-camera-video"></i> Videos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-music-note"></i> Audio</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-code-slash"></i> Source Code</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="wishlist.html">
+                            <i class="bi bi-heart"></i>
+                            <span class="badge-count">3</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="cart.html">
+                            <i class="bi bi-cart3"></i>
+                            <span class="badge-count">2</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-outline-primary btn-sm" href="login.html">Login</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary btn-sm" href="register.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="mainContent">
+
+        <!-- Breadcrumb -->
+        <section class="breadcrumb-section">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="sellers.html">Sellers</a></li>
+                        <li class="breadcrumb-item active">John Doe</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Seller Header -->
+        <section class="seller-header-section">
+            <div class="seller-header-bg"></div>
+            <div class="container">
+                <div class="seller-header-content">
+                    <div class="row align-items-end">
+                        <div class="col-lg-8">
+                            <div class="seller-profile-main">
+                                <!-- Avatar -->
+                                <div class="seller-avatar-large">
+                                    <img src="https://i.pravatar.cc/200?img=1" alt="John Doe">
+                                    <span class="verified-badge">
+                                        <i class="bi bi-patch-check-fill"></i>
+                                    </span>
+                                </div>
+
+                                <!-- Info -->
+                                <div class="seller-info-main">
+                                    <h1 class="seller-name">
+                                        John Doe
+                                        <span class="seller-level">Level 3 Seller</span>
+                                    </h1>
+                                    <p class="seller-tagline">UI/UX Designer & Creative Developer</p>
+
+                                    <div class="seller-meta-inline">
+                                        <div class="meta-item">
+                                            <i class="bi bi-geo-alt"></i>
+                                            <span>San Francisco, CA</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <i class="bi bi-calendar"></i>
+                                            <span>Member since Jan 2023</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <i class="bi bi-clock"></i>
+                                            <span>Last active: 2 hours ago</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Stats Bar -->
+                                    <div class="seller-stats-bar">
+                                        <div class="stat-item">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span class="stat-value">4.9</span>
+                                            <span class="stat-label">Rating</span>
+                                        </div>
+                                        <div class="stat-divider"></div>
+                                        <div class="stat-item">
+                                            <i class="bi bi-box-seam"></i>
+                                            <span class="stat-value">24</span>
+                                            <span class="stat-label">Products</span>
+                                        </div>
+                                        <div class="stat-divider"></div>
+                                        <div class="stat-item">
+                                            <i class="bi bi-download"></i>
+                                            <span class="stat-value">2.5K</span>
+                                            <span class="stat-label">Sales</span>
+                                        </div>
+                                        <div class="stat-divider"></div>
+                                        <div class="stat-item">
+                                            <i class="bi bi-people"></i>
+                                            <span class="stat-value">432</span>
+                                            <span class="stat-label">Followers</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="seller-actions-card">
+                                <button class="btn btn-primary btn-lg w-100 mb-2" id="followBtn">
+                                    <i class="bi bi-person-plus"></i>
+                                    Follow
+                                </button>
+                                <button class="btn btn-outline-primary btn-lg w-100" id="contactBtn">
+                                    <i class="bi bi-chat-dots"></i>
+                                    Contact Seller
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="seller-content-section">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Left Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- About Card -->
+                        <div class="seller-card">
+                            <h3 class="card-title">
+                                <i class="bi bi-person"></i>
+                                About
+                            </h3>
+                            <div class="card-content">
+                                <p class="seller-bio">
+                                    Passionate UI/UX designer with 8+ years of experience creating beautiful and
+                                    functional digital products. I specialize in dashboard designs, mobile apps,
+                                    and web interfaces.
+                                </p>
+                                <p class="seller-bio">
+                                    My goal is to help businesses and individuals bring their ideas to life with
+                                    professional, modern designs that users love.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Skills Card -->
+                        <div class="seller-card">
+                            <h3 class="card-title">
+                                <i class="bi bi-lightbulb"></i>
+                                Skills & Expertise
+                            </h3>
+                            <div class="card-content">
+                                <div class="skills-tags">
+                                    <span class="skill-tag">UI Design</span>
+                                    <span class="skill-tag">UX Design</span>
+                                    <span class="skill-tag">Figma</span>
+                                    <span class="skill-tag">Sketch</span>
+                                    <span class="skill-tag">Adobe XD</span>
+                                    <span class="skill-tag">Web Design</span>
+                                    <span class="skill-tag">Mobile Design</span>
+                                    <span class="skill-tag">Prototyping</span>
+                                    <span class="skill-tag">Design Systems</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stats Card -->
+                        <div class="seller-card">
+                            <h3 class="card-title">
+                                <i class="bi bi-graph-up"></i>
+                                Performance
+                            </h3>
+                            <div class="card-content">
+                                <div class="performance-stats">
+                                    <div class="perf-item">
+                                        <div class="perf-label">Response Time</div>
+                                        <div class="perf-value">
+                                            <span class="value-text">Within 2 hours</span>
+                                            <span class="value-badge success">Excellent</span>
+                                        </div>
+                                    </div>
+                                    <div class="perf-item">
+                                        <div class="perf-label">Order Completion</div>
+                                        <div class="perf-value">
+                                            <span class="value-text">98%</span>
+                                            <span class="value-badge success">Excellent</span>
+                                        </div>
+                                    </div>
+                                    <div class="perf-item">
+                                        <div class="perf-label">Delivered On Time</div>
+                                        <div class="perf-value">
+                                            <span class="value-text">96%</span>
+                                            <span class="value-badge success">Excellent</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links Card -->
+                        <div class="seller-card">
+                            <h3 class="card-title">
+                                <i class="bi bi-share"></i>
+                                Social Links
+                            </h3>
+                            <div class="card-content">
+                                <div class="social-links-list">
+                                    <a href="#" class="social-link">
+                                        <i class="bi bi-globe"></i>
+                                        <span>www.johndoe.design</span>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="bi bi-dribbble"></i>
+                                        <span>dribbble.com/johndoe</span>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="bi bi-behance"></i>
+                                        <span>behance.net/johndoe</span>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="bi bi-twitter"></i>
+                                        <span>@johndoedesign</span>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="bi bi-linkedin"></i>
+                                        <span>linkedin.com/in/johndoe</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Badges Card -->
+                        <div class="seller-card">
+                            <h3 class="card-title">
+                                <i class="bi bi-award"></i>
+                                Achievements
+                            </h3>
+                            <div class="card-content">
+                                <div class="badges-grid">
+                                    <div class="achievement-badge" title="Top Seller">
+                                        <i class="bi bi-trophy-fill"></i>
+                                        <span>Top Seller</span>
+                                    </div>
+                                    <div class="achievement-badge" title="Verified">
+                                        <i class="bi bi-patch-check-fill"></i>
+                                        <span>Verified</span>
+                                    </div>
+                                    <div class="achievement-badge" title="5 Star">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>5 Star</span>
+                                    </div>
+                                    <div class="achievement-badge" title="Fast Delivery">
+                                        <i class="bi bi-lightning-fill"></i>
+                                        <span>Fast</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Content -->
+                    <div class="col-lg-8">
+                        <!-- Navigation Tabs -->
+                        <div class="seller-tabs">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#products">
+                                        <i class="bi bi-grid"></i>
+                                        Products (24)
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#reviews">
+                                        <i class="bi bi-star"></i>
+                                        Reviews (156)
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <!-- Products Tab -->
+                                <div class="tab-pane fade show active" id="products">
+                                    <!-- Filter Toolbar -->
+                                    <div class="products-toolbar">
+                                        <div class="toolbar-left">
+                                            <select class="form-select" id="categoryFilter">
+                                                <option value="all">All Categories</option>
+                                                <option value="ui-kits">UI Kits</option>
+                                                <option value="templates">Templates</option>
+                                                <option value="graphics">Graphics</option>
+                                            </select>
+                                        </div>
+                                        <div class="toolbar-right">
+                                            <select class="form-select" id="sortProducts">
+                                                <option value="recent">Most Recent</option>
+                                                <option value="popular">Most Popular</option>
+                                                <option value="price-low">Price: Low to High</option>
+                                                <option value="price-high">Price: High to Low</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Products Grid -->
+                                    <div class="seller-products-grid">
+                                        <!-- Product Card 1 -->
+                                        <div class="seller-product-card">
+                                            <div class="product-image">
+                                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=300&fit=crop"
+                                                    alt="Product">
+                                                <div class="product-overlay">
+                                                    <button class="btn-wishlist">
+                                                        <i class="bi bi-heart"></i>
+                                                    </button>
+                                                    <a href="asset-details.html" class="btn-view">
+                                                        <i class="bi bi-eye"></i> View
+                                                    </a>
+                                                </div>
+                                                <span class="product-badge badge-trending">
+                                                    <i class="bi bi-fire"></i> Trending
+                                                </span>
+                                            </div>
+                                            <div class="product-info">
+                                                <span class="product-category">UI Kits</span>
+                                                <h4 class="product-title">Modern Dashboard UI Kit</h4>
+                                                <div class="product-footer">
+                                                    <div class="product-rating">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <span>4.9</span>
+                                                        <span class="rating-count">(256)</span>
+                                                    </div>
+                                                    <div class="product-price">$49</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Product Card 2 -->
+                                        <div class="seller-product-card">
+                                            <div class="product-image">
+                                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=300&fit=crop"
+                                                    alt="Product">
+                                                <div class="product-overlay">
+                                                    <button class="btn-wishlist">
+                                                        <i class="bi bi-heart"></i>
+                                                    </button>
+                                                    <a href="asset-details.html" class="btn-view">
+                                                        <i class="bi bi-eye"></i> View
+                                                    </a>
+                                                </div>
+                                                <span class="product-badge badge-new">
+                                                    <i class="bi bi-stars"></i> New
+                                                </span>
+                                            </div>
+                                            <div class="product-info">
+                                                <span class="product-category">Templates</span>
+                                                <h4 class="product-title">SaaS Landing Page</h4>
+                                                <div class="product-footer">
+                                                    <div class="product-rating">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <span>5.0</span>
+                                                        <span class="rating-count">(189)</span>
+                                                    </div>
+                                                    <div class="product-price">$39</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Product Card 3 -->
+                                        <div class="seller-product-card">
+                                            <div class="product-image">
+                                                <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&h=300&fit=crop"
+                                                    alt="Product">
+                                                <div class="product-overlay">
+                                                    <button class="btn-wishlist active">
+                                                        <i class="bi bi-heart-fill"></i>
+                                                    </button>
+                                                    <a href="asset-details.html" class="btn-view">
+                                                        <i class="bi bi-eye"></i> View
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <span class="product-category">Graphics</span>
+                                                <h4 class="product-title">3D Icon Pack Premium</h4>
+                                                <div class="product-footer">
+                                                    <div class="product-rating">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <span>4.8</span>
+                                                        <span class="rating-count">(432)</span>
+                                                    </div>
+                                                    <div class="product-price">$29</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Product Card 4 -->
+                                        <div class="seller-product-card">
+                                            <div class="product-image">
+                                                <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400&h=300&fit=crop"
+                                                    alt="Product">
+                                                <div class="product-overlay">
+                                                    <button class="btn-wishlist">
+                                                        <i class="bi bi-heart"></i>
+                                                    </button>
+                                                    <a href="asset-details.html" class="btn-view">
+                                                        <i class="bi bi-eye"></i> View
+                                                    </a>
+                                                </div>
+                                                <span class="product-badge badge-bestseller">
+                                                    <i class="bi bi-trophy"></i> Best Seller
+                                                </span>
+                                            </div>
+                                            <div class="product-info">
+                                                <span class="product-category">UI Kits</span>
+                                                <h4 class="product-title">E-commerce Mobile App</h4>
+                                                <div class="product-footer">
+                                                    <div class="product-rating">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <span>4.9</span>
+                                                        <span class="rating-count">(521)</span>
+                                                    </div>
+                                                    <div class="product-price">$59</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Product Card 5 -->
+                                        <div class="seller-product-card">
+                                            <div class="product-image">
+                                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop"
+                                                    alt="Product">
+                                                <div class="product-overlay">
+                                                    <button class="btn-wishlist">
+                                                        <i class="bi bi-heart"></i>
+                                                    </button>
+                                                    <a href="asset-details.html" class="btn-view">
+                                                        <i class="bi bi-eye"></i> View
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <span class="product-category">Templates</span>
+                                                <h4 class="product-title">Admin Dashboard Template</h4>
+                                                <div class="product-footer">
+                                                    <div class="product-rating">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <span>4.7</span>
+                                                        <span class="rating-count">(198)</span>
+                                                    </div>
+                                                    <div class="product-price">$69</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Product Card 6 -->
+                                        <div class="seller-product-card">
+                                            <div class="product-image">
+                                                <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?w=400&h=300&fit=crop"
+                                                    alt="Product">
+                                                <div class="product-overlay">
+                                                    <button class="btn-wishlist">
+                                                        <i class="bi bi-heart"></i>
+                                                    </button>
+                                                    <a href="asset-details.html" class="btn-view">
+                                                        <i class="bi bi-eye"></i> View
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <span class="product-category">Graphics</span>
+                                                <h4 class="product-title">Illustration Bundle</h4>
+                                                <div class="product-footer">
+                                                    <div class="product-rating">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <span>5.0</span>
+                                                        <span class="rating-count">(287)</span>
+                                                    </div>
+                                                    <div class="product-price">$45</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Load More -->
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-outline-primary btn-lg">
+                                            Load More Products
+                                            <i class="bi bi-arrow-down ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Reviews Tab -->
+                                <div class="tab-pane fade" id="reviews">
+                                    <!-- Rating Summary -->
+                                    <div class="reviews-summary">
+                                        <div class="summary-left">
+                                            <div class="rating-number-large">4.9</div>
+                                            <div class="rating-stars-large">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="rating-count-text">156 reviews</div>
+                                        </div>
+                                        <div class="summary-right">
+                                            <div class="rating-bar-item">
+                                                <span class="bar-label">5★</span>
+                                                <div class="bar-container">
+                                                    <div class="bar-fill" style="width: 85%"></div>
+                                                </div>
+                                                <span class="bar-count">132</span>
+                                            </div>
+                                            <div class="rating-bar-item">
+                                                <span class="bar-label">4★</span>
+                                                <div class="bar-container">
+                                                    <div class="bar-fill" style="width: 10%"></div>
+                                                </div>
+                                                <span class="bar-count">16</span>
+                                            </div>
+                                            <div class="rating-bar-item">
+                                                <span class="bar-label">3★</span>
+                                                <div class="bar-container">
+                                                    <div class="bar-fill" style="width: 3%"></div>
+                                                </div>
+                                                <span class="bar-count">5</span>
+                                            </div>
+                                            <div class="rating-bar-item">
+                                                <span class="bar-label">2★</span>
+                                                <div class="bar-container">
+                                                    <div class="bar-fill" style="width: 1%"></div>
+                                                </div>
+                                                <span class="bar-count">2</span>
+                                            </div>
+                                            <div class="rating-bar-item">
+                                                <span class="bar-label">1★</span>
+                                                <div class="bar-container">
+                                                    <div class="bar-fill" style="width: 1%"></div>
+                                                </div>
+                                                <span class="bar-count">1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Reviews List -->
+                                    <div class="reviews-list">
+                                        <!-- Review 1 -->
+                                        <div class="review-item">
+                                            <div class="review-header">
+                                                <img src="https://i.pravatar.cc/60?img=10" alt="Reviewer"
+                                                    class="reviewer-avatar">
+                                                <div class="reviewer-info">
+                                                    <h5 class="reviewer-name">Alex Johnson</h5>
+                                                    <div class="review-meta">
+                                                        <div class="review-rating">
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                        </div>
+                                                        <span class="review-date">2 days ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="review-content">
+                                                <p class="review-text">
+                                                    Excellent work! John delivered exactly what I needed. The dashboard
+                                                    UI kit
+                                                    is professional and well-organized. Communication was great and
+                                                    delivery was on time.
+                                                </p>
+                                                <div class="review-product">
+                                                    <i class="bi bi-box-seam"></i>
+                                                    <a href="#">Modern Dashboard UI Kit</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Review 2 -->
+                                        <div class="review-item">
+                                            <div class="review-header">
+                                                <img src="https://i.pravatar.cc/60?img=11" alt="Reviewer"
+                                                    class="reviewer-avatar">
+                                                <div class="reviewer-info">
+                                                    <h5 class="reviewer-name">Maria Garcia</h5>
+                                                    <div class="review-meta">
+                                                        <div class="review-rating">
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                        </div>
+                                                        <span class="review-date">1 week ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="review-content">
+                                                <p class="review-text">
+                                                    Amazing quality! The landing page template saved me weeks of work.
+                                                    John is very professional and responsive. Highly recommend!
+                                                </p>
+                                                <div class="review-product">
+                                                    <i class="bi bi-box-seam"></i>
+                                                    <a href="#">SaaS Landing Page Template</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Review 3 -->
+                                        <div class="review-item">
+                                            <div class="review-header">
+                                                <img src="https://i.pravatar.cc/60?img=12" alt="Reviewer"
+                                                    class="reviewer-avatar">
+                                                <div class="reviewer-info">
+                                                    <h5 class="reviewer-name">James Miller</h5>
+                                                    <div class="review-meta">
+                                                        <div class="review-rating">
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star"></i>
+                                                        </div>
+                                                        <span class="review-date">2 weeks ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="review-content">
+                                                <p class="review-text">
+                                                    Great designs! Very happy with the quality. Only minor revisions
+                                                    were needed.
+                                                    Will definitely work with John again on future projects.
+                                                </p>
+                                                <div class="review-product">
+                                                    <i class="bi bi-box-seam"></i>
+                                                    <a href="#">E-commerce Mobile App UI</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Load More Reviews -->
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-outline-primary btn-lg">
+                                            Load More Reviews
+                                            <i class="bi bi-arrow-down ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- About -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-hexagon-fill"></i>
+                        <span>AssetHub</span>
+                    </div>
+                    <p class="text-muted mb-3">The premier marketplace for digital assets. Buy and sell UI kits,
+                        templates, graphics, and more.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Marketplace -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Marketplace</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">All Assets</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Free Assets</a></li>
+                        <li><a href="#">Top Sellers</a></li>
+                        <li><a href="#">New Releases</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sell -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Sell</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Become a Seller</a></li>
+                        <li><a href="#">Seller Guide</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Payouts</a></li>
+                        <li><a href="#">Best Practices</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Report Issue</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">License Info</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <p class="mb-0 text-muted">&copy; 2024 AssetHub. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="payment-methods">
+                            <i class="bi bi-credit-card"></i>
+                            <i class="bi bi-paypal"></i>
+                            <span class="text-muted ms-2">Secure Payments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/seller-profile.js"></script>
+</body>
+
+</html>
