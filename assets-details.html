@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetHub - Digital Marketplace</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/assets-details.css">
+</head>
+
+<body>
+
+    <!-- Top Header Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-links">
+                        <a href="become-seller.html"><i class="bi bi-shop"></i> Become a Seller</a>
+                        <a href="help.html"><i class="bi bi-question-circle"></i> Help</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-actions">
+                        <div class="dropdown d-inline-block">
+                            <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-globe"></i> EN
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Spanish</a></li>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-sm" id="themeToggle">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo">
+                    <i class="bi bi-hexagon-fill"></i>
+                    <span>AssetHub</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <!-- Search Bar -->
+                <div class="search-bar mx-lg-4 my-3 my-lg-0">
+                    <form class="search-form">
+                        <i class="bi bi-search search-icon"></i>
+                        <input type="text" class="form-control" placeholder="Search for assets, templates, graphics...">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-categories">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-palette"></i> UI Kits</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-laptop"></i> Templates</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-images"></i> Graphics</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-badge-3d"></i> Icons</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-fonts"></i> Fonts</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-camera-video"></i> Videos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-music-note"></i> Audio</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-code-slash"></i> Source Code</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="wishlist.html">
+                            <i class="bi bi-heart"></i>
+                            <span class="badge-count">3</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="cart.html">
+                            <i class="bi bi-cart3"></i>
+                            <span class="badge-count">2</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-outline-primary btn-sm" href="login.html">Login</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary btn-sm" href="register.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area-->
+    <main id="mainContent">
+
+        <!-- ============================================
+     ASSET DETAILS PAGE
+     ============================================ -->
+
+        <!-- Breadcrumb -->
+        <section class="breadcrumb-section">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="asset-listing.html">Browse</a></li>
+                        <li class="breadcrumb-item"><a href="category.html">UI Kits</a></li>
+                        <li class="breadcrumb-item active">Modern Dashboard UI Kit</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Asset Details Section -->
+        <section class="asset-details-section">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Left Column - Preview & Gallery -->
+                    <div class="col-lg-8">
+                        <!-- Main Preview -->
+                        <div class="asset-preview">
+                            <div class="preview-badge">
+                                <span class="badge badge-trending">
+                                    <i class="bi bi-fire"></i> Trending
+                                </span>
+                                <span class="badge badge-bestseller">
+                                    <i class="bi bi-trophy"></i> Best Seller
+                                </span>
+                            </div>
+
+                            <button class="btn-wishlist-large" id="wishlistBtn">
+                                <i class="bi bi-heart"></i>
+                            </button>
+
+                            <div class="main-preview-image">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&h=800&fit=crop"
+                                    alt="Dashboard Preview" id="mainPreviewImage">
+                                <button class="btn-zoom" id="zoomBtn">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </button>
+                            </div>
+
+                            <!-- Thumbnail Gallery -->
+                            <div class="preview-thumbnails">
+                                <button class="thumbnail active"
+                                    data-image="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&h=800&fit=crop">
+                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200&h=150&fit=crop"
+                                        alt="Preview 1">
+                                </button>
+                                <button class="thumbnail"
+                                    data-image="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1200&h=800&fit=crop">
+                                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=200&h=150&fit=crop"
+                                        alt="Preview 2">
+                                </button>
+                                <button class="thumbnail"
+                                    data-image="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=1200&h=800&fit=crop">
+                                    <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=200&h=150&fit=crop"
+                                        alt="Preview 3">
+                                </button>
+                                <button class="thumbnail"
+                                    data-image="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=1200&h=800&fit=crop">
+                                    <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=200&h=150&fit=crop"
+                                        alt="Preview 4">
+                                </button>
+                                <button class="thumbnail"
+                                    data-image="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=800&fit=crop">
+                                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=200&h=150&fit=crop"
+                                        alt="Preview 5">
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Asset Info Tabs -->
+                        <div class="asset-info-tabs">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#description"
+                                        type="button">
+                                        <i class="bi bi-file-text"></i> Description
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#features"
+                                        type="button">
+                                        <i class="bi bi-list-check"></i> Features
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#includes"
+                                        type="button">
+                                        <i class="bi bi-box-seam"></i> What's Included
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#reviews"
+                                        type="button">
+                                        <i class="bi bi-star"></i> Reviews (256)
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <!-- Description Tab -->
+                                <div class="tab-pane fade show active" id="description">
+                                    <div class="tab-content-wrapper">
+                                        <h3>About This Asset</h3>
+                                        <p>
+                                            Modern Dashboard UI Kit is a comprehensive design system that includes
+                                            everything you need to create
+                                            stunning web applications. With over 50+ pre-designed screens and hundreds
+                                            of UI components,
+                                            you can quickly prototype and build professional dashboards.
+                                        </p>
+                                        <p>
+                                            This UI kit is perfect for SaaS platforms, admin panels, analytics
+                                            dashboards, CRM systems,
+                                            and any data-driven web application. Every component is carefully crafted
+                                            with attention to
+                                            detail, ensuring consistency and usability across your entire project.
+                                        </p>
+                                        <p>
+                                            Built with modern design principles and best practices, this kit includes
+                                            light and dark mode
+                                            variations, responsive layouts, and is compatible with popular design tools
+                                            like Figma, Sketch,
+                                            and Adobe XD.
+                                        </p>
+
+                                        <h4 class="mt-4">Why Choose This Kit?</h4>
+                                        <ul class="feature-list">
+                                            <li><i class="bi bi-check-circle-fill"></i> Professional and modern design
+                                            </li>
+                                            <li><i class="bi bi-check-circle-fill"></i> Fully customizable components
+                                            </li>
+                                            <li><i class="bi bi-check-circle-fill"></i> Regular updates and improvements
+                                            </li>
+                                            <li><i class="bi bi-check-circle-fill"></i> Comprehensive documentation</li>
+                                            <li><i class="bi bi-check-circle-fill"></i> Lifetime access and updates</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Features Tab -->
+                                <div class="tab-pane fade" id="features">
+                                    <div class="tab-content-wrapper">
+                                        <h3>Key Features</h3>
+                                        <div class="features-grid">
+                                            <div class="feature-item">
+                                                <div class="feature-icon">
+                                                    <i class="bi bi-palette"></i>
+                                                </div>
+                                                <h5>50+ Screens</h5>
+                                                <p>Complete set of dashboard screens including analytics, tables, forms,
+                                                    and more</p>
+                                            </div>
+                                            <div class="feature-item">
+                                                <div class="feature-icon">
+                                                    <i class="bi bi-puzzle"></i>
+                                                </div>
+                                                <h5>200+ Components</h5>
+                                                <p>Buttons, cards, forms, charts, tables, and all essential UI elements
+                                                </p>
+                                            </div>
+                                            <div class="feature-item">
+                                                <div class="feature-icon">
+                                                    <i class="bi bi-phone"></i>
+                                                </div>
+                                                <h5>Fully Responsive</h5>
+                                                <p>Optimized layouts for desktop, tablet, and mobile devices</p>
+                                            </div>
+                                            <div class="feature-item">
+                                                <div class="feature-icon">
+                                                    <i class="bi bi-moon-stars"></i>
+                                                </div>
+                                                <h5>Dark Mode</h5>
+                                                <p>Complete dark mode variations for all components and screens</p>
+                                            </div>
+                                            <div class="feature-item">
+                                                <div class="feature-icon">
+                                                    <i class="bi bi-layers"></i>
+                                                </div>
+                                                <h5>Organized Layers</h5>
+                                                <p>Well-structured and named layers for easy navigation</p>
+                                            </div>
+                                            <div class="feature-item">
+                                                <div class="feature-icon">
+                                                    <i class="bi bi-type"></i>
+                                                </div>
+                                                <h5>Google Fonts</h5>
+                                                <p>Uses free Google Fonts - no licensing issues</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- What's Included Tab -->
+                                <div class="tab-pane fade" id="includes">
+                                    <div class="tab-content-wrapper">
+                                        <h3>Package Contents</h3>
+                                        <div class="includes-list">
+                                            <div class="include-item">
+                                                <div class="include-icon">
+                                                    <i class="bi bi-file-earmark-code"></i>
+                                                </div>
+                                                <div class="include-info">
+                                                    <h5>Figma Files</h5>
+                                                    <p>Complete Figma design files with all screens and components</p>
+                                                    <span class="file-size">12.4 MB</span>
+                                                </div>
+                                            </div>
+                                            <div class="include-item">
+                                                <div class="include-icon">
+                                                    <i class="bi bi-file-earmark-image"></i>
+                                                </div>
+                                                <div class="include-info">
+                                                    <h5>Sketch Files</h5>
+                                                    <p>Native Sketch format for Sketch users</p>
+                                                    <span class="file-size">15.8 MB</span>
+                                                </div>
+                                            </div>
+                                            <div class="include-item">
+                                                <div class="include-icon">
+                                                    <i class="bi bi-file-earmark-pdf"></i>
+                                                </div>
+                                                <div class="include-info">
+                                                    <h5>Adobe XD Files</h5>
+                                                    <p>XD version for Adobe XD workflow</p>
+                                                    <span class="file-size">10.2 MB</span>
+                                                </div>
+                                            </div>
+                                            <div class="include-item">
+                                                <div class="include-icon">
+                                                    <i class="bi bi-file-earmark-text"></i>
+                                                </div>
+                                                <div class="include-info">
+                                                    <h5>Documentation</h5>
+                                                    <p>Comprehensive guide and usage instructions</p>
+                                                    <span class="file-size">2.1 MB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-specs">
+                                            <h4>File Specifications</h4>
+                                            <div class="specs-grid">
+                                                <div class="spec-item">
+                                                    <span class="spec-label">Format:</span>
+                                                    <span class="spec-value">Figma, Sketch, Adobe XD</span>
+                                                </div>
+                                                <div class="spec-item">
+                                                    <span class="spec-label">File Size:</span>
+                                                    <span class="spec-value">40.5 MB (Total)</span>
+                                                </div>
+                                                <div class="spec-item">
+                                                    <span class="spec-label">Resolution:</span>
+                                                    <span class="spec-value">1920×1080px</span>
+                                                </div>
+                                                <div class="spec-item">
+                                                    <span class="spec-label">Grid System:</span>
+                                                    <span class="spec-value">12 Column Bootstrap Grid</span>
+                                                </div>
+                                                <div class="spec-item">
+                                                    <span class="spec-label">Last Updated:</span>
+                                                    <span class="spec-value">December 20, 2024</span>
+                                                </div>
+                                                <div class="spec-item">
+                                                    <span class="spec-label">Version:</span>
+                                                    <span class="spec-value">2.0</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Reviews Tab -->
+                                <div class="tab-pane fade" id="reviews">
+                                    <div class="tab-content-wrapper">
+                                        <!-- Rating Summary -->
+                                        <div class="rating-summary">
+                                            <div class="rating-overview">
+                                                <div class="rating-number">4.9</div>
+                                                <div class="rating-stars-large">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                </div>
+                                                <div class="rating-count">Based on 256 reviews</div>
+                                            </div>
+
+                                            <div class="rating-breakdown">
+                                                <div class="rating-bar">
+                                                    <span class="bar-label">5 stars</span>
+                                                    <div class="bar-container">
+                                                        <div class="bar-fill" style="width: 85%"></div>
+                                                    </div>
+                                                    <span class="bar-count">218</span>
+                                                </div>
+                                                <div class="rating-bar">
+                                                    <span class="bar-label">4 stars</span>
+                                                    <div class="bar-container">
+                                                        <div class="bar-fill" style="width: 10%"></div>
+                                                    </div>
+                                                    <span class="bar-count">25</span>
+                                                </div>
+                                                <div class="rating-bar">
+                                                    <span class="bar-label">3 stars</span>
+                                                    <div class="bar-container">
+                                                        <div class="bar-fill" style="width: 3%"></div>
+                                                    </div>
+                                                    <span class="bar-count">8</span>
+                                                </div>
+                                                <div class="rating-bar">
+                                                    <span class="bar-label">2 stars</span>
+                                                    <div class="bar-container">
+                                                        <div class="bar-fill" style="width: 1%"></div>
+                                                    </div>
+                                                    <span class="bar-count">3</span>
+                                                </div>
+                                                <div class="rating-bar">
+                                                    <span class="bar-label">1 star</span>
+                                                    <div class="bar-container">
+                                                        <div class="bar-fill" style="width: 1%"></div>
+                                                    </div>
+                                                    <span class="bar-count">2</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Review List -->
+                                        <div class="reviews-list">
+                                            <div class="review-item">
+                                                <div class="review-header">
+                                                    <img src="https://i.pravatar.cc/80?img=10" alt="Reviewer"
+                                                        class="reviewer-avatar">
+                                                    <div class="reviewer-info">
+                                                        <h5 class="reviewer-name">Alex Johnson</h5>
+                                                        <div class="review-meta">
+                                                            <div class="review-stars">
+                                                                <i class="bi bi-star-fill"></i>
+                                                                <i class="bi bi-star-fill"></i>
+                                                                <i class="bi bi-star-fill"></i>
+                                                                <i class="bi bi-star-fill"></i>
+                                                                <i class="bi bi-star-fill"></i>
+                                                            </div>
+                                                            <span class="review-date">2 days ago</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="review-content">
+                                                    <h6 class="review-title">Excellent quality and great value!</h6>
+                                                    <p class="review-text">
+                                                        This UI kit exceeded my expectations. The components are
+                                                        well-designed,
+                                                        easy to customize, and the documentation is crystal clear. I was
+                                                        able to
+                                                        build a complete dashboard in just a few days. Highly
+                                                        recommended!
+                                                    </p>
+                                                </div>
+                                                <div class="review-footer">
+                                                    <button class="btn-review-action">
+                                                        <i class="bi bi-hand-thumbs-up"></i> Helpful (24)
+                                                    </button>
+                                                    <button class="btn-review-action">
+                                                        <i class="bi bi-chat"></i> Reply
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="review-item">
+                                                <div class="review-header">
+                                                    <img src="https://i.pravatar.cc/80?img=11" alt="Reviewer"
+                                                        class="reviewer-avatar">
+                                                    <div class="reviewer-info">
+                                                        <h5 class="reviewer-name">Maria Garcia</h5>
+                                                        <div class="review-meta">
+                                                            <div class="review-stars">
+                                                                <i class="bi bi-star-fill"></i>
+                                                                <i class="bi bi-star-fill"></i>
+                                                                <i class="bi bi-star-fill"></i>
+                                                                <i class="bi bi-star-fill"></i>
+                                                                <i class="bi bi-star-fill"></i>
+                                                            </div>
+                                                            <span class="review-date">1 week ago</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="review-content">
+                                                    <h6 class="review-title">Perfect for my SaaS project</h6>
+                                                    <p class="review-text">
+                                                        Used this kit for our company's internal dashboard. The dark
+                                                        mode is
+                                                        beautiful and all the components are production-ready. Saved us
+                                                        weeks
+                                                        of design work. Worth every penny!
+                                                    </p>
+                                                </div>
+                                                <div class="review-footer">
+                                                    <button class="btn-review-action">
+                                                        <i class="bi bi-hand-thumbs-up"></i> Helpful (18)
+                                                    </button>
+                                                    <button class="btn-review-action">
+                                                        <i class="bi bi-chat"></i> Reply
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="review-item">
+                                                <div class="review-header">
+                                                    <img src="https://i.pravatar.cc/80?img=12" alt="Reviewer"
+                                                        class="reviewer-avatar">
+                                                    <div class="reviewer-info">
+                                                        <h5 class="reviewer-name">James Miller</h5>
+                                                        <div class="review-meta">
+                                                            <div class="review-stars">
+                                                                <i class="bi bi-star-fill"></i>
+                                                                <i class="bi bi-star-fill"></i>
+                                                                <i class="bi bi-star-fill"></i>
+                                                                <i class="bi bi-star-fill"></i>
+                                                                <i class="bi bi-star"></i>
+                                                            </div>
+                                                            <span class="review-date">2 weeks ago</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="review-content">
+                                                    <h6 class="review-title">Great kit with minor improvements needed
+                                                    </h6>
+                                                    <p class="review-text">
+                                                        Overall a fantastic UI kit. Very comprehensive and
+                                                        well-organized.
+                                                        The only reason for 4 stars is that some components could use
+                                                        more
+                                                        variations. But still highly recommended!
+                                                    </p>
+                                                </div>
+                                                <div class="review-footer">
+                                                    <button class="btn-review-action">
+                                                        <i class="bi bi-hand-thumbs-up"></i> Helpful (12)
+                                                    </button>
+                                                    <button class="btn-review-action">
+                                                        <i class="bi bi-chat"></i> Reply
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn-outline-primary w-100 mt-4">
+                                            Load More Reviews
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Assets -->
+                        <div class="related-assets">
+                            <h3 class="section-title">You May Also Like</h3>
+                            <div class="row g-3">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="related-asset-card">
+                                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=300&fit=crop"
+                                            alt="Related">
+                                        <div class="related-content">
+                                            <h6>SaaS Landing Page</h6>
+                                            <div class="related-price">$39</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="related-asset-card">
+                                        <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&h=300&fit=crop"
+                                            alt="Related">
+                                        <div class="related-content">
+                                            <h6>Icon Pack Premium</h6>
+                                            <div class="related-price">$29</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="related-asset-card">
+                                        <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400&h=300&fit=crop"
+                                            alt="Related">
+                                        <div class="related-content">
+                                            <h6>Mobile App UI Kit</h6>
+                                            <div class="related-price">$59</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Purchase Panel -->
+                    <div class="col-lg-4">
+                        <div class="purchase-panel">
+                            <!-- Product Header -->
+                            <div class="product-header">
+                                <span class="product-category">UI Kits</span>
+                                <h1 class="product-title">Modern Dashboard UI Kit</h1>
+                                <div class="product-rating">
+                                    <div class="rating-stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <span class="rating-text">4.9 (256 reviews)</span>
+                                </div>
+                            </div>
+
+                            <!-- Pricing -->
+                            <div class="pricing-section">
+                                <div class="price-display">
+                                    <span class="current-price">$49</span>
+                                    <span class="original-price">$79</span>
+                                    <span class="discount-badge">38% OFF</span>
+                                </div>
+                                <div class="price-info">
+                                    <i class="bi bi-clock-history"></i>
+                                    <span>Limited time offer ends in 3 days</span>
+                                </div>
+                            </div>
+
+                            <!-- License Selector -->
+                            <div class="license-selector">
+                                <h6 class="selector-title">Choose License</h6>
+                                <div class="license-options">
+                                    <label class="license-option">
+                                        <input type="radio" name="license" value="personal" checked>
+                                        <div class="license-card">
+                                            <div class="license-header">
+                                                <span class="license-name">Personal</span>
+                                                <span class="license-price">$49</span>
+                                            </div>
+                                            <ul class="license-features">
+                                                <li><i class="bi bi-check"></i> Single project</li>
+                                                <li><i class="bi bi-check"></i> Lifetime updates</li>
+                                                <li><i class="bi bi-check"></i> Personal use only</li>
+                                            </ul>
+                                        </div>
+                                    </label>
+
+                                    <label class="license-option">
+                                        <input type="radio" name="license" value="commercial">
+                                        <div class="license-card">
+                                            <div class="license-header">
+                                                <span class="license-name">Commercial</span>
+                                                <span class="license-price">$99</span>
+                                            </div>
+                                            <ul class="license-features">
+                                                <li><i class="bi bi-check"></i> Unlimited projects</li>
+                                                <li><i class="bi bi-check"></i> Lifetime updates</li>
+                                                <li><i class="bi bi-check"></i> Commercial use</li>
+                                            </ul>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="action-buttons">
+                                <button class="btn btn-primary btn-lg w-100 btn-purchase">
+                                    <i class="bi bi-cart-plus"></i>
+                                    Add to Cart
+                                </button>
+                                <button class="btn btn-success btn-lg w-100 btn-buy-now">
+                                    <i class="bi bi-lightning"></i>
+                                    Buy Now
+                                </button>
+                            </div>
+
+                            <!-- Product Stats -->
+                            <div class="product-stats">
+                                <div class="stat-item">
+                                    <i class="bi bi-download"></i>
+                                    <span><strong>256</strong> Sales</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-heart"></i>
+                                    <span><strong>432</strong> Favorites</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-eye"></i>
+                                    <span><strong>5.2K</strong> Views</span>
+                                </div>
+                            </div>
+
+                            <!-- Seller Info -->
+                            <div class="seller-info">
+                                <h6 class="info-title">Seller Information</h6>
+                                <div class="seller-profile">
+                                    <img src="https://i.pravatar.cc/80?img=1" alt="Seller" class="seller-avatar">
+                                    <div class="seller-details">
+                                        <h5 class="seller-name">John Doe</h5>
+                                        <div class="seller-badge">
+                                            <i class="bi bi-patch-check-fill"></i>
+                                            Verified Seller
+                                        </div>
+                                        <div class="seller-stats-inline">
+                                            <span><i class="bi bi-star-fill"></i> 4.9</span>
+                                            <span><i class="bi bi-box"></i> 24 Products</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="seller-actions">
+                                    <button class="btn btn-outline-primary w-100">
+                                        <i class="bi bi-person-plus"></i>
+                                        Follow Seller
+                                    </button>
+                                    <button class="btn btn-outline-secondary w-100">
+                                        <i class="bi bi-chat"></i>
+                                        Contact Seller
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Additional Info -->
+                            <div class="additional-info">
+                                <div class="info-item">
+                                    <i class="bi bi-shield-check"></i>
+                                    <span>100% Money Back Guarantee</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                    <span>Free Lifetime Updates</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="bi bi-headset"></i>
+                                    <span>24/7 Support Available</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="bi bi-lightning"></i>
+                                    <span>Instant Download Access</span>
+                                </div>
+                            </div>
+
+                            <!-- Share -->
+                            <div class="share-section">
+                                <h6 class="share-title">Share This Asset</h6>
+                                <div class="share-buttons">
+                                    <button class="btn-share" data-platform="facebook">
+                                        <i class="bi bi-facebook"></i>
+                                    </button>
+                                    <button class="btn-share" data-platform="twitter">
+                                        <i class="bi bi-twitter"></i>
+                                    </button>
+                                    <button class="btn-share" data-platform="pinterest">
+                                        <i class="bi bi-pinterest"></i>
+                                    </button>
+                                    <button class="btn-share" data-platform="linkedin">
+                                        <i class="bi bi-linkedin"></i>
+                                    </button>
+                                    <button class="btn-share" id="copyLinkBtn">
+                                        <i class="bi bi-link-45deg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- About -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-hexagon-fill"></i>
+                        <span>AssetHub</span>
+                    </div>
+                    <p class="text-muted mb-3">The premier marketplace for digital assets. Buy and sell UI kits,
+                        templates, graphics, and more.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Marketplace -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Marketplace</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">All Assets</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Free Assets</a></li>
+                        <li><a href="#">Top Sellers</a></li>
+                        <li><a href="#">New Releases</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sell -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Sell</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Become a Seller</a></li>
+                        <li><a href="#">Seller Guide</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Payouts</a></li>
+                        <li><a href="#">Best Practices</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Report Issue</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">License Info</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <p class="mb-0 text-muted">&copy; 2024 AssetHub. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="payment-methods">
+                            <i class="bi bi-credit-card"></i>
+                            <i class="bi bi-paypal"></i>
+                            <span class="text-muted ms-2">Secure Payments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/assets-details.js"></script>
+</body>
+
+</html>

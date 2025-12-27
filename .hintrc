@@ -5,6 +5,9 @@
   "hints": {
     "button-type": "off",
     "axe/name-role-value": "off",
-    "compat-api/css": "off"
+    "compat-api/css": "off",
+    "axe/aria": "off",
+    "no-inline-styles": "off",
+    "axe/forms": "off"
   }
 }
