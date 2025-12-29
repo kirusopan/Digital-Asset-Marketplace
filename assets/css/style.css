@@ -384,6 +384,9 @@ img {
     font-weight: 800;
     color: var(--white);
 }
+.footer-brand p{
+    color: #ffffff;
+}
 
 .footer-brand i {
     font-size: 1.8rem;

@@ -14,6 +14,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
 </head>
 
 <body>
@@ -121,31 +122,417 @@
         </div>
     </nav>
 
-    <!-- Main Content Area (Pages will inject content here) -->
+    <!-- Main Content Area -->
     <main id="mainContent">
 
+        <!-- ============================================
+     SHOPPING CART PAGE - MAIN CONTENT
+     Place inside <main id="mainContent">
+     ============================================ -->
 
-    </main>
+        <!-- Page Header -->
+        <section class="page-header-simple">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Shopping Cart</li>
+                    </ol>
+                </nav>
+                <h1 class="page-title">Shopping Cart</h1>
+            </div>
+        </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h3 class="fw-bold mb-2">Get Premium Assets Weekly</h3>
-                    <p class="text-muted mb-0">Subscribe to receive free assets, deals, and updates.</p>
-                </div>
-                <div class="col-lg-6">
-                    <form class="newsletter-form">
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Enter your email">
-                            <button class="btn btn-primary" type="submit">Subscribe</button>
+        <!-- Cart Section -->
+        <section class="cart-section">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Cart Items -->
+                    <div class="col-lg-8">
+                        <!-- Cart Header -->
+                        <div class="cart-header">
+                            <h3 class="cart-title">
+                                <i class="bi bi-cart3"></i>
+                                Your Cart (<span id="cartItemCount">3</span> items)
+                            </h3>
+                            <button class="btn btn-outline-danger btn-sm" id="clearCartBtn">
+                                <i class="bi bi-trash"></i> Clear Cart
+                            </button>
                         </div>
-                    </form>
+
+                        <!-- Cart Items Container -->
+                        <div class="cart-items" id="cartItemsContainer">
+                            <!-- Cart Item 1 -->
+                            <div class="cart-item" data-item-id="1">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200&h=150&fit=crop"
+                                        alt="Dashboard UI Kit">
+                                    <span class="item-badge">Digital</span>
+                                </div>
+                                <div class="item-details">
+                                    <h4 class="item-title">Modern Dashboard UI Kit</h4>
+                                    <p class="item-meta">
+                                        <span class="item-category">
+                                            <i class="bi bi-tag"></i> UI Kits
+                                        </span>
+                                        <span class="item-author">
+                                            <i class="bi bi-person"></i> John Doe
+                                        </span>
+                                    </p>
+                                    <div class="item-features">
+                                        <span class="feature-badge">
+                                            <i class="bi bi-file-earmark"></i> PSD, Sketch, Figma
+                                        </span>
+                                        <span class="feature-badge">
+                                            <i class="bi bi-download"></i> Instant Download
+                                        </span>
+                                    </div>
+                                    <!-- License Selector -->
+                                    <div class="license-selector">
+                                        <label class="form-label">License Type:</label>
+                                        <select class="form-select form-select-sm license-select" data-item-id="1">
+                                            <option value="regular" data-price="49">Regular License - $49</option>
+                                            <option value="extended" data-price="249">Extended License - $249</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="item-actions">
+                                    <div class="item-price">
+                                        <span class="price-label">Price:</span>
+                                        <span class="price-value" data-price="49">$49.00</span>
+                                    </div>
+                                    <div class="quantity-controls">
+                                        <button class="btn-quantity btn-decrease" data-item-id="1">
+                                            <i class="bi bi-dash"></i>
+                                        </button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10"
+                                            data-item-id="1">
+                                        <button class="btn-quantity btn-increase" data-item-id="1">
+                                            <i class="bi bi-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="item-total">
+                                        <span class="total-label">Subtotal:</span>
+                                        <span class="total-value">$49.00</span>
+                                    </div>
+                                    <button class="btn-remove" data-item-id="1" title="Remove item">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Cart Item 2 -->
+                            <div class="cart-item" data-item-id="2">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=200&h=150&fit=crop"
+                                        alt="Landing Page Template">
+                                    <span class="item-badge">Digital</span>
+                                </div>
+                                <div class="item-details">
+                                    <h4 class="item-title">SaaS Landing Page Template</h4>
+                                    <p class="item-meta">
+                                        <span class="item-category">
+                                            <i class="bi bi-tag"></i> Templates
+                                        </span>
+                                        <span class="item-author">
+                                            <i class="bi bi-person"></i> Sarah Kim
+                                        </span>
+                                    </p>
+                                    <div class="item-features">
+                                        <span class="feature-badge">
+                                            <i class="bi bi-file-earmark"></i> HTML, CSS, JS
+                                        </span>
+                                        <span class="feature-badge">
+                                            <i class="bi bi-arrow-repeat"></i> Free Updates
+                                        </span>
+                                    </div>
+                                    <div class="license-selector">
+                                        <label class="form-label">License Type:</label>
+                                        <select class="form-select form-select-sm license-select" data-item-id="2">
+                                            <option value="regular" data-price="39">Regular License - $39</option>
+                                            <option value="extended" data-price="199">Extended License - $199</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="item-actions">
+                                    <div class="item-price">
+                                        <span class="price-label">Price:</span>
+                                        <span class="price-value" data-price="39">$39.00</span>
+                                    </div>
+                                    <div class="quantity-controls">
+                                        <button class="btn-quantity btn-decrease" data-item-id="2">
+                                            <i class="bi bi-dash"></i>
+                                        </button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10"
+                                            data-item-id="2">
+                                        <button class="btn-quantity btn-increase" data-item-id="2">
+                                            <i class="bi bi-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="item-total">
+                                        <span class="total-label">Subtotal:</span>
+                                        <span class="total-value">$39.00</span>
+                                    </div>
+                                    <button class="btn-remove" data-item-id="2" title="Remove item">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Cart Item 3 -->
+                            <div class="cart-item" data-item-id="3">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=200&h=150&fit=crop"
+                                        alt="Icon Pack">
+                                    <span class="item-badge free">Free</span>
+                                </div>
+                                <div class="item-details">
+                                    <h4 class="item-title">500+ Premium Icon Set</h4>
+                                    <p class="item-meta">
+                                        <span class="item-category">
+                                            <i class="bi bi-tag"></i> Icons
+                                        </span>
+                                        <span class="item-author">
+                                            <i class="bi bi-person"></i> Mike Chen
+                                        </span>
+                                    </p>
+                                    <div class="item-features">
+                                        <span class="feature-badge">
+                                            <i class="bi bi-file-earmark"></i> SVG, PNG
+                                        </span>
+                                        <span class="feature-badge success">
+                                            <i class="bi bi-gift"></i> Free Item
+                                        </span>
+                                    </div>
+                                    <div class="license-selector">
+                                        <label class="form-label">License Type:</label>
+                                        <select class="form-select form-select-sm license-select" data-item-id="3"
+                                            disabled>
+                                            <option value="free" data-price="0">Free License - $0</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="item-actions">
+                                    <div class="item-price">
+                                        <span class="price-label">Price:</span>
+                                        <span class="price-value free" data-price="0">Free</span>
+                                    </div>
+                                    <div class="quantity-controls">
+                                        <button class="btn-quantity btn-decrease" data-item-id="3">
+                                            <i class="bi bi-dash"></i>
+                                        </button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10"
+                                            data-item-id="3">
+                                        <button class="btn-quantity btn-increase" data-item-id="3">
+                                            <i class="bi bi-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="item-total">
+                                        <span class="total-label">Subtotal:</span>
+                                        <span class="total-value free">Free</span>
+                                    </div>
+                                    <button class="btn-remove" data-item-id="3" title="Remove item">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Empty Cart State (Hidden by default) -->
+                        <div class="empty-cart" id="emptyCartState" style="display: none;">
+                            <div class="empty-cart-icon">
+                                <i class="bi bi-cart-x"></i>
+                            </div>
+                            <h3 class="empty-cart-title">Your cart is empty</h3>
+                            <p class="empty-cart-text">Add some amazing digital assets to get started!</p>
+                            <a href="asset-listing.html" class="btn btn-primary btn-lg">
+                                <i class="bi bi-grid-3x3-gap me-2"></i>
+                                Browse Assets
+                            </a>
+                        </div>
+
+                        <!-- Continue Shopping Button -->
+                        <div class="cart-footer" id="cartFooter">
+                            <a href="asset-listing.html" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-left me-2"></i>
+                                Continue Shopping
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="order-summary" id="orderSummary">
+                            <h3 class="summary-title">Order Summary</h3>
+
+                            <!-- Coupon Code -->
+                            <div class="coupon-section">
+                                <label class="form-label">Have a coupon code?</label>
+                                <div class="coupon-input-group">
+                                    <input type="text" class="form-control" id="couponInput" placeholder="Enter code">
+                                    <button class="btn btn-primary" id="applyCouponBtn">Apply</button>
+                                </div>
+                                <div class="coupon-message" id="couponMessage"></div>
+                            </div>
+
+                            <!-- Price Breakdown -->
+                            <div class="price-breakdown">
+                                <div class="price-row">
+                                    <span class="price-label">Subtotal:</span>
+                                    <span class="price-value" id="subtotalPrice">$88.00</span>
+                                </div>
+                                <div class="price-row discount-row" id="discountRow" style="display: none;">
+                                    <span class="price-label">
+                                        Discount <span class="discount-badge" id="discountBadge">SAVE10</span>:
+                                    </span>
+                                    <span class="price-value discount" id="discountAmount">-$8.80</span>
+                                </div>
+                                <div class="price-row">
+                                    <span class="price-label">Tax (0%):</span>
+                                    <span class="price-value" id="taxAmount">$0.00</span>
+                                </div>
+                                <div class="price-row total-row">
+                                    <span class="price-label">Total:</span>
+                                    <span class="price-value total" id="totalPrice">$88.00</span>
+                                </div>
+                            </div>
+
+                            <!-- Trust Badges -->
+                            <div class="trust-badges">
+                                <div class="trust-badge">
+                                    <i class="bi bi-shield-check"></i>
+                                    <span>Secure Payment</span>
+                                </div>
+                                <div class="trust-badge">
+                                    <i class="bi bi-download"></i>
+                                    <span>Instant Download</span>
+                                </div>
+                                <div class="trust-badge">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                    <span>Free Updates</span>
+                                </div>
+                            </div>
+
+                            <!-- Checkout Button -->
+                            <button class="btn btn-primary btn-lg w-100 checkout-btn" id="checkoutBtn">
+                                <i class="bi bi-lock me-2"></i>
+                                Proceed to Checkout
+                            </button>
+
+                            <!-- Payment Methods -->
+                            <div class="payment-methods">
+                                <p class="payment-label">We accept:</p>
+                                <div class="payment-icons">
+                                    <i class="bi bi-credit-card" title="Credit Card"></i>
+                                    <i class="bi bi-paypal" title="PayPal"></i>
+                                    <i class="bi bi-stripe" title="Stripe"></i>
+                                </div>
+                            </div>
+
+                            <!-- Money Back Guarantee -->
+                            <div class="guarantee-badge">
+                                <i class="bi bi-shield-fill-check"></i>
+                                <div class="guarantee-text">
+                                    <strong>30-Day Money Back Guarantee</strong>
+                                    <span>Shop with confidence</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended Products -->
+                <div class="recommended-section">
+                    <h3 class="section-title">
+                        <i class="bi bi-stars"></i>
+                        You might also like
+                    </h3>
+                    <div class="row g-3">
+                        <!-- Recommended Item 1 -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="recommended-card">
+                                <div class="recommended-image">
+                                    <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=300&h=200&fit=crop"
+                                        alt="Mobile UI">
+                                    <button class="btn-quick-add" data-id="4">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="recommended-content">
+                                    <h5 class="recommended-title">E-commerce Mobile App UI</h5>
+                                    <div class="recommended-footer">
+                                        <span class="recommended-price">$59</span>
+                                        <button class="btn btn-sm btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recommended Item 2 -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="recommended-card">
+                                <div class="recommended-image">
+                                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=300&h=200&fit=crop"
+                                        alt="Admin Template">
+                                    <button class="btn-quick-add" data-id="5">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="recommended-content">
+                                    <h5 class="recommended-title">Admin Dashboard Template</h5>
+                                    <div class="recommended-footer">
+                                        <span class="recommended-price">$69</span>
+                                        <button class="btn btn-sm btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recommended Item 3 -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="recommended-card">
+                                <div class="recommended-image">
+                                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=300&h=200&fit=crop"
+                                        alt="Graphics">
+                                    <button class="btn-quick-add" data-id="6">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="recommended-content">
+                                    <h5 class="recommended-title">3D Graphics Pack</h5>
+                                    <div class="recommended-footer">
+                                        <span class="recommended-price">$29</span>
+                                        <button class="btn btn-sm btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recommended Item 4 -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="recommended-card">
+                                <div class="recommended-image">
+                                    <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=300&h=200&fit=crop"
+                                        alt="Fonts">
+                                    <button class="btn-quick-add" data-id="7">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="recommended-content">
+                                    <h5 class="recommended-title">Premium Font Collection</h5>
+                                    <div class="recommended-footer">
+                                        <span class="recommended-price">$35</span>
+                                        <button class="btn btn-sm btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -245,6 +632,7 @@
 
     <!-- Custom JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
 </body>
 
 </html>

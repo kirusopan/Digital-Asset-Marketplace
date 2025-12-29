@@ -14,6 +14,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
 </head>
 
 <body>
@@ -121,31 +122,438 @@
         </div>
     </nav>
 
-    <!-- Main Content Area (Pages will inject content here) -->
+    <!-- Main Content Area -->
     <main id="mainContent">
 
+        <!-- ============================================
+     CHECKOUT PAGE - MAIN CONTENT
+     Place inside <main id="mainContent">
+     ============================================ -->
 
-    </main>
+        <!-- Page Header -->
+        <section class="page-header-simple">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="cart.html">Cart</a></li>
+                        <li class="breadcrumb-item active">Checkout</li>
+                    </ol>
+                </nav>
+                <h1 class="page-title">Secure Checkout</h1>
+            </div>
+        </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h3 class="fw-bold mb-2">Get Premium Assets Weekly</h3>
-                    <p class="text-muted mb-0">Subscribe to receive free assets, deals, and updates.</p>
-                </div>
-                <div class="col-lg-6">
-                    <form class="newsletter-form">
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Enter your email">
-                            <button class="btn btn-primary" type="submit">Subscribe</button>
+        <!-- Checkout Progress -->
+        <section class="checkout-progress">
+            <div class="container">
+                <div class="progress-steps">
+                    <div class="step completed">
+                        <div class="step-icon">
+                            <i class="bi bi-cart-check"></i>
                         </div>
-                    </form>
+                        <span class="step-label">Cart</span>
+                    </div>
+                    <div class="step-line completed"></div>
+                    <div class="step active">
+                        <div class="step-icon">
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <span class="step-label">Payment</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <span class="step-label">Complete</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checkout Section -->
+        <section class="checkout-section">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Checkout Form -->
+                    <div class="col-lg-8">
+                        <!-- Contact Information -->
+                        <div class="checkout-card">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    <span class="step-number">1</span>
+                                    Contact Information
+                                </h3>
+                                <p class="card-subtitle">We'll send your order confirmation here</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">First Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="firstName" placeholder="John"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Last Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="lastName" placeholder="Doe"
+                                            required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Email Address <span
+                                                class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="john.doe@example.com" required>
+                                        <small class="form-text">Download links will be sent to this email</small>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="createAccount">
+                                            <label class="form-check-label" for="createAccount">
+                                                Create an account for faster checkout next time
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Billing Information -->
+                        <div class="checkout-card">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    <span class="step-number">2</span>
+                                    Billing Information
+                                </h3>
+                                <p class="card-subtitle">Enter your billing details</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label class="form-label">Country <span class="text-danger">*</span></label>
+                                        <select class="form-select" id="country" required>
+                                            <option value="">Select country</option>
+                                            <option value="US">United States</option>
+                                            <option value="UK">United Kingdom</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="AU">Australia</option>
+                                            <option value="DE">Germany</option>
+                                            <option value="FR">France</option>
+                                            <option value="IN">India</option>
+                                            <option value="SG">Singapore</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">City <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="city" placeholder="New York"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">State / Province</label>
+                                        <input type="text" class="form-control" id="state" placeholder="NY">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="address"
+                                            placeholder="123 Main Street">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">ZIP / Postal Code</label>
+                                        <input type="text" class="form-control" id="zipCode" placeholder="10001">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Company Name (Optional)</label>
+                                        <input type="text" class="form-control" id="company"
+                                            placeholder="Your Company Inc.">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="checkout-card">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    <span class="step-number">3</span>
+                                    Payment Method
+                                </h3>
+                                <p class="card-subtitle">All transactions are secure and encrypted</p>
+                            </div>
+                            <div class="card-body">
+                                <!-- Payment Options -->
+                                <div class="payment-options">
+                                    <!-- Credit Card -->
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="card" checked>
+                                        <div class="option-content">
+                                            <div class="option-header">
+                                                <span class="option-title">Credit / Debit Card</span>
+                                                <div class="card-icons">
+                                                    <i class="bi bi-credit-card-2-front"></i>
+                                                    <span class="ms-2">Visa, Mastercard, Amex</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <!-- Credit Card Form -->
+                                    <div class="payment-form card-form" id="cardForm">
+                                        <div class="row g-3 mt-2">
+                                            <div class="col-12">
+                                                <label class="form-label">Card Number <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="input-with-icon">
+                                                    <input type="text" class="form-control" id="cardNumber"
+                                                        placeholder="1234 5678 9012 3456" maxlength="19">
+                                                    <i class="bi bi-credit-card input-icon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Cardholder Name <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="cardName"
+                                                    placeholder="John Doe">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Expiry Date <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="cardExpiry"
+                                                    placeholder="MM/YY" maxlength="5">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">CVV <span class="text-danger">*</span></label>
+                                                <div class="input-with-icon">
+                                                    <input type="text" class="form-control" id="cardCvv"
+                                                        placeholder="123" maxlength="4">
+                                                    <i class="bi bi-question-circle input-icon"
+                                                        title="3-4 digits on back of card"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- PayPal -->
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="paypal">
+                                        <div class="option-content">
+                                            <div class="option-header">
+                                                <span class="option-title">PayPal</span>
+                                                <i class="bi bi-paypal" style="font-size: 1.5rem; color: #0070ba;"></i>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <!-- PayPal Message -->
+                                    <div class="payment-form paypal-message" id="paypalForm" style="display: none;">
+                                        <div class="alert alert-info">
+                                            <i class="bi bi-info-circle me-2"></i>
+                                            You will be redirected to PayPal to complete your purchase securely.
+                                        </div>
+                                    </div>
+
+                                    <!-- Stripe -->
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="stripe">
+                                        <div class="option-content">
+                                            <div class="option-header">
+                                                <span class="option-title">Stripe</span>
+                                                <i class="bi bi-stripe" style="font-size: 1.5rem; color: #635bff;"></i>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <!-- Stripe Message -->
+                                    <div class="payment-form stripe-message" id="stripeForm" style="display: none;">
+                                        <div class="alert alert-info">
+                                            <i class="bi bi-info-circle me-2"></i>
+                                            You will be redirected to Stripe to complete your purchase securely.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Save Payment Method -->
+                                <div class="mt-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="savePayment">
+                                        <label class="form-check-label" for="savePayment">
+                                            Securely save this payment method for future purchases
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Security Badge -->
+                                <div class="security-badge">
+                                    <i class="bi bi-shield-lock"></i>
+                                    <div class="security-text">
+                                        <strong>Secure Payment</strong>
+                                        <span>Your payment information is encrypted and secure</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Terms & Conditions -->
+                        <div class="checkout-card">
+                            <div class="card-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                    <label class="form-check-label" for="agreeTerms">
+                                        I agree to the <a href="terms.html" target="_blank">Terms of Service</a> and <a
+                                            href="privacy.html" target="_blank">Privacy Policy</a> <span
+                                            class="text-danger">*</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" id="subscribeNewsletter">
+                                    <label class="form-check-label" for="subscribeNewsletter">
+                                        Send me updates about new products and special offers
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="order-summary-checkout">
+                            <h3 class="summary-title">Order Summary</h3>
+
+                            <!-- Order Items -->
+                            <div class="order-items">
+                                <div class="order-item">
+                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=80&h=60&fit=crop"
+                                        alt="Product">
+                                    <div class="item-info">
+                                        <h5 class="item-name">Modern Dashboard UI Kit</h5>
+                                        <p class="item-meta">Regular License × 1</p>
+                                    </div>
+                                    <span class="item-price">$49.00</span>
+                                </div>
+
+                                <div class="order-item">
+                                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=80&h=60&fit=crop"
+                                        alt="Product">
+                                    <div class="item-info">
+                                        <h5 class="item-name">SaaS Landing Page</h5>
+                                        <p class="item-meta">Regular License × 1</p>
+                                    </div>
+                                    <span class="item-price">$39.00</span>
+                                </div>
+
+                                <div class="order-item">
+                                    <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=80&h=60&fit=crop"
+                                        alt="Product">
+                                    <div class="item-info">
+                                        <h5 class="item-name">Premium Icon Set</h5>
+                                        <p class="item-meta">Free License × 1</p>
+                                    </div>
+                                    <span class="item-price free">Free</span>
+                                </div>
+                            </div>
+
+                            <!-- Coupon Code -->
+                            <div class="coupon-section-summary">
+                                <div class="coupon-input-group">
+                                    <input type="text" class="form-control form-control-sm" id="checkoutCoupon"
+                                        placeholder="Coupon code">
+                                    <button class="btn btn-sm btn-outline-primary"
+                                        id="applyCheckoutCoupon">Apply</button>
+                                </div>
+                            </div>
+
+                            <!-- Price Breakdown -->
+                            <div class="price-breakdown-summary">
+                                <div class="price-row">
+                                    <span>Subtotal</span>
+                                    <span id="checkoutSubtotal">$88.00</span>
+                                </div>
+                                <div class="price-row discount-row" id="checkoutDiscountRow" style="display: none;">
+                                    <span>Discount <span class="discount-code" id="checkoutDiscountCode"></span></span>
+                                    <span class="discount" id="checkoutDiscount">-$8.80</span>
+                                </div>
+                                <div class="price-row">
+                                    <span>Tax</span>
+                                    <span id="checkoutTax">$0.00</span>
+                                </div>
+                                <div class="price-row total-row">
+                                    <span>Total</span>
+                                    <span class="total" id="checkoutTotal">$88.00</span>
+                                </div>
+                            </div>
+
+                            <!-- Place Order Button -->
+                            <button class="btn btn-primary btn-lg w-100 place-order-btn" id="placeOrderBtn">
+                                <i class="bi bi-lock-fill me-2"></i>
+                                Place Order - <span id="orderTotalBtn">$88.00</span>
+                            </button>
+
+                            <!-- Trust Indicators -->
+                            <div class="trust-indicators">
+                                <div class="trust-item">
+                                    <i class="bi bi-shield-check"></i>
+                                    <span>Secure 256-bit SSL encryption</span>
+                                </div>
+                                <div class="trust-item">
+                                    <i class="bi bi-arrow-clockwise"></i>
+                                    <span>30-day money-back guarantee</span>
+                                </div>
+                                <div class="trust-item">
+                                    <i class="bi bi-download"></i>
+                                    <span>Instant access after payment</span>
+                                </div>
+                            </div>
+
+                            <!-- Back to Cart -->
+                            <a href="cart.html" class="back-to-cart">
+                                <i class="bi bi-arrow-left me-2"></i>
+                                Back to Cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Modal (Hidden by default) -->
+        <div class="success-modal" id="successModal" style="display: none;">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <div class="success-icon">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <h2 class="success-title">Order Complete!</h2>
+                <p class="success-message">
+                    Thank you for your purchase! Your order has been successfully processed.
+                </p>
+                <div class="order-details">
+                    <div class="detail-row">
+                        <span>Order Number:</span>
+                        <strong id="orderNumber">#12345</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span>Total Amount:</span>
+                        <strong id="orderAmount">$88.00</strong>
+                    </div>
+                </div>
+                <p class="success-note">
+                    <i class="bi bi-envelope-check me-2"></i>
+                    A confirmation email with download links has been sent to <strong id="orderEmail">your
+                        email</strong>
+                </p>
+                <div class="success-actions">
+                    <a href="downloads.html" class="btn btn-primary btn-lg">
+                        <i class="bi bi-download me-2"></i>
+                        Download Files
+                    </a>
+                    <a href="index.html" class="btn btn-outline-primary btn-lg">
+                        Back to Home
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -245,6 +653,7 @@
 
     <!-- Custom JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/checkout.js"></script>
 </body>
 
 </html>
