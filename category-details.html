@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetHub - Digital Marketplace</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/category-details.css">
+</head>
+
+<body>
+
+    <!-- Top Header Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-links">
+                        <a href="become-seller.html"><i class="bi bi-shop"></i> Become a Seller</a>
+                        <a href="help.html"><i class="bi bi-question-circle"></i> Help</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-actions">
+                        <div class="dropdown d-inline-block">
+                            <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-globe"></i> EN
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Spanish</a></li>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-sm" id="themeToggle">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo">
+                    <i class="bi bi-hexagon-fill"></i>
+                    <span>AssetHub</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <!-- Search Bar -->
+                <div class="search-bar mx-lg-4 my-3 my-lg-0">
+                    <form class="search-form">
+                        <i class="bi bi-search search-icon"></i>
+                        <input type="text" class="form-control" placeholder="Search for assets, templates, graphics...">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-categories">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-palette"></i> UI Kits</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-laptop"></i> Templates</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-images"></i> Graphics</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-badge-3d"></i> Icons</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-fonts"></i> Fonts</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-camera-video"></i> Videos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-music-note"></i> Audio</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-code-slash"></i> Source Code</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="wishlist.html">
+                            <i class="bi bi-heart"></i>
+                            <span class="badge-count">3</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="cart.html">
+                            <i class="bi bi-cart3"></i>
+                            <span class="badge-count">2</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-outline-primary btn-sm" href="login.html">Login</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary btn-sm" href="register.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area  -->
+    <main id="mainContent">
+
+
+        <!-- Category Hero Section -->
+        <section class="single-category-hero">
+            <div class="hero-background-2">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1920&h=600&fit=crop"
+                    alt="UI Kits">
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Breadcrumb -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="categories.html">Categories</a></li>
+                            <li class="breadcrumb-item active">UI Kits</li>
+                        </ol>
+                    </nav>
+
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <!-- Category Icon & Name -->
+                            <div class="category-header">
+                                <div class="category-icon-large">
+                                    <i class="bi bi-palette"></i>
+                                </div>
+                                <div class="category-info">
+                                    <h1 class="category-title">UI Kits</h1>
+                                    <p class="category-tagline">Complete interface design systems for modern
+                                        applications</p>
+                                </div>
+                            </div>
+
+                            <!-- Category Description -->
+                            <p class="category-description">
+                                Discover our comprehensive collection of premium UI kits featuring ready-to-use
+                                components,
+                                screens, and design systems. Perfect for building dashboards, mobile apps, web
+                                applications,
+                                and admin panels with professional design quality.
+                            </p>
+
+                            <!-- Category Stats -->
+                            <div class="category-stats-bar">
+                                <div class="stat-item">
+                                    <i class="bi bi-box-seam"></i>
+                                    <div class="stat-content">
+                                        <strong>12,450</strong>
+                                        <span>Total Assets</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-star-fill"></i>
+                                    <div class="stat-content">
+                                        <strong>4.8</strong>
+                                        <span>Avg Rating</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-download"></i>
+                                    <div class="stat-content">
+                                        <strong>256K+</strong>
+                                        <span>Downloads</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-people"></i>
+                                    <div class="stat-content">
+                                        <strong>1,245</strong>
+                                        <span>Creators</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <!-- Quick Actions Card -->
+                            <div class="quick-actions-card">
+                                <h3>Quick Actions</h3>
+                                <button class="btn btn-primary w-100 mb-2">
+                                    <i class="bi bi-funnel me-2"></i>
+                                    Filter Assets
+                                </button>
+                                <button class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="bi bi-bookmark me-2"></i>
+                                    Save Category
+                                </button>
+                                <button class="btn btn-outline-primary w-100">
+                                    <i class="bi bi-bell me-2"></i>
+                                    Get Notifications
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subcategories Pills -->
+        <section class="subcategories-pills-section">
+            <div class="container">
+                <div class="subcategories-scroll">
+                    <a href="#" class="subcategory-pill active">
+                        <i class="bi bi-grid-3x3-gap"></i>
+                        <span>All UI Kits</span>
+                        <span class="count">12.4K</span>
+                    </a>
+                    <a href="#" class="subcategory-pill">
+                        <i class="bi bi-speedometer2"></i>
+                        <span>Dashboards</span>
+                        <span class="count">2.1K</span>
+                    </a>
+                    <a href="#" class="subcategory-pill">
+                        <i class="bi bi-phone"></i>
+                        <span>Mobile Apps</span>
+                        <span class="count">3.5K</span>
+                    </a>
+                    <a href="#" class="subcategory-pill">
+                        <i class="bi bi-gear"></i>
+                        <span>Admin Panels</span>
+                        <span class="count">1.8K</span>
+                    </a>
+                    <a href="#" class="subcategory-pill">
+                        <i class="bi bi-cart"></i>
+                        <span>E-commerce</span>
+                        <span class="count">1.2K</span>
+                    </a>
+                    <a href="#" class="subcategory-pill">
+                        <i class="bi bi-people"></i>
+                        <span>Social Media</span>
+                        <span class="count">987</span>
+                    </a>
+                    <a href="#" class="subcategory-pill">
+                        <i class="bi bi-wallet2"></i>
+                        <span>Finance</span>
+                        <span class="count">654</span>
+                    </a>
+                    <a href="#" class="subcategory-pill">
+                        <i class="bi bi-heart-pulse"></i>
+                        <span>Healthcare</span>
+                        <span class="count">432</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Section -->
+        <section class="category-content-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar Filters -->
+                    <div class="col-lg-3">
+                        <div class="category-sidebar">
+                            <h6 class="sidebar-title">Refine Results</h6>
+
+                            <!-- Price Filter -->
+                            <div class="filter-group">
+                                <h6 class="filter-title">Price Range</h6>
+                                <div class="filter-options">
+                                    <label class="filter-radio">
+                                        <input type="radio" name="price" value="all" checked>
+                                        <span class="radiomark"></span>
+                                        <span class="label-text">All Prices</span>
+                                    </label>
+                                    <label class="filter-radio">
+                                        <input type="radio" name="price" value="free">
+                                        <span class="radiomark"></span>
+                                        <span class="label-text">Free</span>
+                                    </label>
+                                    <label class="filter-radio">
+                                        <input type="radio" name="price" value="0-25">
+                                        <span class="radiomark"></span>
+                                        <span class="label-text">$0 - $25</span>
+                                    </label>
+                                    <label class="filter-radio">
+                                        <input type="radio" name="price" value="25-50">
+                                        <span class="radiomark"></span>
+                                        <span class="label-text">$25 - $50</span>
+                                    </label>
+                                    <label class="filter-radio">
+                                        <input type="radio" name="price" value="50+">
+                                        <span class="radiomark"></span>
+                                        <span class="label-text">$50+</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Rating Filter -->
+                            <div class="filter-group">
+                                <h6 class="filter-title">Minimum Rating</h6>
+                                <div class="filter-options">
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="rating" value="5">
+                                        <span class="checkmark"></span>
+                                        <span class="rating-stars">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </span>
+                                        <span class="count">(245)</span>
+                                    </label>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="rating" value="4">
+                                        <span class="checkmark"></span>
+                                        <span class="rating-stars">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                        </span>
+                                        <span class="label-text">& up</span>
+                                        <span class="count">(832)</span>
+                                    </label>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="rating" value="3">
+                                        <span class="checkmark"></span>
+                                        <span class="rating-stars">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                            <i class="bi bi-star"></i>
+                                        </span>
+                                        <span class="label-text">& up</span>
+                                        <span class="count">(1.2K)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- File Format -->
+                            <div class="filter-group">
+                                <h6 class="filter-title">File Format</h6>
+                                <div class="filter-options">
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="format" value="figma">
+                                        <span class="checkmark"></span>
+                                        <span class="label-text">Figma</span>
+                                        <span class="count">(3.2K)</span>
+                                    </label>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="format" value="sketch">
+                                        <span class="checkmark"></span>
+                                        <span class="label-text">Sketch</span>
+                                        <span class="count">(2.8K)</span>
+                                    </label>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="format" value="xd">
+                                        <span class="checkmark"></span>
+                                        <span class="label-text">Adobe XD</span>
+                                        <span class="count">(1.9K)</span>
+                                    </label>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="format" value="psd">
+                                        <span class="checkmark"></span>
+                                        <span class="label-text">Photoshop</span>
+                                        <span class="count">(2.1K)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Popular Tags -->
+                            <div class="filter-group">
+                                <h6 class="filter-title">Popular Tags</h6>
+                                <div class="tags-cloud">
+                                    <a href="#" class="tag-cloud-item">Dark Mode</a>
+                                    <a href="#" class="tag-cloud-item">Responsive</a>
+                                    <a href="#" class="tag-cloud-item">Modern</a>
+                                    <a href="#" class="tag-cloud-item">Minimal</a>
+                                    <a href="#" class="tag-cloud-item">Corporate</a>
+                                    <a href="#" class="tag-cloud-item">Creative</a>
+                                    <a href="#" class="tag-cloud-item">SaaS</a>
+                                    <a href="#" class="tag-cloud-item">Startup</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Assets Grid -->
+                    <div class="col-lg-9">
+                        <!-- Toolbar -->
+                        <div class="category-toolbar">
+                            <div class="toolbar-left">
+                                <span class="results-text">Showing <strong>1-24</strong> of <strong>12,450</strong> UI
+                                    Kits</span>
+                            </div>
+                            <div class="toolbar-right">
+                                <!-- Sort Dropdown -->
+                                <div class="sort-dropdown">
+                                    <button class="btn btn-light dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown">
+                                        <i class="bi bi-sort-down"></i>
+                                        <span>Popular</span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item active" href="#">Most Popular</a></li>
+                                        <li><a class="dropdown-item" href="#">Newest First</a></li>
+                                        <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
+                                        <li><a class="dropdown-item" href="#">Price: High to Low</a></li>
+                                        <li><a class="dropdown-item" href="#">Best Rated</a></li>
+                                        <li><a class="dropdown-item" href="#">Best Selling</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- View Toggle -->
+                                <div class="view-toggle">
+                                    <button class="btn btn-light active" data-view="grid">
+                                        <i class="bi bi-grid-3x3-gap"></i>
+                                    </button>
+                                    <button class="btn btn-light" data-view="list">
+                                        <i class="bi bi-list-ul"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Assets Grid (Reuse from listing page) -->
+                        <div class="assets-grid grid-view">
+                            <!-- Asset Card 1 -->
+                            <div class="asset-card-listing">
+                                <div class="asset-image">
+                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=300&fit=crop"
+                                        alt="Dashboard">
+                                    <div class="asset-overlay">
+                                        <button class="btn-wishlist">
+                                            <i class="bi bi-heart"></i>
+                                        </button>
+                                        <button class="btn-quick-view">
+                                            <i class="bi bi-eye"></i> Quick View
+                                        </button>
+                                    </div>
+                                    <span class="asset-badge badge-trending">
+                                        <i class="bi bi-fire"></i> Trending
+                                    </span>
+                                </div>
+                                <div class="asset-content">
+                                    <div class="asset-header">
+                                        <span class="asset-category">UI Kits</span>
+                                        <div class="asset-rating">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.9</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="asset-title">Modern Dashboard UI Kit</h4>
+                                    <div class="asset-meta">
+                                        <div class="asset-author">
+                                            <img src="https://i.pravatar.cc/40?img=1" alt="Author">
+                                            <span>John Doe</span>
+                                        </div>
+                                        <div class="asset-sales">
+                                            <i class="bi bi-download"></i>
+                                            <span>256 sales</span>
+                                        </div>
+                                    </div>
+                                    <div class="asset-footer">
+                                        <div class="asset-price">
+                                            <span class="current-price">$49</span>
+                                            <span class="original-price">$79</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm">
+                                            <i class="bi bi-cart-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Asset Card 2 -->
+                            <div class="asset-card-listing">
+                                <div class="asset-image">
+                                    <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400&h=300&fit=crop"
+                                        alt="Mobile UI">
+                                    <div class="asset-overlay">
+                                        <button class="btn-wishlist">
+                                            <i class="bi bi-heart"></i>
+                                        </button>
+                                        <button class="btn-quick-view">
+                                            <i class="bi bi-eye"></i> Quick View
+                                        </button>
+                                    </div>
+                                    <span class="asset-badge badge-bestseller">
+                                        <i class="bi bi-trophy"></i> Best Seller
+                                    </span>
+                                </div>
+                                <div class="asset-content">
+                                    <div class="asset-header">
+                                        <span class="asset-category">UI Kits</span>
+                                        <div class="asset-rating">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>5.0</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="asset-title">E-commerce Mobile App UI</h4>
+                                    <div class="asset-meta">
+                                        <div class="asset-author">
+                                            <img src="https://i.pravatar.cc/40?img=2" alt="Author">
+                                            <span>Sarah Kim</span>
+                                        </div>
+                                        <div class="asset-sales">
+                                            <i class="bi bi-download"></i>
+                                            <span>521 sales</span>
+                                        </div>
+                                    </div>
+                                    <div class="asset-footer">
+                                        <div class="asset-price">
+                                            <span class="current-price">$59</span>
+                                            <span class="original-price">$89</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm">
+                                            <i class="bi bi-cart-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Asset Card 3 -->
+                            <div class="asset-card-listing">
+                                <div class="asset-image">
+                                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=300&fit=crop"
+                                        alt="Admin Panel">
+                                    <div class="asset-overlay">
+                                        <button class="btn-wishlist">
+                                            <i class="bi bi-heart"></i>
+                                        </button>
+                                        <button class="btn-quick-view">
+                                            <i class="bi bi-eye"></i> Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="asset-content">
+                                    <div class="asset-header">
+                                        <span class="asset-category">UI Kits</span>
+                                        <div class="asset-rating">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.8</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="asset-title">Admin Panel UI Kit</h4>
+                                    <div class="asset-meta">
+                                        <div class="asset-author">
+                                            <img src="https://i.pravatar.cc/40?img=3" alt="Author">
+                                            <span>Mike Chen</span>
+                                        </div>
+                                        <div class="asset-sales">
+                                            <i class="bi bi-download"></i>
+                                            <span>345 sales</span>
+                                        </div>
+                                    </div>
+                                    <div class="asset-footer">
+                                        <div class="asset-price">
+                                            <span class="current-price">$69</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm">
+                                            <i class="bi bi-cart-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add more asset cards as needed -->
+                        </div>
+
+                        <!-- Pagination -->
+                        <nav class="pagination-nav" aria-label="Page navigation">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><span class="page-link">...</span></li>
+                                <li class="page-item"><a class="page-link" href="#">519</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Sellers in Category -->
+        <section class="category-top-sellers">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Top Sellers in UI Kits</h2>
+                    <a href="#" class="view-all-link">View All <i class="bi bi-arrow-right"></i></a>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="seller-card-small">
+                            <img src="https://i.pravatar.cc/100?img=1" alt="Seller" class="seller-avatar">
+                            <h4 class="seller-name">John Doe</h4>
+                            <p class="seller-role">UI/UX Designer</p>
+                            <div class="seller-stats-small">
+                                <span><strong>48</strong> Assets</span>
+                                <span><strong>4.9</strong> <i class="bi bi-star-fill"></i></span>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm w-100">View Profile</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="seller-card-small">
+                            <img src="https://i.pravatar.cc/100?img=2" alt="Seller" class="seller-avatar">
+                            <h4 class="seller-name">Sarah Kim</h4>
+                            <p class="seller-role">Product Designer</p>
+                            <div class="seller-stats-small">
+                                <span><strong>36</strong> Assets</span>
+                                <span><strong>5.0</strong> <i class="bi bi-star-fill"></i></span>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm w-100">View Profile</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="seller-card-small">
+                            <img src="https://i.pravatar.cc/100?img=3" alt="Seller" class="seller-avatar">
+                            <h4 class="seller-name">Mike Chen</h4>
+                            <p class="seller-role">Interface Designer</p>
+                            <div class="seller-stats-small">
+                                <span><strong>52</strong> Assets</span>
+                                <span><strong>4.8</strong> <i class="bi bi-star-fill"></i></span>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm w-100">View Profile</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="seller-card-small">
+                            <img src="https://i.pravatar.cc/100?img=4" alt="Seller" class="seller-avatar">
+                            <h4 class="seller-name">Emma Wilson</h4>
+                            <p class="seller-role">Visual Designer</p>
+                            <div class="seller-stats-small">
+                                <span><strong>41</strong> Assets</span>
+                                <span><strong>4.9</strong> <i class="bi bi-star-fill"></i></span>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm w-100">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Categories -->
+        <section class="related-categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Related Categories</h2>
+                    <p class="section-description">Explore similar categories you might be interested in</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <a href="category-single.html?cat=templates" class="related-category-card">
+                            <div class="related-cat-icon">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <div class="related-cat-content">
+                                <h4 class="related-cat-name">Website Templates</h4>
+                                <p class="related-cat-count">8,320 assets</p>
+                            </div>
+                            <i class="bi bi-arrow-right related-cat-arrow"></i>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <a href="category-single.html?cat=graphics" class="related-category-card">
+                            <div class="related-cat-icon">
+                                <i class="bi bi-images"></i>
+                            </div>
+                            <div class="related-cat-content">
+                                <h4 class="related-cat-name">Graphics</h4>
+                                <p class="related-cat-count">15,890 assets</p>
+                            </div>
+                            <i class="bi bi-arrow-right related-cat-arrow"></i>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <a href="category-single.html?cat=icons" class="related-category-card">
+                            <div class="related-cat-icon">
+                                <i class="bi bi-badge-3d"></i>
+                            </div>
+                            <div class="related-cat-content">
+                                <h4 class="related-cat-name">Icon Packs</h4>
+                                <p class="related-cat-count">20,150 assets</p>
+                            </div>
+                            <i class="bi bi-arrow-right related-cat-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- About -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-hexagon-fill"></i>
+                        <span>AssetHub</span>
+                    </div>
+                    <p class="text-muted mb-3">The premier marketplace for digital assets. Buy and sell UI kits,
+                        templates, graphics, and more.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Marketplace -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Marketplace</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">All Assets</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Free Assets</a></li>
+                        <li><a href="#">Top Sellers</a></li>
+                        <li><a href="#">New Releases</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sell -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Sell</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Become a Seller</a></li>
+                        <li><a href="#">Seller Guide</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Payouts</a></li>
+                        <li><a href="#">Best Practices</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Report Issue</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">License Info</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <p class="mb-0 text-muted">&copy; 2024 AssetHub. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="payment-methods">
+                            <i class="bi bi-credit-card"></i>
+                            <i class="bi bi-paypal"></i>
+                            <span class="text-muted ms-2">Secure Payments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/category-details.js"></script>
+</body>
+
+</html>
