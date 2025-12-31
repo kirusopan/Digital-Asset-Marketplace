@@ -125,6 +125,423 @@
     <!-- Main Content Area (Pages will inject content here) -->
     <main id="mainContent">
 
+        <!-- ============================================
+     CONTACT PAGE - MAIN CONTENT
+     Place inside <main id="mainContent">
+     ============================================ -->
+
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <span class="hero-badge">
+                            <i class="bi bi-chat-dots"></i> Get In Touch
+                        </span>
+                        <h1 class="hero-title">Contact Us</h1>
+                        <p class="hero-description">
+                            Have a question or need assistance? We're here to help! Reach out to our team and we'll get
+                            back to you as soon as possible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info Cards -->
+        <section class="contact-info-section">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Email Card -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="info-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <h3 class="info-title">Email Us</h3>
+                            <p class="info-description">Send us an email anytime</p>
+                            <a href="mailto:support@assethub.com" class="info-link">
+                                support@assethub.com
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Phone Card -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="info-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <h3 class="info-title">Call Us</h3>
+                            <p class="info-description">Mon-Fri from 8am to 5pm</p>
+                            <a href="tel:+1234567890" class="info-link">
+                                +1 (234) 567-890
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Location Card -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="info-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <h3 class="info-title">Visit Us</h3>
+                            <p class="info-description">Come say hello at our office</p>
+                            <a href="#map" class="info-link">
+                                123 Business St, Suite 100
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Info Section -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="row g-5">
+                    <!-- Contact Form -->
+                    <div class="col-lg-7">
+                        <div class="contact-form-wrapper">
+                            <div class="form-header">
+                                <h2 class="form-title">Send Us a Message</h2>
+                                <p class="form-description">Fill out the form below and we'll get back to you within 24
+                                    hours</p>
+                            </div>
+
+                            <form class="contact-form" id="contactForm">
+                                <div class="row g-3">
+                                    <!-- Name Field -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="name" class="form-label">
+                                                Full Name <span class="required">*</span>
+                                            </label>
+                                            <div class="input-with-icon">
+                                                <i class="bi bi-person"></i>
+                                                <input type="text" class="form-control" id="name" name="name"
+                                                    placeholder="John Doe" required>
+                                            </div>
+                                            <div class="invalid-feedback">Please enter your name</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email Field -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">
+                                                Email Address <span class="required">*</span>
+                                            </label>
+                                            <div class="input-with-icon">
+                                                <i class="bi bi-envelope"></i>
+                                                <input type="email" class="form-control" id="email" name="email"
+                                                    placeholder="john@example.com" required>
+                                            </div>
+                                            <div class="invalid-feedback">Please enter a valid email</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phone Field -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone" class="form-label">Phone Number</label>
+                                            <div class="input-with-icon">
+                                                <i class="bi bi-telephone"></i>
+                                                <input type="tel" class="form-control" id="phone" name="phone"
+                                                    placeholder="+1 (234) 567-890">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Subject Field -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="subject" class="form-label">
+                                                Subject <span class="required">*</span>
+                                            </label>
+                                            <select class="form-control" id="subject" name="subject" required>
+                                                <option value="">Select a subject</option>
+                                                <option value="general">General Inquiry</option>
+                                                <option value="support">Technical Support</option>
+                                                <option value="sales">Sales Question</option>
+                                                <option value="billing">Billing Issue</option>
+                                                <option value="feedback">Feedback</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                            <div class="invalid-feedback">Please select a subject</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Message Field -->
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="message" class="form-label">
+                                                Message <span class="required">*</span>
+                                            </label>
+                                            <textarea class="form-control" id="message" name="message" rows="6"
+                                                placeholder="Tell us how we can help you..." required></textarea>
+                                            <div class="invalid-feedback">Please enter your message</div>
+                                            <div class="form-text">
+                                                <i class="bi bi-info-circle"></i>
+                                                Minimum 10 characters required
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Checkbox -->
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="newsletter"
+                                                name="newsletter">
+                                            <label class="form-check-label" for="newsletter">
+                                                Send me updates and newsletters
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                                            <i class="bi bi-send me-2"></i>
+                                            Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Success Message -->
+                            <div class="alert alert-success mt-4 d-none" id="successMessage">
+                                <i class="bi bi-check-circle me-2"></i>
+                                <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to
+                                you soon!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Sidebar -->
+                    <div class="col-lg-5">
+                        <!-- Business Hours Card -->
+                        <div class="contact-sidebar-card">
+                            <h3 class="sidebar-card-title">
+                                <i class="bi bi-clock"></i>
+                                Business Hours
+                            </h3>
+                            <div class="business-hours">
+                                <div class="hours-row">
+                                    <span class="day">Monday - Friday</span>
+                                    <span class="time">8:00 AM - 5:00 PM</span>
+                                </div>
+                                <div class="hours-row">
+                                    <span class="day">Saturday</span>
+                                    <span class="time">9:00 AM - 1:00 PM</span>
+                                </div>
+                                <div class="hours-row">
+                                    <span class="day">Sunday</span>
+                                    <span class="time">Closed</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Card -->
+                        <div class="contact-sidebar-card">
+                            <h3 class="sidebar-card-title">
+                                <i class="bi bi-share"></i>
+                                Follow Us
+                            </h3>
+                            <p class="sidebar-card-text">Connect with us on social media for updates and news</p>
+                            <div class="social-links-large">
+                                <a href="#" class="social-link facebook">
+                                    <i class="bi bi-facebook"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="#" class="social-link twitter">
+                                    <i class="bi bi-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="#" class="social-link instagram">
+                                    <i class="bi bi-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="#" class="social-link linkedin">
+                                    <i class="bi bi-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links Card -->
+                        <div class="contact-sidebar-card">
+                            <h3 class="sidebar-card-title">
+                                <i class="bi bi-link-45deg"></i>
+                                Quick Links
+                            </h3>
+                            <div class="quick-links-list">
+                                <a href="help.html" class="quick-link-item">
+                                    <i class="bi bi-question-circle"></i>
+                                    <span>Help Center</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                                <a href="faq.html" class="quick-link-item">
+                                    <i class="bi bi-chat-left-text"></i>
+                                    <span>FAQs</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                                <a href="become-seller.html" class="quick-link-item">
+                                    <i class="bi bi-shop"></i>
+                                    <span>Become a Seller</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section" id="map">
+            <div class="container-fluid p-0">
+                <div class="map-wrapper">
+                    <!-- Google Maps Embed (Replace with your actual location) -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1841374516425!2d-73.98731492346669!3d40.75889497138558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1703001234567!5m2!1sen!2sus"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                    <!-- Map Overlay Card -->
+                    <div class="map-overlay-card">
+                        <h4 class="overlay-title">Our Office</h4>
+                        <p class="overlay-address">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            123 Business Street, Suite 100<br>
+                            New York, NY 10001
+                        </p>
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-primary btn-sm">
+                            <i class="bi bi-map me-2"></i>
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-description">Find quick answers to common questions</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="accordion" id="faqAccordion">
+                            <!-- FAQ Item 1 -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq1">
+                                        <i class="bi bi-question-circle me-2"></i>
+                                        How do I purchase assets?
+                                    </button>
+                                </h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Simply browse our marketplace, add items to your cart, and proceed to checkout.
+                                        We accept all major credit cards and PayPal. After purchase, you'll get instant
+                                        access to download your assets.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 2 -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq2">
+                                        <i class="bi bi-question-circle me-2"></i>
+                                        What is your refund policy?
+                                    </button>
+                                </h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We offer a 30-day money-back guarantee on all purchases. If you're not satisfied
+                                        with your asset, contact us within 30 days for a full refund.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 3 -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq3">
+                                        <i class="bi bi-question-circle me-2"></i>
+                                        How can I become a seller?
+                                    </button>
+                                </h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Click on "Become a Seller" in the navigation menu, fill out the application
+                                        form, and our team will review your submission within 2-3 business days.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 4 -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq4">
+                                        <i class="bi bi-question-circle me-2"></i>
+                                        What file formats do you support?
+                                    </button>
+                                </h3>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We support a wide range of file formats including PSD, Sketch, Figma, Adobe XD,
+                                        AI, SVG, PNG, JPG, MP4, MOV, MP3, WAV, and many more depending on the asset
+                                        type.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 5 -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq5">
+                                        <i class="bi bi-question-circle me-2"></i>
+                                        Do you offer customer support?
+                                    </button>
+                                </h3>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes! Our support team is available Monday-Friday, 8am-5pm EST. You can reach us
+                                        via email, phone, or live chat. We aim to respond to all inquiries within 24
+                                        hours.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- More Questions CTA -->
+                        <div class="text-center mt-5">
+                            <p class="text-muted mb-3">Still have questions?</p>
+                            <a href="#contactForm" class="btn btn-outline-primary btn-lg">
+                                Contact Support
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
