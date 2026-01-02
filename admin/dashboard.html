@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - AssetHub</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
     <!-- Admin Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
+
 <body class="admin-body">
 
     <!-- Sidebar -->
@@ -47,7 +49,7 @@
         <nav class="sidebar-nav">
             <div class="nav-section">
                 <h6 class="nav-section-title">Main</h6>
-                
+
                 <a href="dashboard.html" class="nav-item active">
                     <i class="bi bi-grid-fill"></i>
                     <span class="nav-text">Dashboard</span>
@@ -62,7 +64,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Management</h6>
-                
+
                 <a href="assets.html" class="nav-item">
                     <i class="bi bi-box-seam"></i>
                     <span class="nav-text">Assets</span>
@@ -99,7 +101,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Financial</h6>
-                
+
                 <a href="payments.html" class="nav-item">
                     <i class="bi bi-credit-card"></i>
                     <span class="nav-text">Payments</span>
@@ -119,7 +121,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Content</h6>
-                
+
                 <a href="blog.html" class="nav-item">
                     <i class="bi bi-file-text"></i>
                     <span class="nav-text">Blog Posts</span>
@@ -139,7 +141,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Settings</h6>
-                
+
                 <a href="settings.html" class="nav-item">
                     <i class="bi bi-gear"></i>
                     <span class="nav-text">Settings</span>
@@ -309,9 +311,466 @@
 
         <!-- Page Content -->
         <main class="admin-content">
-            
 
 
+            <!-- ============================================
+     ADMIN DASHBOARD - MAIN CONTENT
+     Place inside <main class="admin-content">
+     ============================================ -->
+
+            <!-- Page Header -->
+            <div class="content-header">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h1 class="content-title">Dashboard</h1>
+                        <p class="content-subtitle">Welcome back! Here's what's happening today.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="btn-group">
+                            <button class="btn btn-outline-secondary">
+                                <i class="bi bi-download"></i> Export
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="bi bi-plus-circle"></i> Add New
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="row g-4 mb-4">
+                <div class="col-xl-3 col-md-6">
+                    <div class="stats-card">
+                        <div class="stats-icon bg-primary">
+                            <i class="bi bi-currency-dollar"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3 class="stats-value">$48,574</h3>
+                            <p class="stats-label">Total Revenue</p>
+                            <div class="stats-trend positive">
+                                <i class="bi bi-arrow-up"></i>
+                                <span>12.5%</span> vs last month
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="stats-card">
+                        <div class="stats-icon bg-success">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3 class="stats-value">1,248</h3>
+                            <p class="stats-label">Total Assets</p>
+                            <div class="stats-trend positive">
+                                <i class="bi bi-arrow-up"></i>
+                                <span>8.2%</span> vs last month
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="stats-card">
+                        <div class="stats-icon bg-warning">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3 class="stats-value">2,845</h3>
+                            <p class="stats-label">Total Users</p>
+                            <div class="stats-trend positive">
+                                <i class="bi bi-arrow-up"></i>
+                                <span>15.3%</span> vs last month
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="stats-card">
+                        <div class="stats-icon bg-info">
+                            <i class="bi bi-cart-check"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3 class="stats-value">892</h3>
+                            <p class="stats-label">Total Orders</p>
+                            <div class="stats-trend negative">
+                                <i class="bi bi-arrow-down"></i>
+                                <span>3.1%</span> vs last month
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="row g-4 mb-4">
+                <div class="col-xl-8">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4 class="card-title">Revenue Overview</h4>
+                            <div class="card-actions">
+                                <select class="form-select form-select-sm">
+                                    <option>Last 7 days</option>
+                                    <option>Last 30 days</option>
+                                    <option>Last 90 days</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="revenueChart" height="80"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4 class="card-title">Sales by Category</h4>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="categoryChart" height="200"></canvas>
+                            <div class="category-legend mt-3">
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: #6366f1;"></span>
+                                    <span class="legend-label">UI Kits</span>
+                                    <span class="legend-value">35%</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: #10b981;"></span>
+                                    <span class="legend-label">Templates</span>
+                                    <span class="legend-value">28%</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: #f59e0b;"></span>
+                                    <span class="legend-label">Graphics</span>
+                                    <span class="legend-value">22%</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: #3b82f6;"></span>
+                                    <span class="legend-label">Others</span>
+                                    <span class="legend-value">15%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tables Row -->
+            <div class="row g-4 mb-4">
+                <!-- Recent Orders -->
+                <div class="col-xl-8">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4 class="card-title">Recent Orders</h4>
+                            <a href="admin-orders.html" class="card-link">View All</a>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table dashboard-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Customer</th>
+                                            <th>Product</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>#ORD-2841</strong></td>
+                                            <td>
+                                                <div class="user-info">
+                                                    <img src="https://i.pravatar.cc/40?img=1" alt="User">
+                                                    <span>John Doe</span>
+                                                </div>
+                                            </td>
+                                            <td>Dashboard UI Kit</td>
+                                            <td><strong>$49.00</strong></td>
+                                            <td><span class="badge-status badge-success">Completed</span></td>
+                                            <td>Jan 12, 2024</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#ORD-2840</strong></td>
+                                            <td>
+                                                <div class="user-info">
+                                                    <img src="https://i.pravatar.cc/40?img=2" alt="User">
+                                                    <span>Sarah Kim</span>
+                                                </div>
+                                            </td>
+                                            <td>Landing Page Template</td>
+                                            <td><strong>$39.00</strong></td>
+                                            <td><span class="badge-status badge-warning">Pending</span></td>
+                                            <td>Jan 12, 2024</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#ORD-2839</strong></td>
+                                            <td>
+                                                <div class="user-info">
+                                                    <img src="https://i.pravatar.cc/40?img=3" alt="User">
+                                                    <span>Mike Chen</span>
+                                                </div>
+                                            </td>
+                                            <td>Icon Pack Premium</td>
+                                            <td><strong>$29.00</strong></td>
+                                            <td><span class="badge-status badge-success">Completed</span></td>
+                                            <td>Jan 11, 2024</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#ORD-2838</strong></td>
+                                            <td>
+                                                <div class="user-info">
+                                                    <img src="https://i.pravatar.cc/40?img=4" alt="User">
+                                                    <span>Emma Wilson</span>
+                                                </div>
+                                            </td>
+                                            <td>Mobile App UI</td>
+                                            <td><strong>$59.00</strong></td>
+                                            <td><span class="badge-status badge-success">Completed</span></td>
+                                            <td>Jan 11, 2024</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#ORD-2837</strong></td>
+                                            <td>
+                                                <div class="user-info">
+                                                    <img src="https://i.pravatar.cc/40?img=5" alt="User">
+                                                    <span>Alex Rivera</span>
+                                                </div>
+                                            </td>
+                                            <td>3D Graphics Bundle</td>
+                                            <td><strong>$79.00</strong></td>
+                                            <td><span class="badge-status badge-danger">Refunded</span></td>
+                                            <td>Jan 10, 2024</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Sellers -->
+                <div class="col-xl-4">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4 class="card-title">Top Sellers</h4>
+                            <a href="admin-sellers.html" class="card-link">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="seller-list">
+                                <div class="seller-item">
+                                    <div class="seller-rank">1</div>
+                                    <img src="https://i.pravatar.cc/50?img=10" alt="Seller" class="seller-avatar">
+                                    <div class="seller-info">
+                                        <h6 class="seller-name">John Doe</h6>
+                                        <p class="seller-sales">245 sales</p>
+                                    </div>
+                                    <div class="seller-revenue">$12,250</div>
+                                </div>
+                                <div class="seller-item">
+                                    <div class="seller-rank">2</div>
+                                    <img src="https://i.pravatar.cc/50?img=11" alt="Seller" class="seller-avatar">
+                                    <div class="seller-info">
+                                        <h6 class="seller-name">Sarah Kim</h6>
+                                        <p class="seller-sales">189 sales</p>
+                                    </div>
+                                    <div class="seller-revenue">$9,450</div>
+                                </div>
+                                <div class="seller-item">
+                                    <div class="seller-rank">3</div>
+                                    <img src="https://i.pravatar.cc/50?img=12" alt="Seller" class="seller-avatar">
+                                    <div class="seller-info">
+                                        <h6 class="seller-name">Mike Chen</h6>
+                                        <p class="seller-sales">156 sales</p>
+                                    </div>
+                                    <div class="seller-revenue">$7,800</div>
+                                </div>
+                                <div class="seller-item">
+                                    <div class="seller-rank">4</div>
+                                    <img src="https://i.pravatar.cc/50?img=13" alt="Seller" class="seller-avatar">
+                                    <div class="seller-info">
+                                        <h6 class="seller-name">Emma Wilson</h6>
+                                        <p class="seller-sales">142 sales</p>
+                                    </div>
+                                    <div class="seller-revenue">$7,100</div>
+                                </div>
+                                <div class="seller-item">
+                                    <div class="seller-rank">5</div>
+                                    <img src="https://i.pravatar.cc/50?img=14" alt="Seller" class="seller-avatar">
+                                    <div class="seller-info">
+                                        <h6 class="seller-name">David Park</h6>
+                                        <p class="seller-sales">128 sales</p>
+                                    </div>
+                                    <div class="seller-revenue">$6,400</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Tables -->
+            <div class="row g-4">
+                <!-- Pending Assets -->
+                <div class="col-xl-6">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4 class="card-title">Pending Assets</h4>
+                            <span class="badge bg-warning">12 Pending</span>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table dashboard-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Asset</th>
+                                            <th>Seller</th>
+                                            <th>Category</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="asset-info">
+                                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=50&h=50&fit=crop"
+                                                        alt="Asset">
+                                                    <span>Modern Dashboard</span>
+                                                </div>
+                                            </td>
+                                            <td>John Doe</td>
+                                            <td><span class="badge bg-primary">UI Kits</span></td>
+                                            <td>2 hours ago</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-success me-1">
+                                                    <i class="bi bi-check"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-danger">
+                                                    <i class="bi bi-x"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="asset-info">
+                                                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=50&h=50&fit=crop"
+                                                        alt="Asset">
+                                                    <span>SaaS Landing Page</span>
+                                                </div>
+                                            </td>
+                                            <td>Sarah Kim</td>
+                                            <td><span class="badge bg-success">Templates</span></td>
+                                            <td>4 hours ago</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-success me-1">
+                                                    <i class="bi bi-check"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-danger">
+                                                    <i class="bi bi-x"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="asset-info">
+                                                    <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=50&h=50&fit=crop"
+                                                        alt="Asset">
+                                                    <span>Icon Pack Pro</span>
+                                                </div>
+                                            </td>
+                                            <td>Mike Chen</td>
+                                            <td><span class="badge bg-warning">Icons</span></td>
+                                            <td>6 hours ago</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-success me-1">
+                                                    <i class="bi bi-check"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-danger">
+                                                    <i class="bi bi-x"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activities -->
+                <div class="col-xl-6">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4 class="card-title">Recent Activities</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon bg-success">
+                                        <i class="bi bi-check-circle"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="activity-text"><strong>John Doe</strong> purchased Dashboard UI Kit
+                                        </p>
+                                        <span class="activity-time">5 minutes ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon bg-primary">
+                                        <i class="bi bi-upload"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="activity-text"><strong>Sarah Kim</strong> uploaded new asset</p>
+                                        <span class="activity-time">15 minutes ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon bg-warning">
+                                        <i class="bi bi-star"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="activity-text"><strong>Mike Chen</strong> received 5-star review</p>
+                                        <span class="activity-time">1 hour ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon bg-danger">
+                                        <i class="bi bi-arrow-clockwise"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="activity-text">Order <strong>#ORD-2837</strong> was refunded</p>
+                                        <span class="activity-time">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon bg-info">
+                                        <i class="bi bi-person-plus"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="activity-text">New user <strong>Emma Wilson</strong> registered</p>
+                                        <span class="activity-time">3 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon bg-success">
+                                        <i class="bi bi-check-circle"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="activity-text">Asset <strong>Mobile App UI</strong> was approved</p>
+                                        <span class="activity-time">4 hours ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </main>
 
@@ -334,9 +793,10 @@
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Admin Custom JavaScript -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
 </body>
+
 </html>

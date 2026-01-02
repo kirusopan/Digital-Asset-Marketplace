@@ -1,0 +1,473 @@
+/* ============================================
+   ADMIN DASHBOARD - CSS
+   Add to admin.css file
+   ============================================ */
+
+/* ===== STATS CARDS ===== */
+.stats-card {
+    background: var(--admin-bg-light);
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: var(--admin-transition);
+    height: 100%;
+}
+
+.stats-card:hover {
+    box-shadow: var(--admin-shadow-lg);
+    transform: translateY(-4px);
+}
+
+.stats-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.stats-icon.bg-primary {
+    background: linear-gradient(135deg, var(--admin-primary), var(--admin-primary-light));
+}
+
+.stats-icon.bg-success {
+    background: linear-gradient(135deg, var(--admin-success), #059669);
+}
+
+.stats-icon.bg-warning {
+    background: linear-gradient(135deg, var(--admin-warning), #d97706);
+}
+
+.stats-icon.bg-info {
+    background: linear-gradient(135deg, var(--admin-info), #2563eb);
+}
+
+.stats-content {
+    flex: 1;
+}
+
+.stats-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--admin-text-dark);
+    margin: 0 0 4px;
+    line-height: 1;
+}
+
+.stats-label {
+    font-size: 0.875rem;
+    color: var(--admin-text-muted);
+    margin: 0 0 8px;
+    font-weight: 500;
+}
+
+.stats-trend {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.stats-trend.positive {
+    color: var(--admin-success);
+}
+
+.stats-trend.negative {
+    color: var(--admin-danger);
+}
+
+.stats-trend span {
+    font-weight: 700;
+}
+
+/* ===== DASHBOARD CARD ===== */
+.dashboard-card {
+    background: var(--admin-bg-light);
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-card .card-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--admin-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+    margin: 0;
+}
+
+.card-link {
+    font-size: 0.875rem;
+    color: var(--admin-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--admin-transition);
+}
+
+.card-link:hover {
+    color: var(--admin-primary-dark);
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.card-actions .form-select {
+    min-width: 150px;
+    border-radius: 8px;
+}
+
+.dashboard-card .card-body {
+    padding: 24px;
+    flex: 1;
+}
+
+/* ===== CHARTS ===== */
+canvas {
+    max-width: 100%;
+}
+
+.category-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.legend-label {
+    flex: 1;
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+    font-weight: 500;
+}
+
+.legend-value {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+}
+
+/* ===== TABLES ===== */
+.dashboard-table {
+    margin: 0;
+}
+
+.dashboard-table thead {
+    background: var(--admin-bg);
+}
+
+.dashboard-table thead th {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--admin-text-muted);
+    padding: 16px 20px;
+    border: none;
+}
+
+.dashboard-table tbody td {
+    padding: 16px 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--admin-border);
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+}
+
+.dashboard-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.dashboard-table tbody tr:hover {
+    background: var(--admin-bg);
+}
+
+/* User Info in Table */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-info img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info span {
+    font-weight: 500;
+}
+
+/* Asset Info in Table */
+.asset-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.asset-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.asset-info span {
+    font-weight: 500;
+}
+
+/* Badge Status */
+.badge-status {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-status.badge-success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--admin-success);
+}
+
+.badge-status.badge-warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--admin-warning);
+}
+
+.badge-status.badge-danger {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--admin-danger);
+}
+
+.badge-status.badge-info {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--admin-info);
+}
+
+/* ===== TOP SELLERS LIST ===== */
+.seller-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.seller-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    background: var(--admin-bg);
+    border-radius: 12px;
+    transition: var(--admin-transition);
+}
+
+.seller-item:hover {
+    background: var(--admin-border);
+}
+
+.seller-rank {
+    width: 36px;
+    height: 36px;
+    background: var(--admin-primary);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.seller-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.seller-info {
+    flex: 1;
+}
+
+.seller-name {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+    margin: 0 0 4px;
+}
+
+.seller-sales {
+    font-size: 0.75rem;
+    color: var(--admin-text-muted);
+    margin: 0;
+}
+
+.seller-revenue {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--admin-primary);
+}
+
+/* ===== ACTIVITY LIST ===== */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.activity-item {
+    display: flex;
+    gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.activity-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.activity-icon.bg-primary {
+    background: var(--admin-primary);
+}
+
+.activity-icon.bg-success {
+    background: var(--admin-success);
+}
+
+.activity-icon.bg-warning {
+    background: var(--admin-warning);
+}
+
+.activity-icon.bg-danger {
+    background: var(--admin-danger);
+}
+
+.activity-icon.bg-info {
+    background: var(--admin-info);
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-text {
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+    margin: 0 0 4px;
+}
+
+.activity-text strong {
+    font-weight: 700;
+}
+
+.activity-time {
+    font-size: 0.75rem;
+    color: var(--admin-text-muted);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1199px) {
+    .stats-card {
+        padding: 20px;
+    }
+
+    .stats-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .stats-value {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .stats-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats-value {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-card .card-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .card-actions {
+        width: 100%;
+    }
+
+    .card-actions .form-select {
+        width: 100%;
+    }
+
+    .dashboard-table {
+        font-size: 0.8rem;
+    }
+
+    .dashboard-table thead th,
+    .dashboard-table tbody td {
+        padding: 12px;
+    }
+
+    .user-info img,
+    .asset-info img {
+        width: 32px;
+        height: 32px;
+    }
+}
