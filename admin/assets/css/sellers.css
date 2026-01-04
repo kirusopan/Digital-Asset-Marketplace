@@ -1,0 +1,213 @@
+/* ============================================
+   ADMIN SELLERS MANAGEMENT - CSS
+   ============================================ */
+
+.sellers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.seller-card {
+    background: var(--admin-bg-light);
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--admin-transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.seller-card:hover {
+    box-shadow: var(--admin-shadow-lg);
+    transform: translateY(-4px);
+}
+
+.seller-header {
+    position: relative;
+    background: linear-gradient(135deg, var(--admin-primary), var(--admin-primary-light));
+    padding: 30px 20px 60px;
+    text-align: center;
+}
+
+.seller-avatar-lg {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: var(--admin-shadow);
+}
+
+.seller-level {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.seller-level.platinum {
+    background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+    color: #374151;
+}
+
+.seller-level.gold {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: white;
+}
+
+.seller-level.silver {
+    background: linear-gradient(135deg, #94a3b8, #64748b);
+    color: white;
+}
+
+.seller-level.bronze {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    color: white;
+}
+
+.seller-status-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.seller-status-badge.active {
+    background: rgba(16, 185, 129, 0.95);
+    color: white;
+}
+
+.seller-status-badge.pending {
+    background: rgba(245, 158, 11, 0.95);
+    color: white;
+}
+
+.seller-status-badge.suspended {
+    background: rgba(239, 68, 68, 0.95);
+    color: white;
+}
+
+.seller-body {
+    padding: 20px;
+    flex: 1;
+}
+
+.seller-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+    margin: 0 0 4px;
+}
+
+.seller-title {
+    font-size: 0.875rem;
+    color: var(--admin-text-muted);
+    margin: 0 0 12px;
+}
+
+.seller-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--admin-warning);
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+}
+
+.seller-rating span {
+    color: var(--admin-text-muted);
+    font-weight: 600;
+    margin-left: 6px;
+}
+
+.seller-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.stat-box {
+    background: var(--admin-bg);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-box strong {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: var(--admin-primary);
+    margin-bottom: 4px;
+}
+
+.stat-box span {
+    font-size: 0.75rem;
+    color: var(--admin-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.seller-info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 16px;
+    border-top: 1px solid var(--admin-border);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8125rem;
+    color: var(--admin-text-muted);
+}
+
+.info-item i {
+    font-size: 1rem;
+    color: var(--admin-text-light);
+}
+
+.seller-actions {
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+    border-top: 1px solid var(--admin-border);
+}
+
+.seller-actions .btn {
+    flex: 1;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+@media (max-width: 1199px) {
+    .sellers-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .sellers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .seller-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
