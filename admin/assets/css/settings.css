@@ -1,0 +1,121 @@
+/* ============================================
+   ADMIN SITE SETTINGS - CSS
+   ============================================ */
+
+.settings-nav {
+    background: var(--admin-bg-light);
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    padding: 8px;
+    position: sticky;
+    top: 90px;
+}
+
+.settings-nav-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--admin-text-dark);
+    cursor: pointer;
+    transition: var(--admin-transition);
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+.settings-nav-item:last-child {
+    margin-bottom: 0;
+}
+
+.settings-nav-item i {
+    font-size: 1.125rem;
+    color: var(--admin-text-muted);
+    transition: var(--admin-transition);
+}
+
+.settings-nav-item:hover {
+    background: var(--admin-bg);
+}
+
+.settings-nav-item.active {
+    background: var(--admin-primary);
+    color: white;
+}
+
+.settings-nav-item.active i {
+    color: white;
+}
+
+.settings-section {
+    display: none;
+}
+
+.settings-section.active {
+    display: block;
+}
+
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    margin-bottom: 8px;
+}
+
+.form-label i {
+    margin-right: 6px;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid var(--admin-border);
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 0.875rem;
+    transition: var(--admin-transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-check-input {
+    width: 48px;
+    height: 24px;
+    margin-top: 0;
+    border: 2px solid var(--admin-border);
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: var(--admin-primary);
+    border-color: var(--admin-primary);
+}
+
+.form-check-label {
+    font-size: 0.9375rem;
+    color: var(--admin-text-dark);
+    margin-left: 12px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+    .settings-nav {
+        position: relative;
+        top: 0;
+        margin-bottom: 24px;
+    }
+
+    .settings-nav-item {
+        padding: 10px 14px;
+        font-size: 0.875rem;
+    }
+}
