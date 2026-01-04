@@ -1,0 +1,87 @@
+/* ============================================
+   ADMIN CMS PAGES - CSS
+   ============================================ */
+
+.cms-table {
+    margin: 0;
+}
+
+.cms-table thead {
+    background: var(--admin-bg);
+}
+
+.cms-table thead th {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--admin-text-muted);
+    padding: 16px 20px;
+    border: none;
+    white-space: nowrap;
+}
+
+.cms-table tbody td {
+    padding: 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.cms-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.cms-table tbody tr:hover {
+    background: var(--admin-bg);
+}
+
+.page-info strong {
+    font-size: 0.9375rem;
+    color: var(--admin-text-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.page-slug {
+    font-size: 0.8125rem;
+    color: var(--admin-text-muted);
+    margin: 0;
+    font-family: 'Courier New', monospace;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author-info img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info span {
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+}
+
+.modal-lg {
+    max-width: 800px;
+}
+
+@media (max-width: 767px) {
+    .cms-table {
+        font-size: 0.8125rem;
+    }
+
+    .cms-table thead th,
+    .cms-table tbody td {
+        padding: 12px;
+    }
+
+    .modal-lg {
+        max-width: 95%;
+    }
+}

@@ -1,0 +1,167 @@
+/* ============================================
+   ADMIN ORDERS & PAYMENTS - CSS
+   ============================================ */
+
+.orders-table {
+    margin: 0;
+}
+
+.orders-table thead {
+    background: var(--admin-bg);
+}
+
+.orders-table thead th {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--admin-text-muted);
+    padding: 16px 20px;
+    border: none;
+    white-space: nowrap;
+}
+
+.orders-table tbody td {
+    padding: 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.orders-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.orders-table tbody tr:hover {
+    background: var(--admin-bg);
+}
+
+.order-id {
+    color: var(--admin-primary);
+    font-size: 0.9375rem;
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.customer-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.customer-info strong {
+    font-size: 0.9375rem;
+    color: var(--admin-text-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.customer-info p {
+    font-size: 0.8125rem;
+    color: var(--admin-text-muted);
+    margin: 0;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-info img {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.product-info span {
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+    font-weight: 500;
+}
+
+.amount {
+    font-size: 1.125rem;
+    color: var(--admin-primary);
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.payment-method i {
+    font-size: 1.25rem;
+}
+
+.payment-method span {
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+    font-weight: 500;
+}
+
+.date-info strong {
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.date-info p {
+    font-size: 0.75rem;
+    color: var(--admin-text-muted);
+    margin: 0;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.action-buttons .btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    font-size: 0.875rem;
+}
+
+.dropdown-menu .dropdown-item i {
+    font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+    .orders-table {
+        font-size: 0.8125rem;
+    }
+
+    .orders-table thead th,
+    .orders-table tbody td {
+        padding: 12px;
+    }
+
+    .customer-info,
+    .product-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -14,9 +14,7 @@
 
     <!-- Admin Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/dashboard.css">
-    <link rel="stylesheet" href="assets/css/pages.css">
-    <link rel="stylesheet" href="assets/css/assets.css">
+    <link rel="stylesheet" href="assets/css/orders.css">
 </head>
 
 <body class="admin-body">
@@ -314,20 +312,24 @@
         <!-- Page Content -->
         <main class="admin-content">
 
+
             <!-- ============================================
-     ADMIN CMS PAGES - MAIN CONTENT
+     ADMIN ORDERS & PAYMENTS - MAIN CONTENT
      Place inside <main class="admin-content">
      ============================================ -->
 
             <div class="content-header">
                 <div class="row align-items-center mb-4">
                     <div class="col-md-6">
-                        <h1 class="content-title">CMS Pages</h1>
-                        <p class="content-subtitle">Manage static pages and content</p>
+                        <h1 class="content-title">Orders & Payments</h1>
+                        <p class="content-subtitle">Manage orders and transaction history</p>
                     </div>
                     <div class="col-md-6 text-md-end">
-                        <button class="btn btn-primary" onclick="openAddPageModal()">
-                            <i class="bi bi-plus-circle"></i> Add Page
+                        <button class="btn btn-outline-secondary me-2">
+                            <i class="bi bi-download"></i> Export
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="bi bi-file-earmark-text"></i> Generate Report
                         </button>
                     </div>
                 </div>
@@ -336,11 +338,11 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="summary-card">
                             <div class="summary-icon bg-primary">
-                                <i class="bi bi-file-earmark"></i>
+                                <i class="bi bi-cart-check"></i>
                             </div>
                             <div class="summary-content">
-                                <h4 class="summary-value">12</h4>
-                                <p class="summary-label">Total Pages</p>
+                                <h4 class="summary-value">892</h4>
+                                <p class="summary-label">Total Orders</p>
                             </div>
                         </div>
                     </div>
@@ -350,8 +352,8 @@
                                 <i class="bi bi-check-circle"></i>
                             </div>
                             <div class="summary-content">
-                                <h4 class="summary-value">10</h4>
-                                <p class="summary-label">Published</p>
+                                <h4 class="summary-value">845</h4>
+                                <p class="summary-label">Completed</p>
                             </div>
                         </div>
                     </div>
@@ -361,19 +363,19 @@
                                 <i class="bi bi-clock-history"></i>
                             </div>
                             <div class="summary-content">
-                                <h4 class="summary-value">2</h4>
-                                <p class="summary-label">Draft</p>
+                                <h4 class="summary-value">28</h4>
+                                <p class="summary-label">Pending</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="summary-card">
                             <div class="summary-icon bg-info">
-                                <i class="bi bi-eye"></i>
+                                <i class="bi bi-currency-dollar"></i>
                             </div>
                             <div class="summary-content">
-                                <h4 class="summary-value">45.2K</h4>
-                                <p class="summary-label">Total Views</p>
+                                <h4 class="summary-value">$48,574</h4>
+                                <p class="summary-label">Total Revenue</p>
                             </div>
                         </div>
                     </div>
@@ -382,36 +384,36 @@
 
             <div class="dashboard-card mb-4">
                 <div class="card-body">
-                    <div class="row g-3 align-items-center">
-                        <div class="col-lg-5">
+                    <div class="row g-3">
+                        <div class="col-lg-3">
                             <div class="search-box">
                                 <i class="bi bi-search"></i>
-                                <input type="text" class="form-control" placeholder="Search pages...">
+                                <input type="text" class="form-control" placeholder="Search orders...">
                             </div>
                         </div>
                         <div class="col-lg-2">
                             <select class="form-select">
                                 <option value="">All Status</option>
-                                <option value="published">Published</option>
-                                <option value="draft">Draft</option>
+                                <option value="completed">Completed</option>
+                                <option value="pending">Pending</option>
+                                <option value="processing">Processing</option>
+                                <option value="refunded">Refunded</option>
+                                <option value="failed">Failed</option>
                             </select>
                         </div>
                         <div class="col-lg-2">
                             <select class="form-select">
-                                <option value="">All Types</option>
-                                <option value="standard">Standard</option>
-                                <option value="legal">Legal</option>
-                                <option value="help">Help</option>
+                                <option value="">Payment Method</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="stripe">Stripe</option>
+                                <option value="card">Credit Card</option>
                             </select>
                         </div>
                         <div class="col-lg-2">
-                            <select class="form-select">
-                                <option value="">Sort By</option>
-                                <option value="newest">Newest</option>
-                                <option value="oldest">Oldest</option>
-                                <option value="title">Title</option>
-                                <option value="views">Most Viewed</option>
-                            </select>
+                            <input type="date" class="form-control" placeholder="Date From">
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="date" class="form-control" placeholder="Date To">
                         </div>
                         <div class="col-lg-1">
                             <button class="btn btn-outline-secondary w-100">
@@ -424,28 +426,32 @@
 
             <div class="dashboard-card">
                 <div class="card-header">
-                    <h4 class="card-title">All Pages (12)</h4>
+                    <h4 class="card-title">All Orders (892)</h4>
                     <div class="card-actions">
-                        <button class="btn btn-sm btn-outline-secondary">
-                            <i class="bi bi-download"></i> Export
-                        </button>
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-outline-secondary active">All</button>
+                            <button class="btn btn-sm btn-outline-secondary">Today</button>
+                            <button class="btn btn-sm btn-outline-secondary">Week</button>
+                            <button class="btn btn-sm btn-outline-secondary">Month</button>
+                        </div>
                     </div>
                 </div>
                 <div class="card-body p-0">
                     <div class="table-responsive">
-                        <table class="table cms-table">
+                        <table class="table orders-table">
                             <thead>
                                 <tr>
                                     <th width="50">
                                         <input type="checkbox" class="form-check-input" id="selectAll">
                                     </th>
-                                    <th>Page</th>
-                                    <th>Type</th>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Product</th>
+                                    <th>Amount</th>
+                                    <th>Payment</th>
                                     <th>Status</th>
-                                    <th>Views</th>
-                                    <th>Author</th>
-                                    <th>Last Modified</th>
-                                    <th width="120">Actions</th>
+                                    <th>Date</th>
+                                    <th width="100">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -454,29 +460,64 @@
                                         <input type="checkbox" class="form-check-input">
                                     </td>
                                     <td>
-                                        <div class="page-info">
-                                            <strong>About Us</strong>
-                                            <p class="page-slug">/about-us</p>
-                                        </div>
+                                        <strong class="order-id">#ORD-2841</strong>
                                     </td>
-                                    <td><span class="badge bg-primary">Standard</span></td>
-                                    <td><span class="badge-status badge-success">Published</span></td>
-                                    <td><strong>8,542</strong> views</td>
                                     <td>
-                                        <div class="author-info">
-                                            <img src="https://i.pravatar.cc/32?img=50" alt="Author">
-                                            <span>Admin</span>
+                                        <div class="customer-info">
+                                            <img src="https://i.pravatar.cc/40?img=1" alt="Customer">
+                                            <div>
+                                                <strong>John Doe</strong>
+                                                <p>john.doe@email.com</p>
+                                            </div>
                                         </div>
                                     </td>
-                                    <td>Jan 10, 2024</td>
+                                    <td>
+                                        <div class="product-info">
+                                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=50&h=50&fit=crop"
+                                                alt="Product">
+                                            <span>Dashboard UI Kit</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong class="amount">$49.00</strong>
+                                    </td>
+                                    <td>
+                                        <div class="payment-method">
+                                            <i class="bi bi-paypal text-primary"></i>
+                                            <span>PayPal</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge-status badge-success">Completed</span></td>
+                                    <td>
+                                        <div class="date-info">
+                                            <strong>Jan 12, 2024</strong>
+                                            <p>10:45 AM</p>
+                                        </div>
+                                    </td>
                                     <td>
                                         <div class="action-buttons">
-                                            <button class="btn btn-sm btn-outline-primary" onclick="editPage(1)">
-                                                <i class="bi bi-pencil"></i>
+                                            <button class="btn btn-sm btn-outline-primary" onclick="viewOrder(1)">
+                                                <i class="bi bi-eye"></i>
                                             </button>
-                                            <button class="btn btn-sm btn-outline-danger" onclick="deletePage(1)">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-secondary"
+                                                    data-bs-toggle="dropdown">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#" onclick="printInvoice(1)"><i
+                                                                class="bi bi-printer"></i> Print Invoice</a></li>
+                                                    <li><a class="dropdown-item" href="#" onclick="sendReceipt(1)"><i
+                                                                class="bi bi-envelope"></i> Send Receipt</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider">
+                                                    </li>
+                                                    <li><a class="dropdown-item text-danger" href="#"
+                                                            onclick="refundOrder(1)"><i
+                                                                class="bi bi-arrow-counterclockwise"></i> Refund</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
@@ -485,29 +526,64 @@
                                         <input type="checkbox" class="form-check-input">
                                     </td>
                                     <td>
-                                        <div class="page-info">
-                                            <strong>Privacy Policy</strong>
-                                            <p class="page-slug">/privacy-policy</p>
-                                        </div>
+                                        <strong class="order-id">#ORD-2840</strong>
                                     </td>
-                                    <td><span class="badge bg-warning">Legal</span></td>
-                                    <td><span class="badge-status badge-success">Published</span></td>
-                                    <td><strong>12,845</strong> views</td>
                                     <td>
-                                        <div class="author-info">
-                                            <img src="https://i.pravatar.cc/32?img=50" alt="Author">
-                                            <span>Admin</span>
+                                        <div class="customer-info">
+                                            <img src="https://i.pravatar.cc/40?img=2" alt="Customer">
+                                            <div>
+                                                <strong>Sarah Kim</strong>
+                                                <p>sarah.kim@email.com</p>
+                                            </div>
                                         </div>
                                     </td>
-                                    <td>Jan 8, 2024</td>
+                                    <td>
+                                        <div class="product-info">
+                                            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=50&h=50&fit=crop"
+                                                alt="Product">
+                                            <span>Landing Page Template</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong class="amount">$39.00</strong>
+                                    </td>
+                                    <td>
+                                        <div class="payment-method">
+                                            <i class="bi bi-credit-card text-success"></i>
+                                            <span>Stripe</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge-status badge-warning">Pending</span></td>
+                                    <td>
+                                        <div class="date-info">
+                                            <strong>Jan 12, 2024</strong>
+                                            <p>09:30 AM</p>
+                                        </div>
+                                    </td>
                                     <td>
                                         <div class="action-buttons">
-                                            <button class="btn btn-sm btn-outline-primary" onclick="editPage(2)">
-                                                <i class="bi bi-pencil"></i>
+                                            <button class="btn btn-sm btn-outline-primary" onclick="viewOrder(2)">
+                                                <i class="bi bi-eye"></i>
                                             </button>
-                                            <button class="btn btn-sm btn-outline-danger" onclick="deletePage(2)">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-secondary"
+                                                    data-bs-toggle="dropdown">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#" onclick="printInvoice(2)"><i
+                                                                class="bi bi-printer"></i> Print Invoice</a></li>
+                                                    <li><a class="dropdown-item" href="#" onclick="sendReceipt(2)"><i
+                                                                class="bi bi-envelope"></i> Send Receipt</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider">
+                                                    </li>
+                                                    <li><a class="dropdown-item text-danger" href="#"
+                                                            onclick="refundOrder(2)"><i
+                                                                class="bi bi-arrow-counterclockwise"></i> Refund</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
@@ -516,29 +592,64 @@
                                         <input type="checkbox" class="form-check-input">
                                     </td>
                                     <td>
-                                        <div class="page-info">
-                                            <strong>Terms of Service</strong>
-                                            <p class="page-slug">/terms-of-service</p>
-                                        </div>
+                                        <strong class="order-id">#ORD-2839</strong>
                                     </td>
-                                    <td><span class="badge bg-warning">Legal</span></td>
-                                    <td><span class="badge-status badge-success">Published</span></td>
-                                    <td><strong>9,234</strong> views</td>
                                     <td>
-                                        <div class="author-info">
-                                            <img src="https://i.pravatar.cc/32?img=50" alt="Author">
-                                            <span>Admin</span>
+                                        <div class="customer-info">
+                                            <img src="https://i.pravatar.cc/40?img=3" alt="Customer">
+                                            <div>
+                                                <strong>Mike Chen</strong>
+                                                <p>mike.chen@email.com</p>
+                                            </div>
                                         </div>
                                     </td>
-                                    <td>Jan 8, 2024</td>
+                                    <td>
+                                        <div class="product-info">
+                                            <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=50&h=50&fit=crop"
+                                                alt="Product">
+                                            <span>Icon Pack Premium</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong class="amount">$29.00</strong>
+                                    </td>
+                                    <td>
+                                        <div class="payment-method">
+                                            <i class="bi bi-paypal text-primary"></i>
+                                            <span>PayPal</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge-status badge-success">Completed</span></td>
+                                    <td>
+                                        <div class="date-info">
+                                            <strong>Jan 11, 2024</strong>
+                                            <p>08:15 PM</p>
+                                        </div>
+                                    </td>
                                     <td>
                                         <div class="action-buttons">
-                                            <button class="btn btn-sm btn-outline-primary" onclick="editPage(3)">
-                                                <i class="bi bi-pencil"></i>
+                                            <button class="btn btn-sm btn-outline-primary" onclick="viewOrder(3)">
+                                                <i class="bi bi-eye"></i>
                                             </button>
-                                            <button class="btn btn-sm btn-outline-danger" onclick="deletePage(3)">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-secondary"
+                                                    data-bs-toggle="dropdown">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#" onclick="printInvoice(3)"><i
+                                                                class="bi bi-printer"></i> Print Invoice</a></li>
+                                                    <li><a class="dropdown-item" href="#" onclick="sendReceipt(3)"><i
+                                                                class="bi bi-envelope"></i> Send Receipt</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider">
+                                                    </li>
+                                                    <li><a class="dropdown-item text-danger" href="#"
+                                                            onclick="refundOrder(3)"><i
+                                                                class="bi bi-arrow-counterclockwise"></i> Refund</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
@@ -547,29 +658,64 @@
                                         <input type="checkbox" class="form-check-input">
                                     </td>
                                     <td>
-                                        <div class="page-info">
-                                            <strong>Contact Us</strong>
-                                            <p class="page-slug">/contact</p>
-                                        </div>
+                                        <strong class="order-id">#ORD-2838</strong>
                                     </td>
-                                    <td><span class="badge bg-primary">Standard</span></td>
-                                    <td><span class="badge-status badge-success">Published</span></td>
-                                    <td><strong>5,678</strong> views</td>
                                     <td>
-                                        <div class="author-info">
-                                            <img src="https://i.pravatar.cc/32?img=50" alt="Author">
-                                            <span>Admin</span>
+                                        <div class="customer-info">
+                                            <img src="https://i.pravatar.cc/40?img=4" alt="Customer">
+                                            <div>
+                                                <strong>Emma Wilson</strong>
+                                                <p>emma.wilson@email.com</p>
+                                            </div>
                                         </div>
                                     </td>
-                                    <td>Jan 5, 2024</td>
+                                    <td>
+                                        <div class="product-info">
+                                            <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=50&h=50&fit=crop"
+                                                alt="Product">
+                                            <span>Mobile App UI</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong class="amount">$59.00</strong>
+                                    </td>
+                                    <td>
+                                        <div class="payment-method">
+                                            <i class="bi bi-credit-card text-success"></i>
+                                            <span>Stripe</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge-status badge-success">Completed</span></td>
+                                    <td>
+                                        <div class="date-info">
+                                            <strong>Jan 11, 2024</strong>
+                                            <p>03:20 PM</p>
+                                        </div>
+                                    </td>
                                     <td>
                                         <div class="action-buttons">
-                                            <button class="btn btn-sm btn-outline-primary" onclick="editPage(4)">
-                                                <i class="bi bi-pencil"></i>
+                                            <button class="btn btn-sm btn-outline-primary" onclick="viewOrder(4)">
+                                                <i class="bi bi-eye"></i>
                                             </button>
-                                            <button class="btn btn-sm btn-outline-danger" onclick="deletePage(4)">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-secondary"
+                                                    data-bs-toggle="dropdown">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#" onclick="printInvoice(4)"><i
+                                                                class="bi bi-printer"></i> Print Invoice</a></li>
+                                                    <li><a class="dropdown-item" href="#" onclick="sendReceipt(4)"><i
+                                                                class="bi bi-envelope"></i> Send Receipt</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider">
+                                                    </li>
+                                                    <li><a class="dropdown-item text-danger" href="#"
+                                                            onclick="refundOrder(4)"><i
+                                                                class="bi bi-arrow-counterclockwise"></i> Refund</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
@@ -578,29 +724,57 @@
                                         <input type="checkbox" class="form-check-input">
                                     </td>
                                     <td>
-                                        <div class="page-info">
-                                            <strong>FAQ</strong>
-                                            <p class="page-slug">/faq</p>
-                                        </div>
+                                        <strong class="order-id">#ORD-2837</strong>
                                     </td>
-                                    <td><span class="badge bg-info">Help</span></td>
-                                    <td><span class="badge-status badge-success">Published</span></td>
-                                    <td><strong>7,891</strong> views</td>
                                     <td>
-                                        <div class="author-info">
-                                            <img src="https://i.pravatar.cc/32?img=50" alt="Author">
-                                            <span>Admin</span>
+                                        <div class="customer-info">
+                                            <img src="https://i.pravatar.cc/40?img=5" alt="Customer">
+                                            <div>
+                                                <strong>Alex Rivera</strong>
+                                                <p>alex.rivera@email.com</p>
+                                            </div>
                                         </div>
                                     </td>
-                                    <td>Jan 3, 2024</td>
+                                    <td>
+                                        <div class="product-info">
+                                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=50&h=50&fit=crop"
+                                                alt="Product">
+                                            <span>3D Graphics Bundle</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong class="amount">$79.00</strong>
+                                    </td>
+                                    <td>
+                                        <div class="payment-method">
+                                            <i class="bi bi-paypal text-primary"></i>
+                                            <span>PayPal</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge-status badge-danger">Refunded</span></td>
+                                    <td>
+                                        <div class="date-info">
+                                            <strong>Jan 10, 2024</strong>
+                                            <p>11:00 AM</p>
+                                        </div>
+                                    </td>
                                     <td>
                                         <div class="action-buttons">
-                                            <button class="btn btn-sm btn-outline-primary" onclick="editPage(5)">
-                                                <i class="bi bi-pencil"></i>
+                                            <button class="btn btn-sm btn-outline-primary" onclick="viewOrder(5)">
+                                                <i class="bi bi-eye"></i>
                                             </button>
-                                            <button class="btn btn-sm btn-outline-danger" onclick="deletePage(5)">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-secondary"
+                                                    data-bs-toggle="dropdown">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#" onclick="printInvoice(5)"><i
+                                                                class="bi bi-printer"></i> Print Invoice</a></li>
+                                                    <li><a class="dropdown-item" href="#" onclick="sendReceipt(5)"><i
+                                                                class="bi bi-envelope"></i> Send Receipt</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
@@ -609,230 +783,87 @@
                                         <input type="checkbox" class="form-check-input">
                                     </td>
                                     <td>
-                                        <div class="page-info">
-                                            <strong>Refund Policy</strong>
-                                            <p class="page-slug">/refund-policy</p>
-                                        </div>
+                                        <strong class="order-id">#ORD-2836</strong>
                                     </td>
-                                    <td><span class="badge bg-warning">Legal</span></td>
-                                    <td><span class="badge-status badge-success">Published</span></td>
-                                    <td><strong>3,456</strong> views</td>
                                     <td>
-                                        <div class="author-info">
-                                            <img src="https://i.pravatar.cc/32?img=50" alt="Author">
-                                            <span>Admin</span>
+                                        <div class="customer-info">
+                                            <img src="https://i.pravatar.cc/40?img=6" alt="Customer">
+                                            <div>
+                                                <strong>David Park</strong>
+                                                <p>david.park@email.com</p>
+                                            </div>
                                         </div>
                                     </td>
-                                    <td>Dec 28, 2023</td>
+                                    <td>
+                                        <div class="product-info">
+                                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=50&h=50&fit=crop"
+                                                alt="Product">
+                                            <span>Admin Dashboard</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong class="amount">$69.00</strong>
+                                    </td>
+                                    <td>
+                                        <div class="payment-method">
+                                            <i class="bi bi-credit-card text-success"></i>
+                                            <span>Card</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge-status badge-info">Processing</span></td>
+                                    <td>
+                                        <div class="date-info">
+                                            <strong>Jan 10, 2024</strong>
+                                            <p>09:45 AM</p>
+                                        </div>
+                                    </td>
                                     <td>
                                         <div class="action-buttons">
-                                            <button class="btn btn-sm btn-outline-primary" onclick="editPage(6)">
-                                                <i class="bi bi-pencil"></i>
+                                            <button class="btn btn-sm btn-outline-primary" onclick="viewOrder(6)">
+                                                <i class="bi bi-eye"></i>
                                             </button>
-                                            <button class="btn btn-sm btn-outline-danger" onclick="deletePage(6)">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" class="form-check-input">
-                                    </td>
-                                    <td>
-                                        <div class="page-info">
-                                            <strong>Become a Seller</strong>
-                                            <p class="page-slug">/become-seller</p>
-                                        </div>
-                                    </td>
-                                    <td><span class="badge bg-primary">Standard</span></td>
-                                    <td><span class="badge-status badge-success">Published</span></td>
-                                    <td><strong>11,234</strong> views</td>
-                                    <td>
-                                        <div class="author-info">
-                                            <img src="https://i.pravatar.cc/32?img=50" alt="Author">
-                                            <span>Admin</span>
-                                        </div>
-                                    </td>
-                                    <td>Dec 25, 2023</td>
-                                    <td>
-                                        <div class="action-buttons">
-                                            <button class="btn btn-sm btn-outline-primary" onclick="editPage(7)">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-outline-danger" onclick="deletePage(7)">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" class="form-check-input">
-                                    </td>
-                                    <td>
-                                        <div class="page-info">
-                                            <strong>License Information</strong>
-                                            <p class="page-slug">/licenses</p>
-                                        </div>
-                                    </td>
-                                    <td><span class="badge bg-warning">Legal</span></td>
-                                    <td><span class="badge-status badge-warning">Draft</span></td>
-                                    <td><strong>0</strong> views</td>
-                                    <td>
-                                        <div class="author-info">
-                                            <img src="https://i.pravatar.cc/32?img=50" alt="Author">
-                                            <span>Admin</span>
-                                        </div>
-                                    </td>
-                                    <td>Dec 20, 2023</td>
-                                    <td>
-                                        <div class="action-buttons">
-                                            <button class="btn btn-sm btn-outline-primary" onclick="editPage(8)">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-outline-danger" onclick="deletePage(8)">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" class="form-check-input">
-                                    </td>
-                                    <td>
-                                        <div class="page-info">
-                                            <strong>How It Works</strong>
-                                            <p class="page-slug">/how-it-works</p>
-                                        </div>
-                                    </td>
-                                    <td><span class="badge bg-info">Help</span></td>
-                                    <td><span class="badge-status badge-success">Published</span></td>
-                                    <td><strong>6,789</strong> views</td>
-                                    <td>
-                                        <div class="author-info">
-                                            <img src="https://i.pravatar.cc/32?img=50" alt="Author">
-                                            <span>Admin</span>
-                                        </div>
-                                    </td>
-                                    <td>Dec 18, 2023</td>
-                                    <td>
-                                        <div class="action-buttons">
-                                            <button class="btn btn-sm btn-outline-primary" onclick="editPage(9)">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-outline-danger" onclick="deletePage(9)">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" class="form-check-input">
-                                    </td>
-                                    <td>
-                                        <div class="page-info">
-                                            <strong>Cookie Policy</strong>
-                                            <p class="page-slug">/cookie-policy</p>
-                                        </div>
-                                    </td>
-                                    <td><span class="badge bg-warning">Legal</span></td>
-                                    <td><span class="badge-status badge-warning">Draft</span></td>
-                                    <td><strong>0</strong> views</td>
-                                    <td>
-                                        <div class="author-info">
-                                            <img src="https://i.pravatar.cc/32?img=50" alt="Author">
-                                            <span>Admin</span>
-                                        </div>
-                                    </td>
-                                    <td>Dec 15, 2023</td>
-                                    <td>
-                                        <div class="action-buttons">
-                                            <button class="btn btn-sm btn-outline-primary" onclick="editPage(10)">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-outline-danger" onclick="deletePage(10)">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-secondary"
+                                                    data-bs-toggle="dropdown">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#" onclick="printInvoice(6)"><i
+                                                                class="bi bi-printer"></i> Print Invoice</a></li>
+                                                    <li><a class="dropdown-item" href="#" onclick="sendReceipt(6)"><i
+                                                                class="bi bi-envelope"></i> Send Receipt</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider">
+                                                    </li>
+                                                    <li><a class="dropdown-item text-danger" href="#"
+                                                            onclick="refundOrder(6)"><i
+                                                                class="bi bi-arrow-counterclockwise"></i> Refund</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                </div>
-            </div>
 
-            <!-- Add/Edit Page Modal -->
-            <div class="modal fade" id="pageModal" tabindex="-1">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalTitle">Add New Page</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="pageForm">
-                                <div class="row">
-                                    <div class="col-md-8 mb-3">
-                                        <label class="form-label">Page Title <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="pageTitle"
-                                            placeholder="e.g., About Us" required>
-                                    </div>
-                                    <div class="col-md-4 mb-3">
-                                        <label class="form-label">Type</label>
-                                        <select class="form-select" id="pageType">
-                                            <option value="standard">Standard</option>
-                                            <option value="legal">Legal</option>
-                                            <option value="help">Help</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Slug <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="pageSlug" placeholder="e.g., about-us"
-                                        required>
-                                    <small class="form-text text-muted">URL-friendly version (auto-generated)</small>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Meta Description</label>
-                                    <textarea class="form-control" id="pageMetaDesc" rows="2"
-                                        placeholder="Brief description for SEO..."></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Content <span class="text-danger">*</span></label>
-                                    <textarea class="form-control" id="pageContent" rows="10"
-                                        placeholder="Page content here..." required></textarea>
-                                    <small class="form-text text-muted">HTML content supported</small>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label">Status</label>
-                                        <select class="form-select" id="pageStatus">
-                                            <option value="published">Published</option>
-                                            <option value="draft">Draft</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label">Author</label>
-                                        <input type="text" class="form-control" id="pageAuthor" value="Admin" readonly>
-                                    </div>
-                                </div>
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="pageFeatured">
-                                    <label class="form-check-label" for="pageFeatured">
-                                        Show in footer menu
-                                    </label>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-outline-primary" onclick="saveDraft()">Save as
-                                Draft</button>
-                            <button type="button" class="btn btn-primary" onclick="savePage()">Publish</button>
+                    <div class="pagination-wrapper">
+                        <nav>
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="pagination-info">
+                            Showing 1-6 of 892 orders
                         </div>
                     </div>
                 </div>
@@ -862,7 +893,7 @@
 
     <!-- Admin Custom JavaScript -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/pages.js"></script>
+    <script src="assets/js/orders.js"></script>
 </body>
 
 </html>
