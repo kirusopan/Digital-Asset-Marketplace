@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - AssetHub</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
     <!-- Admin Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/assets.css">
 </head>
+
 <body class="admin-body">
 
     <!-- Sidebar -->
@@ -47,7 +50,7 @@
         <nav class="sidebar-nav">
             <div class="nav-section">
                 <h6 class="nav-section-title">Main</h6>
-                
+
                 <a href="dashboard.html" class="nav-item active">
                     <i class="bi bi-grid-fill"></i>
                     <span class="nav-text">Dashboard</span>
@@ -62,7 +65,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Management</h6>
-                
+
                 <a href="assets.html" class="nav-item">
                     <i class="bi bi-box-seam"></i>
                     <span class="nav-text">Assets</span>
@@ -99,7 +102,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Financial</h6>
-                
+
                 <a href="payments.html" class="nav-item">
                     <i class="bi bi-credit-card"></i>
                     <span class="nav-text">Payments</span>
@@ -119,7 +122,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Content</h6>
-                
+
                 <a href="blog.html" class="nav-item">
                     <i class="bi bi-file-text"></i>
                     <span class="nav-text">Blog Posts</span>
@@ -139,7 +142,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Settings</h6>
-                
+
                 <a href="settings.html" class="nav-item">
                     <i class="bi bi-gear"></i>
                     <span class="nav-text">Settings</span>
@@ -309,9 +312,471 @@
 
         <!-- Page Content -->
         <main class="admin-content">
-            
 
 
+            <!-- ============================================
+     ADMIN ASSETS APPROVAL - MAIN CONTENT
+     Place inside <main class="admin-content">
+     ============================================ -->
+
+            <!-- Page Header -->
+            <div class="content-header">
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-6">
+                        <h1 class="content-title">Assets Management</h1>
+                        <p class="content-subtitle">Review and approve pending assets</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <button class="btn btn-outline-secondary me-2">
+                            <i class="bi bi-funnel"></i> Filter
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="bi bi-download"></i> Export
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stats Summary -->
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="summary-card">
+                            <div class="summary-icon bg-warning">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h4 class="summary-value">12</h4>
+                                <p class="summary-label">Pending Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="summary-card">
+                            <div class="summary-icon bg-success">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h4 class="summary-value">248</h4>
+                                <p class="summary-label">Approved</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="summary-card">
+                            <div class="summary-icon bg-danger">
+                                <i class="bi bi-x-circle"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h4 class="summary-value">18</h4>
+                                <p class="summary-label">Rejected</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="summary-card">
+                            <div class="summary-icon bg-primary">
+                                <i class="bi bi-box-seam"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h4 class="summary-value">1,248</h4>
+                                <p class="summary-label">Total Assets</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters & Search -->
+            <div class="dashboard-card mb-4">
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-lg-4">
+                            <div class="search-box">
+                                <i class="bi bi-search"></i>
+                                <input type="text" class="form-control" placeholder="Search assets...">
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <select class="form-select">
+                                <option value="">All Status</option>
+                                <option value="pending">Pending</option>
+                                <option value="approved">Approved</option>
+                                <option value="rejected">Rejected</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2">
+                            <select class="form-select">
+                                <option value="">All Categories</option>
+                                <option value="ui-kits">UI Kits</option>
+                                <option value="templates">Templates</option>
+                                <option value="graphics">Graphics</option>
+                                <option value="icons">Icons</option>
+                                <option value="fonts">Fonts</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2">
+                            <select class="form-select">
+                                <option value="">Sort By</option>
+                                <option value="newest">Newest First</option>
+                                <option value="oldest">Oldest First</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="price-low">Price: Low to High</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2">
+                            <button class="btn btn-outline-secondary w-100">
+                                <i class="bi bi-arrow-clockwise"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assets List -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h4 class="card-title">Pending Assets (12)</h4>
+                        <div class="view-toggle">
+                            <button class="btn btn-sm btn-outline-secondary active" data-view="grid">
+                                <i class="bi bi-grid"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-secondary" data-view="list">
+                                <i class="bi bi-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- Grid View -->
+                    <div class="assets-grid" id="assetsGrid">
+                        <!-- Asset Card 1 -->
+                        <div class="asset-approval-card">
+                            <div class="asset-preview">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=300&fit=crop"
+                                    alt="Asset">
+                                <div class="asset-overlay">
+                                    <button class="btn btn-light btn-sm" onclick="viewAssetDetails(1)">
+                                        <i class="bi bi-eye"></i> Preview
+                                    </button>
+                                </div>
+                                <span class="asset-status-badge pending">Pending</span>
+                            </div>
+                            <div class="asset-details">
+                                <h5 class="asset-name">Modern Dashboard UI Kit</h5>
+                                <div class="asset-meta">
+                                    <span class="asset-category">
+                                        <i class="bi bi-tag"></i> UI Kits
+                                    </span>
+                                    <span class="asset-price">$49.00</span>
+                                </div>
+                                <div class="asset-seller">
+                                    <img src="https://i.pravatar.cc/40?img=1" alt="Seller">
+                                    <div class="seller-info">
+                                        <span class="seller-name">John Doe</span>
+                                        <span class="seller-date">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="asset-stats">
+                                    <div class="stat-item">
+                                        <i class="bi bi-file-earmark"></i>
+                                        <span>15 Files</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="bi bi-hdd"></i>
+                                        <span>45 MB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="asset-actions">
+                                <button class="btn btn-success btn-sm flex-fill" onclick="approveAsset(1)">
+                                    <i class="bi bi-check-lg"></i> Approve
+                                </button>
+                                <button class="btn btn-danger btn-sm flex-fill" onclick="rejectAsset(1)">
+                                    <i class="bi bi-x-lg"></i> Reject
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="viewAssetDetails(1)">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Asset Card 2 -->
+                        <div class="asset-approval-card">
+                            <div class="asset-preview">
+                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=300&fit=crop"
+                                    alt="Asset">
+                                <div class="asset-overlay">
+                                    <button class="btn btn-light btn-sm" onclick="viewAssetDetails(2)">
+                                        <i class="bi bi-eye"></i> Preview
+                                    </button>
+                                </div>
+                                <span class="asset-status-badge pending">Pending</span>
+                            </div>
+                            <div class="asset-details">
+                                <h5 class="asset-name">SaaS Landing Page Template</h5>
+                                <div class="asset-meta">
+                                    <span class="asset-category">
+                                        <i class="bi bi-tag"></i> Templates
+                                    </span>
+                                    <span class="asset-price">$39.00</span>
+                                </div>
+                                <div class="asset-seller">
+                                    <img src="https://i.pravatar.cc/40?img=2" alt="Seller">
+                                    <div class="seller-info">
+                                        <span class="seller-name">Sarah Kim</span>
+                                        <span class="seller-date">4 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="asset-stats">
+                                    <div class="stat-item">
+                                        <i class="bi bi-file-earmark"></i>
+                                        <span>8 Files</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="bi bi-hdd"></i>
+                                        <span>28 MB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="asset-actions">
+                                <button class="btn btn-success btn-sm flex-fill" onclick="approveAsset(2)">
+                                    <i class="bi bi-check-lg"></i> Approve
+                                </button>
+                                <button class="btn btn-danger btn-sm flex-fill" onclick="rejectAsset(2)">
+                                    <i class="bi bi-x-lg"></i> Reject
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="viewAssetDetails(2)">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Asset Card 3 -->
+                        <div class="asset-approval-card">
+                            <div class="asset-preview">
+                                <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&h=300&fit=crop"
+                                    alt="Asset">
+                                <div class="asset-overlay">
+                                    <button class="btn btn-light btn-sm" onclick="viewAssetDetails(3)">
+                                        <i class="bi bi-eye"></i> Preview
+                                    </button>
+                                </div>
+                                <span class="asset-status-badge pending">Pending</span>
+                            </div>
+                            <div class="asset-details">
+                                <h5 class="asset-name">Premium Icon Pack 500+</h5>
+                                <div class="asset-meta">
+                                    <span class="asset-category">
+                                        <i class="bi bi-tag"></i> Icons
+                                    </span>
+                                    <span class="asset-price">$29.00</span>
+                                </div>
+                                <div class="asset-seller">
+                                    <img src="https://i.pravatar.cc/40?img=3" alt="Seller">
+                                    <div class="seller-info">
+                                        <span class="seller-name">Mike Chen</span>
+                                        <span class="seller-date">6 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="asset-stats">
+                                    <div class="stat-item">
+                                        <i class="bi bi-file-earmark"></i>
+                                        <span>500 Files</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="bi bi-hdd"></i>
+                                        <span>12 MB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="asset-actions">
+                                <button class="btn btn-success btn-sm flex-fill" onclick="approveAsset(3)">
+                                    <i class="bi bi-check-lg"></i> Approve
+                                </button>
+                                <button class="btn btn-danger btn-sm flex-fill" onclick="rejectAsset(3)">
+                                    <i class="bi bi-x-lg"></i> Reject
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="viewAssetDetails(3)">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Asset Card 4 -->
+                        <div class="asset-approval-card">
+                            <div class="asset-preview">
+                                <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400&h=300&fit=crop"
+                                    alt="Asset">
+                                <div class="asset-overlay">
+                                    <button class="btn btn-light btn-sm" onclick="viewAssetDetails(4)">
+                                        <i class="bi bi-eye"></i> Preview
+                                    </button>
+                                </div>
+                                <span class="asset-status-badge pending">Pending</span>
+                            </div>
+                            <div class="asset-details">
+                                <h5 class="asset-name">E-commerce Mobile App UI</h5>
+                                <div class="asset-meta">
+                                    <span class="asset-category">
+                                        <i class="bi bi-tag"></i> UI Kits
+                                    </span>
+                                    <span class="asset-price">$59.00</span>
+                                </div>
+                                <div class="asset-seller">
+                                    <img src="https://i.pravatar.cc/40?img=4" alt="Seller">
+                                    <div class="seller-info">
+                                        <span class="seller-name">Emma Wilson</span>
+                                        <span class="seller-date">8 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="asset-stats">
+                                    <div class="stat-item">
+                                        <i class="bi bi-file-earmark"></i>
+                                        <span>25 Files</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="bi bi-hdd"></i>
+                                        <span>68 MB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="asset-actions">
+                                <button class="btn btn-success btn-sm flex-fill" onclick="approveAsset(4)">
+                                    <i class="bi bi-check-lg"></i> Approve
+                                </button>
+                                <button class="btn btn-danger btn-sm flex-fill" onclick="rejectAsset(4)">
+                                    <i class="bi bi-x-lg"></i> Reject
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="viewAssetDetails(4)">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Asset Card 5 -->
+                        <div class="asset-approval-card">
+                            <div class="asset-preview">
+                                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop"
+                                    alt="Asset">
+                                <div class="asset-overlay">
+                                    <button class="btn btn-light btn-sm" onclick="viewAssetDetails(5)">
+                                        <i class="bi bi-eye"></i> Preview
+                                    </button>
+                                </div>
+                                <span class="asset-status-badge pending">Pending</span>
+                            </div>
+                            <div class="asset-details">
+                                <h5 class="asset-name">Abstract 3D Graphics Pack</h5>
+                                <div class="asset-meta">
+                                    <span class="asset-category">
+                                        <i class="bi bi-tag"></i> Graphics
+                                    </span>
+                                    <span class="asset-price">$45.00</span>
+                                </div>
+                                <div class="asset-seller">
+                                    <img src="https://i.pravatar.cc/40?img=5" alt="Seller">
+                                    <div class="seller-info">
+                                        <span class="seller-name">Alex Rivera</span>
+                                        <span class="seller-date">1 day ago</span>
+                                    </div>
+                                </div>
+                                <div class="asset-stats">
+                                    <div class="stat-item">
+                                        <i class="bi bi-file-earmark"></i>
+                                        <span>30 Files</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="bi bi-hdd"></i>
+                                        <span>95 MB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="asset-actions">
+                                <button class="btn btn-success btn-sm flex-fill" onclick="approveAsset(5)">
+                                    <i class="bi bi-check-lg"></i> Approve
+                                </button>
+                                <button class="btn btn-danger btn-sm flex-fill" onclick="rejectAsset(5)">
+                                    <i class="bi bi-x-lg"></i> Reject
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="viewAssetDetails(5)">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Asset Card 6 -->
+                        <div class="asset-approval-card">
+                            <div class="asset-preview">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop"
+                                    alt="Asset">
+                                <div class="asset-overlay">
+                                    <button class="btn btn-light btn-sm" onclick="viewAssetDetails(6)">
+                                        <i class="bi bi-eye"></i> Preview
+                                    </button>
+                                </div>
+                                <span class="asset-status-badge pending">Pending</span>
+                            </div>
+                            <div class="asset-details">
+                                <h5 class="asset-name">Admin Dashboard Template</h5>
+                                <div class="asset-meta">
+                                    <span class="asset-category">
+                                        <i class="bi bi-tag"></i> Templates
+                                    </span>
+                                    <span class="asset-price">$69.00</span>
+                                </div>
+                                <div class="asset-seller">
+                                    <img src="https://i.pravatar.cc/40?img=6" alt="Seller">
+                                    <div class="seller-info">
+                                        <span class="seller-name">David Park</span>
+                                        <span class="seller-date">1 day ago</span>
+                                    </div>
+                                </div>
+                                <div class="asset-stats">
+                                    <div class="stat-item">
+                                        <i class="bi bi-file-earmark"></i>
+                                        <span>40 Files</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="bi bi-hdd"></i>
+                                        <span>120 MB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="asset-actions">
+                                <button class="btn btn-success btn-sm flex-fill" onclick="approveAsset(6)">
+                                    <i class="bi bi-check-lg"></i> Approve
+                                </button>
+                                <button class="btn btn-danger btn-sm flex-fill" onclick="rejectAsset(6)">
+                                    <i class="bi bi-x-lg"></i> Reject
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="viewAssetDetails(6)">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination-wrapper">
+                        <nav>
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="pagination-info">
+                            Showing 1-6 of 12 assets
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </main>
 
@@ -334,9 +799,10 @@
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Admin Custom JavaScript -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/assets.js"></script>
 </body>
+
 </html>

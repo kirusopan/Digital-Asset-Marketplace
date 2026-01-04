@@ -1,0 +1,203 @@
+/* ============================================
+   ADMIN COMMISSION MANAGEMENT - CSS
+   ============================================ */
+
+.commission-rate-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.rate-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: var(--admin-bg);
+    border-radius: 10px;
+    transition: var(--admin-transition);
+}
+
+.rate-item:hover {
+    background: var(--admin-border);
+}
+
+.rate-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.rate-label {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+    margin-bottom: 4px;
+}
+
+.rate-desc {
+    font-size: 0.8125rem;
+    color: var(--admin-text-muted);
+}
+
+.rate-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--admin-primary);
+}
+
+.commission-table {
+    margin: 0;
+}
+
+.commission-table thead {
+    background: var(--admin-bg);
+}
+
+.commission-table thead th {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--admin-text-muted);
+    padding: 16px 20px;
+    border: none;
+    white-space: nowrap;
+}
+
+.commission-table tbody td {
+    padding: 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.commission-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.commission-table tbody tr:hover {
+    background: var(--admin-bg);
+}
+
+.txn-id {
+    color: var(--admin-primary);
+    font-size: 0.875rem;
+}
+
+.seller-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.seller-mini img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.seller-mini strong {
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.seller-badge {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.seller-badge.platinum {
+    background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+    color: #374151;
+}
+
+.seller-badge.gold {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: white;
+}
+
+.seller-badge.silver {
+    background: linear-gradient(135deg, #94a3b8, #64748b);
+    color: white;
+}
+
+.seller-badge.bronze {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    color: white;
+}
+
+.product-mini {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-mini img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.product-mini span {
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+    font-weight: 500;
+}
+
+.rate-badge {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--admin-primary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.commission-amount {
+    font-size: 1rem;
+    color: var(--admin-danger);
+    font-weight: 700;
+}
+
+.earning-amount {
+    font-size: 1rem;
+    color: var(--admin-success);
+    font-weight: 700;
+}
+
+.date-mini strong {
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.date-mini p {
+    font-size: 0.75rem;
+    color: var(--admin-text-muted);
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .commission-table {
+        font-size: 0.8125rem;
+    }
+
+    .commission-table thead th,
+    .commission-table tbody td {
+        padding: 12px;
+    }
+
+    .rate-value {
+        font-size: 1.25rem;
+    }
+}

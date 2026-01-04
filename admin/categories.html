@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - AssetHub</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
     <!-- Admin Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/categories.css">
+    <link rel="stylesheet" href="assets/css/assets.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
+
 <body class="admin-body">
 
     <!-- Sidebar -->
@@ -47,7 +51,7 @@
         <nav class="sidebar-nav">
             <div class="nav-section">
                 <h6 class="nav-section-title">Main</h6>
-                
+
                 <a href="dashboard.html" class="nav-item active">
                     <i class="bi bi-grid-fill"></i>
                     <span class="nav-text">Dashboard</span>
@@ -62,7 +66,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Management</h6>
-                
+
                 <a href="assets.html" class="nav-item">
                     <i class="bi bi-box-seam"></i>
                     <span class="nav-text">Assets</span>
@@ -99,7 +103,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Financial</h6>
-                
+
                 <a href="payments.html" class="nav-item">
                     <i class="bi bi-credit-card"></i>
                     <span class="nav-text">Payments</span>
@@ -119,7 +123,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Content</h6>
-                
+
                 <a href="blog.html" class="nav-item">
                     <i class="bi bi-file-text"></i>
                     <span class="nav-text">Blog Posts</span>
@@ -139,7 +143,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Settings</h6>
-                
+
                 <a href="settings.html" class="nav-item">
                     <i class="bi bi-gear"></i>
                     <span class="nav-text">Settings</span>
@@ -309,8 +313,462 @@
 
         <!-- Page Content -->
         <main class="admin-content">
-            
 
+            <!-- ============================================
+     ADMIN CATEGORIES MANAGEMENT - MAIN CONTENT
+     Place inside <main class="admin-content">
+     ============================================ -->
+
+            <div class="content-header">
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-6">
+                        <h1 class="content-title">Categories Management</h1>
+                        <p class="content-subtitle">Manage product categories and organization</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <button class="btn btn-primary" onclick="openAddCategoryModal()">
+                            <i class="bi bi-plus-circle"></i> Add Category
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="summary-card">
+                            <div class="summary-icon bg-primary">
+                                <i class="bi bi-tag"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h4 class="summary-value">8</h4>
+                                <p class="summary-label">Total Categories</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="summary-card">
+                            <div class="summary-icon bg-success">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h4 class="summary-value">8</h4>
+                                <p class="summary-label">Active</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="summary-card">
+                            <div class="summary-icon bg-warning">
+                                <i class="bi bi-box-seam"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h4 class="summary-value">1,248</h4>
+                                <p class="summary-label">Total Assets</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="summary-card">
+                            <div class="summary-icon bg-info">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                            <div class="summary-content">
+                                <h4 class="summary-value">156</h4>
+                                <p class="summary-label">Avg Assets/Category</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card mb-4">
+                <div class="card-body">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="search-box">
+                                <i class="bi bi-search"></i>
+                                <input type="text" class="form-control" placeholder="Search categories...">
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <select class="form-select">
+                                <option value="">All Status</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2">
+                            <select class="form-select">
+                                <option value="">Sort By</option>
+                                <option value="name">Name</option>
+                                <option value="assets">Assets Count</option>
+                                <option value="newest">Newest</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2">
+                            <button class="btn btn-outline-secondary w-100">
+                                <i class="bi bi-arrow-clockwise"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h4 class="card-title">All Categories (8)</h4>
+                    <div class="card-actions">
+                        <button class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-download"></i> Export
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table category-table">
+                            <thead>
+                                <tr>
+                                    <th width="50">
+                                        <input type="checkbox" class="form-check-input" id="selectAll">
+                                    </th>
+                                    <th>Category</th>
+                                    <th>Slug</th>
+                                    <th>Assets</th>
+                                    <th>Revenue</th>
+                                    <th>Status</th>
+                                    <th>Created</th>
+                                    <th width="120">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td>
+                                        <div class="category-info">
+                                            <div class="category-icon-sm"
+                                                style="background: linear-gradient(135deg, #6366f1, #818cf8);">
+                                                <i class="bi bi-palette"></i>
+                                            </div>
+                                            <div>
+                                                <strong>UI Kits</strong>
+                                                <p class="category-desc">User interface design kits and components</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><code>ui-kits</code></td>
+                                    <td><strong>248</strong> assets</td>
+                                    <td><strong>$12,450</strong></td>
+                                    <td><span class="badge-status badge-success">Active</span></td>
+                                    <td>Jan 15, 2024</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="editCategory(1)">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteCategory(1)">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td>
+                                        <div class="category-info">
+                                            <div class="category-icon-sm"
+                                                style="background: linear-gradient(135deg, #10b981, #059669);">
+                                                <i class="bi bi-laptop"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Templates</strong>
+                                                <p class="category-desc">Website and landing page templates</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><code>templates</code></td>
+                                    <td><strong>189</strong> assets</td>
+                                    <td><strong>$9,450</strong></td>
+                                    <td><span class="badge-status badge-success">Active</span></td>
+                                    <td>Jan 15, 2024</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="editCategory(2)">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteCategory(2)">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td>
+                                        <div class="category-info">
+                                            <div class="category-icon-sm"
+                                                style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                                                <i class="bi bi-images"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Graphics</strong>
+                                                <p class="category-desc">Illustrations, photos, and graphics</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><code>graphics</code></td>
+                                    <td><strong>312</strong> assets</td>
+                                    <td><strong>$15,600</strong></td>
+                                    <td><span class="badge-status badge-success">Active</span></td>
+                                    <td>Jan 15, 2024</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="editCategory(3)">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteCategory(3)">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td>
+                                        <div class="category-info">
+                                            <div class="category-icon-sm"
+                                                style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                                                <i class="bi bi-badge-3d"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Icons</strong>
+                                                <p class="category-desc">Icon packs and individual icons</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><code>icons</code></td>
+                                    <td><strong>156</strong> assets</td>
+                                    <td><strong>$7,800</strong></td>
+                                    <td><span class="badge-status badge-success">Active</span></td>
+                                    <td>Jan 15, 2024</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="editCategory(4)">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteCategory(4)">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td>
+                                        <div class="category-info">
+                                            <div class="category-icon-sm"
+                                                style="background: linear-gradient(135deg, #ec4899, #db2777);">
+                                                <i class="bi bi-fonts"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Fonts</strong>
+                                                <p class="category-desc">Typography and font families</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><code>fonts</code></td>
+                                    <td><strong>89</strong> assets</td>
+                                    <td><strong>$4,450</strong></td>
+                                    <td><span class="badge-status badge-success">Active</span></td>
+                                    <td>Jan 15, 2024</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="editCategory(5)">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteCategory(5)">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td>
+                                        <div class="category-info">
+                                            <div class="category-icon-sm"
+                                                style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                                                <i class="bi bi-camera-video"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Videos</strong>
+                                                <p class="category-desc">Stock footage and motion graphics</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><code>videos</code></td>
+                                    <td><strong>124</strong> assets</td>
+                                    <td><strong>$6,200</strong></td>
+                                    <td><span class="badge-status badge-success">Active</span></td>
+                                    <td>Jan 15, 2024</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="editCategory(6)">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteCategory(6)">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td>
+                                        <div class="category-info">
+                                            <div class="category-icon-sm"
+                                                style="background: linear-gradient(135deg, #14b8a6, #0d9488);">
+                                                <i class="bi bi-music-note"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Audio</strong>
+                                                <p class="category-desc">Music tracks and sound effects</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><code>audio</code></td>
+                                    <td><strong>67</strong> assets</td>
+                                    <td><strong>$3,350</strong></td>
+                                    <td><span class="badge-status badge-success">Active</span></td>
+                                    <td>Jan 15, 2024</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="editCategory(7)">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteCategory(7)">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td>
+                                        <div class="category-info">
+                                            <div class="category-icon-sm"
+                                                style="background: linear-gradient(135deg, #f97316, #ea580c);">
+                                                <i class="bi bi-code-slash"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Source Code</strong>
+                                                <p class="category-desc">Scripts, plugins, and code snippets</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><code>source-code</code></td>
+                                    <td><strong>163</strong> assets</td>
+                                    <td><strong>$8,150</strong></td>
+                                    <td><span class="badge-status badge-success">Active</span></td>
+                                    <td>Jan 15, 2024</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="editCategory(8)">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteCategory(8)">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add/Edit Category Modal -->
+            <div class="modal fade" id="categoryModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle">Add New Category</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="categoryForm">
+                                <div class="mb-3">
+                                    <label class="form-label">Category Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="categoryName"
+                                        placeholder="e.g., UI Kits" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Slug <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="categorySlug"
+                                        placeholder="e.g., ui-kits" required>
+                                    <small class="form-text text-muted">URL-friendly version (auto-generated)</small>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Description</label>
+                                    <textarea class="form-control" id="categoryDesc" rows="3"
+                                        placeholder="Brief description..."></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Icon Class</label>
+                                    <input type="text" class="form-control" id="categoryIcon"
+                                        placeholder="e.g., bi-palette">
+                                    <small class="form-text text-muted">Bootstrap icon class</small>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Color (Gradient Start)</label>
+                                        <input type="color" class="form-control form-control-color" id="categoryColor1"
+                                            value="#6366f1">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Color (Gradient End)</label>
+                                        <input type="color" class="form-control form-control-color" id="categoryColor2"
+                                            value="#818cf8">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Status</label>
+                                    <select class="form-select" id="categoryStatus">
+                                        <option value="active">Active</option>
+                                        <option value="inactive">Inactive</option>
+                                    </select>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="categoryFeatured">
+                                    <label class="form-check-label" for="categoryFeatured">
+                                        Featured Category
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="saveCategory()">Save
+                                Category</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
         </main>
@@ -334,9 +792,10 @@
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Admin Custom JavaScript -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/categories.js"></script>
 </body>
+
 </html>
