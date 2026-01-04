@@ -1,0 +1,158 @@
+/* ============================================
+   ADMIN WITHDRAWAL REQUESTS - CSS
+   ============================================ */
+
+.withdrawal-table {
+    margin: 0;
+}
+
+.withdrawal-table thead {
+    background: var(--admin-bg);
+}
+
+.withdrawal-table thead th {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--admin-text-muted);
+    padding: 16px 20px;
+    border: none;
+    white-space: nowrap;
+}
+
+.withdrawal-table tbody td {
+    padding: 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.withdrawal-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.withdrawal-table tbody tr:hover {
+    background: var(--admin-bg);
+}
+
+.request-id {
+    color: var(--admin-primary);
+    font-size: 0.9375rem;
+}
+
+.seller-info-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.seller-info-mini img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.seller-info-mini strong {
+    font-size: 0.9375rem;
+    color: var(--admin-text-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.seller-info-mini p {
+    font-size: 0.8125rem;
+    color: var(--admin-text-muted);
+    margin: 0;
+}
+
+.withdrawal-amount {
+    font-size: 1.25rem;
+    color: var(--admin-primary);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.available-balance {
+    font-size: 0.75rem;
+    color: var(--admin-text-muted);
+    margin: 0;
+}
+
+.payment-type {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.payment-type i {
+    font-size: 1.25rem;
+}
+
+.payment-type span {
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+    font-weight: 500;
+}
+
+.account-details strong {
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.account-details p {
+    font-size: 0.75rem;
+    color: var(--admin-text-muted);
+    margin: 0;
+}
+
+.date-info-mini strong {
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.date-info-mini p {
+    font-size: 0.75rem;
+    color: var(--admin-text-muted);
+    margin: 0;
+}
+
+.withdrawal-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.withdrawal-actions .btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+    .withdrawal-table {
+        font-size: 0.8125rem;
+    }
+
+    .withdrawal-table thead th,
+    .withdrawal-table tbody td {
+        padding: 12px;
+    }
+
+    .withdrawal-amount {
+        font-size: 1.125rem;
+    }
+
+    .withdrawal-actions {
+        flex-direction: column;
+    }
+}
