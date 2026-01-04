@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - AssetHub</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
     <!-- Admin Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/report.css">
 </head>
+
 <body class="admin-body">
 
     <!-- Sidebar -->
@@ -47,7 +50,7 @@
         <nav class="sidebar-nav">
             <div class="nav-section">
                 <h6 class="nav-section-title">Main</h6>
-                
+
                 <a href="dashboard.html" class="nav-item active">
                     <i class="bi bi-grid-fill"></i>
                     <span class="nav-text">Dashboard</span>
@@ -62,7 +65,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Management</h6>
-                
+
                 <a href="assets.html" class="nav-item">
                     <i class="bi bi-box-seam"></i>
                     <span class="nav-text">Assets</span>
@@ -99,7 +102,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Financial</h6>
-                
+
                 <a href="payments.html" class="nav-item">
                     <i class="bi bi-credit-card"></i>
                     <span class="nav-text">Payments</span>
@@ -119,7 +122,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Content</h6>
-                
+
                 <a href="blog.html" class="nav-item">
                     <i class="bi bi-file-text"></i>
                     <span class="nav-text">Blog Posts</span>
@@ -139,7 +142,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Settings</h6>
-                
+
                 <a href="settings.html" class="nav-item">
                     <i class="bi bi-gear"></i>
                     <span class="nav-text">Settings</span>
@@ -309,8 +312,467 @@
 
         <!-- Page Content -->
         <main class="admin-content">
-            
 
+            <!-- ============================================
+     ADMIN REPORTS - MAIN CONTENT
+     Place inside <main class="admin-content">
+     ============================================ -->
+
+            <div class="content-header">
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-6">
+                        <h1 class="content-title">Reports & Analytics</h1>
+                        <p class="content-subtitle">Generate and view detailed reports</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <button class="btn btn-outline-secondary me-2">
+                            <i class="bi bi-printer"></i> Print
+                        </button>
+                        <button class="btn btn-primary" onclick="generateCustomReport()">
+                            <i class="bi bi-file-earmark-bar-graph"></i> Custom Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="report-card" onclick="openReport('sales')">
+                        <div class="report-icon bg-primary">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <div class="report-content">
+                            <h5 class="report-title">Sales Report</h5>
+                            <p class="report-desc">Revenue & transaction analytics</p>
+                        </div>
+                        <div class="report-arrow">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="report-card" onclick="openReport('products')">
+                        <div class="report-icon bg-success">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <div class="report-content">
+                            <h5 class="report-title">Products Report</h5>
+                            <p class="report-desc">Asset performance & metrics</p>
+                        </div>
+                        <div class="report-arrow">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="report-card" onclick="openReport('sellers')">
+                        <div class="report-icon bg-warning">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div class="report-content">
+                            <h5 class="report-title">Sellers Report</h5>
+                            <p class="report-desc">Vendor performance analysis</p>
+                        </div>
+                        <div class="report-arrow">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="report-card" onclick="openReport('financial')">
+                        <div class="report-icon bg-info">
+                            <i class="bi bi-cash-stack"></i>
+                        </div>
+                        <div class="report-content">
+                            <h5 class="report-title">Financial Report</h5>
+                            <p class="report-desc">Commission & payouts</p>
+                        </div>
+                        <div class="report-arrow">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-lg-8">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4 class="card-title">Revenue Overview</h4>
+                            <div class="d-flex gap-2">
+                                <select class="form-select form-select-sm" style="max-width: 150px;">
+                                    <option>Last 7 days</option>
+                                    <option>Last 30 days</option>
+                                    <option>Last 90 days</option>
+                                    <option>This Year</option>
+                                </select>
+                                <button class="btn btn-sm btn-outline-secondary">
+                                    <i class="bi bi-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="revenueOverviewChart" height="80"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4 class="card-title">Quick Stats</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="quick-stats">
+                                <div class="stat-item-report">
+                                    <div class="stat-label-report">Total Sales</div>
+                                    <div class="stat-value-report">$48,574</div>
+                                    <div class="stat-change positive">
+                                        <i class="bi bi-arrow-up"></i> 12.5%
+                                    </div>
+                                </div>
+                                <div class="stat-item-report">
+                                    <div class="stat-label-report">Orders</div>
+                                    <div class="stat-value-report">892</div>
+                                    <div class="stat-change positive">
+                                        <i class="bi bi-arrow-up"></i> 8.2%
+                                    </div>
+                                </div>
+                                <div class="stat-item-report">
+                                    <div class="stat-label-report">Avg Order Value</div>
+                                    <div class="stat-value-report">$54.48</div>
+                                    <div class="stat-change positive">
+                                        <i class="bi bi-arrow-up"></i> 5.1%
+                                    </div>
+                                </div>
+                                <div class="stat-item-report">
+                                    <div class="stat-label-report">Commission</div>
+                                    <div class="stat-value-report">$14,572</div>
+                                    <div class="stat-change positive">
+                                        <i class="bi bi-arrow-up"></i> 10.3%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-lg-6">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4 class="card-title">Top Selling Categories</h4>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="categoriesChart" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4 class="card-title">Sales by Region</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="region-list">
+                                <div class="region-item">
+                                    <div class="region-info">
+                                        <span class="region-name">United States</span>
+                                        <div class="region-bar">
+                                            <div class="region-progress" style="width: 85%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="region-value">
+                                        <strong>$21,450</strong>
+                                        <span>45%</span>
+                                    </div>
+                                </div>
+                                <div class="region-item">
+                                    <div class="region-info">
+                                        <span class="region-name">United Kingdom</span>
+                                        <div class="region-bar">
+                                            <div class="region-progress" style="width: 65%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="region-value">
+                                        <strong>$12,320</strong>
+                                        <span>28%</span>
+                                    </div>
+                                </div>
+                                <div class="region-item">
+                                    <div class="region-info">
+                                        <span class="region-name">Canada</span>
+                                        <div class="region-bar">
+                                            <div class="region-progress" style="width: 45%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="region-value">
+                                        <strong>$7,840</strong>
+                                        <span>16%</span>
+                                    </div>
+                                </div>
+                                <div class="region-item">
+                                    <div class="region-info">
+                                        <span class="region-name">Australia</span>
+                                        <div class="region-bar">
+                                            <div class="region-progress" style="width: 30%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="region-value">
+                                        <strong>$4,120</strong>
+                                        <span>8%</span>
+                                    </div>
+                                </div>
+                                <div class="region-item">
+                                    <div class="region-info">
+                                        <span class="region-name">Others</span>
+                                        <div class="region-bar">
+                                            <div class="region-progress" style="width: 20%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="region-value">
+                                        <strong>$2,844</strong>
+                                        <span>3%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h4 class="card-title">Recent Report History</h4>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table reports-table">
+                            <thead>
+                                <tr>
+                                    <th>Report Name</th>
+                                    <th>Type</th>
+                                    <th>Period</th>
+                                    <th>Generated By</th>
+                                    <th>Date</th>
+                                    <th>Size</th>
+                                    <th width="100">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="report-name-cell">
+                                            <i class="bi bi-file-earmark-pdf text-danger"></i>
+                                            <strong>Monthly Sales Report</strong>
+                                        </div>
+                                    </td>
+                                    <td><span class="type-badge sales">Sales</span></td>
+                                    <td>Jan 2024</td>
+                                    <td>Admin User</td>
+                                    <td>Jan 12, 2024 10:45 AM</td>
+                                    <td>2.4 MB</td>
+                                    <td>
+                                        <div class="report-actions">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="downloadReport(1)">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary" onclick="viewReport(1)">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="report-name-cell">
+                                            <i class="bi bi-file-earmark-excel text-success"></i>
+                                            <strong>Products Performance</strong>
+                                        </div>
+                                    </td>
+                                    <td><span class="type-badge products">Products</span></td>
+                                    <td>Dec 2023</td>
+                                    <td>Admin User</td>
+                                    <td>Jan 10, 2024 03:20 PM</td>
+                                    <td>1.8 MB</td>
+                                    <td>
+                                        <div class="report-actions">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="downloadReport(2)">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary" onclick="viewReport(2)">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="report-name-cell">
+                                            <i class="bi bi-file-earmark-pdf text-danger"></i>
+                                            <strong>Seller Earnings Report</strong>
+                                        </div>
+                                    </td>
+                                    <td><span class="type-badge sellers">Sellers</span></td>
+                                    <td>Q4 2023</td>
+                                    <td>Admin User</td>
+                                    <td>Jan 08, 2024 11:00 AM</td>
+                                    <td>3.2 MB</td>
+                                    <td>
+                                        <div class="report-actions">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="downloadReport(3)">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary" onclick="viewReport(3)">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="report-name-cell">
+                                            <i class="bi bi-file-earmark-pdf text-danger"></i>
+                                            <strong>Financial Summary</strong>
+                                        </div>
+                                    </td>
+                                    <td><span class="type-badge financial">Financial</span></td>
+                                    <td>2023 Annual</td>
+                                    <td>Admin User</td>
+                                    <td>Jan 05, 2024 09:15 AM</td>
+                                    <td>5.1 MB</td>
+                                    <td>
+                                        <div class="report-actions">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="downloadReport(4)">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary" onclick="viewReport(4)">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="report-name-cell">
+                                            <i class="bi bi-file-earmark-excel text-success"></i>
+                                            <strong>Customer Analytics</strong>
+                                        </div>
+                                    </td>
+                                    <td><span class="type-badge sales">Sales</span></td>
+                                    <td>Dec 2023</td>
+                                    <td>Admin User</td>
+                                    <td>Jan 03, 2024 02:30 PM</td>
+                                    <td>1.5 MB</td>
+                                    <td>
+                                        <div class="report-actions">
+                                            <button class="btn btn-sm btn-outline-primary" onclick="downloadReport(5)">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary" onclick="viewReport(5)">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="customReportModal" tabindex="-1">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Generate Custom Report</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-4">
+                                <div class="col-md-12">
+                                    <label class="form-label">Report Type</label>
+                                    <select class="form-select">
+                                        <option>Sales Report</option>
+                                        <option>Products Report</option>
+                                        <option>Sellers Report</option>
+                                        <option>Financial Report</option>
+                                        <option>Custom Report</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Date From</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Date To</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Include Metrics</label>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="metricRevenue"
+                                                    checked>
+                                                <label class="form-check-label" for="metricRevenue">Revenue</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="metricOrders"
+                                                    checked>
+                                                <label class="form-check-label" for="metricOrders">Orders</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="metricProducts"
+                                                    checked>
+                                                <label class="form-check-label" for="metricProducts">Products</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="metricCommission">
+                                                <label class="form-check-label"
+                                                    for="metricCommission">Commission</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="metricSellers">
+                                                <label class="form-check-label" for="metricSellers">Sellers</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="metricCustomers">
+                                                <label class="form-check-label" for="metricCustomers">Customers</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Export Format</label>
+                                    <div class="btn-group w-100" role="group">
+                                        <input type="radio" class="btn-check" name="format" id="formatPDF" checked>
+                                        <label class="btn btn-outline-secondary" for="formatPDF">PDF</label>
+
+                                        <input type="radio" class="btn-check" name="format" id="formatExcel">
+                                        <label class="btn btn-outline-secondary" for="formatExcel">Excel</label>
+
+                                        <input type="radio" class="btn-check" name="format" id="formatCSV">
+                                        <label class="btn btn-outline-secondary" for="formatCSV">CSV</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="generateReport()">Generate
+                                Report</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
         </main>
@@ -334,9 +796,10 @@
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Admin Custom JavaScript -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/report.js"></script>
 </body>
+
 </html>
