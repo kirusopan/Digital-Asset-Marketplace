@@ -126,7 +126,7 @@
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false,
+                // maintainAspectRatio: false,
                 plugins: {
                     legend: {
                         display: false
