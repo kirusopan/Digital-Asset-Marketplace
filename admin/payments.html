@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - AssetHub</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
     <!-- Admin Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/payments.css">
+    <link rel="stylesheet" href="assets/css/analytics.css">
 </head>
+
 <body class="admin-body">
 
     <!-- Sidebar -->
@@ -47,7 +51,7 @@
         <nav class="sidebar-nav">
             <div class="nav-section">
                 <h6 class="nav-section-title">Main</h6>
-                
+
                 <a href="dashboard.html" class="nav-item active">
                     <i class="bi bi-grid-fill"></i>
                     <span class="nav-text">Dashboard</span>
@@ -62,7 +66,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Management</h6>
-                
+
                 <a href="assets.html" class="nav-item">
                     <i class="bi bi-box-seam"></i>
                     <span class="nav-text">Assets</span>
@@ -99,7 +103,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Financial</h6>
-                
+
                 <a href="payments.html" class="nav-item">
                     <i class="bi bi-credit-card"></i>
                     <span class="nav-text">Payments</span>
@@ -119,7 +123,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Content</h6>
-                
+
                 <a href="blog.html" class="nav-item">
                     <i class="bi bi-file-text"></i>
                     <span class="nav-text">Blog Posts</span>
@@ -139,7 +143,7 @@
 
             <div class="nav-section">
                 <h6 class="nav-section-title">Settings</h6>
-                
+
                 <a href="settings.html" class="nav-item">
                     <i class="bi bi-gear"></i>
                     <span class="nav-text">Settings</span>
@@ -309,8 +313,564 @@
 
         <!-- Page Content -->
         <main class="admin-content">
-            
 
+            <!-- ============================================
+     ADMIN PAYMENTS PAGE - MAIN CONTENT
+     Place inside <main class="admin-content">
+     ============================================ -->
+
+            <!-- Page Header -->
+            <div class="content-header">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h1 class="content-title">Payments</h1>
+                        <p class="content-subtitle">Track and manage all payment transactions</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="btn-group">
+                            <button class="btn btn-outline-secondary">
+                                <i class="bi bi-download"></i> Export
+                            </button>
+                            <button class="btn btn-outline-secondary">
+                                <i class="bi bi-filter"></i> Filter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="row g-4 mb-4">
+                <div class="col-xl-3 col-md-6">
+                    <div class="stats-card">
+                        <div class="stats-icon bg-success">
+                            <i class="bi bi-currency-dollar"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3 class="stats-value">$48,574</h3>
+                            <p class="stats-label">Total Revenue</p>
+                            <div class="stats-trend positive">
+                                <i class="bi bi-arrow-up"></i>
+                                <span>12.5%</span> vs last month
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="stats-card">
+                        <div class="stats-icon bg-primary">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3 class="stats-value">845</h3>
+                            <p class="stats-label">Successful</p>
+                            <div class="stats-trend positive">
+                                <i class="bi bi-arrow-up"></i>
+                                <span>8.2%</span> vs last month
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="stats-card">
+                        <div class="stats-icon bg-warning">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3 class="stats-value">24</h3>
+                            <p class="stats-label">Pending</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="stats-card">
+                        <div class="stats-icon bg-danger">
+                            <i class="bi bi-x-circle"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3 class="stats-value">23</h3>
+                            <p class="stats-label">Failed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payments Table -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h4 class="card-title">All Payments</h4>
+                    <div class="card-actions">
+                        <div class="input-group search-box">
+                            <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Search payments..." id="paymentSearch">
+                        </div>
+                        <select class="form-select" id="statusFilter">
+                            <option value="all">All Status</option>
+                            <option value="completed">Completed</option>
+                            <option value="pending">Pending</option>
+                            <option value="failed">Failed</option>
+                            <option value="refunded">Refunded</option>
+                        </select>
+                        <select class="form-select" id="methodFilter">
+                            <option value="all">All Methods</option>
+                            <option value="card">Credit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="bank">Bank Transfer</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table dashboard-table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox" class="form-check-input" id="selectAll">
+                                    </th>
+                                    <th>Transaction ID</th>
+                                    <th>Customer</th>
+                                    <th>Order ID</th>
+                                    <th>Amount</th>
+                                    <th>Method</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td><strong>TXN-894561237</strong></td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://i.pravatar.cc/40?img=1" alt="User">
+                                            <div>
+                                                <div class="user-name">John Doe</div>
+                                                <div class="user-email">john@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><a href="admin-order-details.html" class="order-link">#ORD-2841</a></td>
+                                    <td><strong>$53.90</strong></td>
+                                    <td>
+                                        <span class="payment-method-badge">
+                                            <i class="bi bi-credit-card"></i> Card
+                                        </span>
+                                    </td>
+                                    <td><span class="badge-status badge-success">Completed</span></td>
+                                    <td>
+                                        <div>Jan 12, 2024</div>
+                                        <small class="text-muted">10:31 AM</small>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-action" data-bs-toggle="tooltip" title="View Details">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn-action" data-bs-toggle="tooltip"
+                                                title="Download Receipt">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn-action text-warning" data-bs-toggle="tooltip"
+                                                title="Refund">
+                                                <i class="bi bi-arrow-clockwise"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td><strong>TXN-894561236</strong></td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://i.pravatar.cc/40?img=2" alt="User">
+                                            <div>
+                                                <div class="user-name">Sarah Kim</div>
+                                                <div class="user-email">sarah@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><a href="admin-order-details.html" class="order-link">#ORD-2840</a></td>
+                                    <td><strong>$42.90</strong></td>
+                                    <td>
+                                        <span class="payment-method-badge">
+                                            <i class="bi bi-paypal"></i> PayPal
+                                        </span>
+                                    </td>
+                                    <td><span class="badge-status badge-warning">Pending</span></td>
+                                    <td>
+                                        <div>Jan 12, 2024</div>
+                                        <small class="text-muted">09:15 AM</small>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-action">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn-action">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn-action text-warning">
+                                                <i class="bi bi-arrow-clockwise"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td><strong>TXN-894561235</strong></td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://i.pravatar.cc/40?img=3" alt="User">
+                                            <div>
+                                                <div class="user-name">Mike Chen</div>
+                                                <div class="user-email">mike@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><a href="admin-order-details.html" class="order-link">#ORD-2839</a></td>
+                                    <td><strong>$31.90</strong></td>
+                                    <td>
+                                        <span class="payment-method-badge">
+                                            <i class="bi bi-credit-card"></i> Card
+                                        </span>
+                                    </td>
+                                    <td><span class="badge-status badge-success">Completed</span></td>
+                                    <td>
+                                        <div>Jan 11, 2024</div>
+                                        <small class="text-muted">04:20 PM</small>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-action">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn-action">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn-action text-warning">
+                                                <i class="bi bi-arrow-clockwise"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td><strong>TXN-894561234</strong></td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://i.pravatar.cc/40?img=4" alt="User">
+                                            <div>
+                                                <div class="user-name">Emma Wilson</div>
+                                                <div class="user-email">emma@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><a href="admin-order-details.html" class="order-link">#ORD-2838</a></td>
+                                    <td><strong>$64.90</strong></td>
+                                    <td>
+                                        <span class="payment-method-badge">
+                                            <i class="bi bi-credit-card"></i> Card
+                                        </span>
+                                    </td>
+                                    <td><span class="badge-status badge-success">Completed</span></td>
+                                    <td>
+                                        <div>Jan 11, 2024</div>
+                                        <small class="text-muted">02:45 PM</small>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-action">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn-action">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn-action text-warning">
+                                                <i class="bi bi-arrow-clockwise"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td><strong>TXN-894561233</strong></td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://i.pravatar.cc/40?img=5" alt="User">
+                                            <div>
+                                                <div class="user-name">Alex Rivera</div>
+                                                <div class="user-email">alex@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><a href="admin-order-details.html" class="order-link">#ORD-2837</a></td>
+                                    <td><strong>$86.90</strong></td>
+                                    <td>
+                                        <span class="payment-method-badge">
+                                            <i class="bi bi-paypal"></i> PayPal
+                                        </span>
+                                    </td>
+                                    <td><span class="badge-status badge-danger">Refunded</span></td>
+                                    <td>
+                                        <div>Jan 10, 2024</div>
+                                        <small class="text-muted">11:00 AM</small>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-action">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn-action">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn-action text-warning">
+                                                <i class="bi bi-arrow-clockwise"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td><strong>TXN-894561232</strong></td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://i.pravatar.cc/40?img=6" alt="User">
+                                            <div>
+                                                <div class="user-name">David Park</div>
+                                                <div class="user-email">david@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><a href="admin-order-details.html" class="order-link">#ORD-2836</a></td>
+                                    <td><strong>$75.90</strong></td>
+                                    <td>
+                                        <span class="payment-method-badge">
+                                            <i class="bi bi-bank"></i> Bank
+                                        </span>
+                                    </td>
+                                    <td><span class="badge-status badge-info">Processing</span></td>
+                                    <td>
+                                        <div>Jan 10, 2024</div>
+                                        <small class="text-muted">08:30 AM</small>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-action">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn-action">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn-action text-warning">
+                                                <i class="bi bi-arrow-clockwise"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td><strong>TXN-894561231</strong></td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://i.pravatar.cc/40?img=7" alt="User">
+                                            <div>
+                                                <div class="user-name">Lisa Anderson</div>
+                                                <div class="user-email">lisa@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><a href="admin-order-details.html" class="order-link">#ORD-2835</a></td>
+                                    <td><strong>$49.50</strong></td>
+                                    <td>
+                                        <span class="payment-method-badge">
+                                            <i class="bi bi-credit-card"></i> Card
+                                        </span>
+                                    </td>
+                                    <td><span class="badge-status badge-success">Completed</span></td>
+                                    <td>
+                                        <div>Jan 9, 2024</div>
+                                        <small class="text-muted">03:15 PM</small>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-action">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn-action">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn-action text-warning">
+                                                <i class="bi bi-arrow-clockwise"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td><strong>TXN-894561230</strong></td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://i.pravatar.cc/40?img=8" alt="User">
+                                            <div>
+                                                <div class="user-name">Tom Harris</div>
+                                                <div class="user-email">tom@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><a href="admin-order-details.html" class="order-link">#ORD-2834</a></td>
+                                    <td><strong>$38.50</strong></td>
+                                    <td>
+                                        <span class="payment-method-badge">
+                                            <i class="bi bi-paypal"></i> PayPal
+                                        </span>
+                                    </td>
+                                    <td><span class="badge-status badge-danger">Failed</span></td>
+                                    <td>
+                                        <div>Jan 9, 2024</div>
+                                        <small class="text-muted">12:00 PM</small>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-action">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn-action">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn-action text-warning">
+                                                <i class="bi bi-arrow-clockwise"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <p class="table-info">Showing 1 to 8 of 892 payments</p>
+                        </div>
+                        <div class="col-md-6">
+                            <nav>
+                                <ul class="pagination justify-content-md-end mb-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Details Modal -->
+            <div class="modal fade" id="paymentDetailsModal" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Payment Details - TXN-894561237</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="detail-card">
+                                        <h6 class="detail-title">Transaction Information</h6>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Transaction ID:</span>
+                                            <span class="detail-value">TXN-894561237</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Order ID:</span>
+                                            <span class="detail-value">#ORD-2841</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Date & Time:</span>
+                                            <span class="detail-value">Jan 12, 2024 10:31 AM</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Status:</span>
+                                            <span class="badge-status badge-success">Completed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-card">
+                                        <h6 class="detail-title">Payment Method</h6>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Method:</span>
+                                            <span class="detail-value">Credit Card</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Card:</span>
+                                            <span class="detail-value">**** **** **** 4242</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Gateway:</span>
+                                            <span class="detail-value">Stripe</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Amount:</span>
+                                            <span class="detail-value text-success"><strong>$53.90</strong></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="detail-card">
+                                        <h6 class="detail-title">Customer Information</h6>
+                                        <div class="customer-info-modal">
+                                            <img src="https://i.pravatar.cc/60?img=1" alt="Customer">
+                                            <div>
+                                                <h6>John Doe</h6>
+                                                <p>john.doe@example.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-warning">
+                                <i class="bi bi-arrow-clockwise"></i> Process Refund
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
         </main>
@@ -334,9 +894,10 @@
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Admin Custom JavaScript -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/payments.js"></script>
 </body>
+
 </html>

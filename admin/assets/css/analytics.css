@@ -1,0 +1,315 @@
+/* ============================================
+   ADMIN ANALYTICS PAGE - CSS
+   Add to admin.css file
+   ============================================ */
+
+/* ===== TOP PRODUCTS LIST ===== */
+.top-products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.top-product-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--admin-bg);
+    border-radius: 10px;
+    transition: var(--admin-transition);
+}
+
+.top-product-item:hover {
+    background: var(--admin-border);
+}
+
+.product-rank {
+    width: 32px;
+    height: 32px;
+    background: var(--admin-primary);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+.top-product-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-details h6 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+    margin: 0 0 4px;
+}
+
+.product-details p {
+    font-size: 0.75rem;
+    color: var(--admin-text-muted);
+    margin: 0;
+}
+
+.product-revenue {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--admin-primary);
+}
+
+/* ===== TRAFFIC LEGEND ===== */
+.traffic-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.legend-label {
+    flex: 1;
+    font-size: 0.875rem;
+    color: var(--admin-text-dark);
+}
+
+.legend-value {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+}
+
+/* ===== ACTIVITY METRICS ===== */
+.activity-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.metric-item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 16px;
+    background: var(--admin-bg);
+    border-radius: 10px;
+}
+
+.metric-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.metric-icon.bg-primary {
+    background: var(--admin-primary);
+}
+
+.metric-icon.bg-success {
+    background: var(--admin-success);
+}
+
+.metric-icon.bg-warning {
+    background: var(--admin-warning);
+}
+
+.metric-icon.bg-info {
+    background: var(--admin-info);
+}
+
+.metric-content {
+    flex: 1;
+}
+
+.metric-content h5 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--admin-text-dark);
+    margin: 0 0 4px;
+}
+
+.metric-content p {
+    font-size: 0.75rem;
+    color: var(--admin-text-muted);
+    margin: 0 0 8px;
+}
+
+.metric-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.metric-trend.positive {
+    color: var(--admin-success);
+}
+
+.metric-trend.negative {
+    color: var(--admin-danger);
+}
+
+/* ===== DEVICE STATS ===== */
+.device-stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.device-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.device-icon {
+    font-size: 1.5rem;
+    color: var(--admin-primary);
+    width: 32px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.device-info {
+    flex: 1;
+}
+
+.device-info h6 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+    margin: 0 0 6px;
+}
+
+.device-info .progress {
+    height: 6px;
+    background: var(--admin-border);
+    border-radius: 10px;
+}
+
+.device-info .progress-bar {
+    background: linear-gradient(90deg, var(--admin-primary), var(--admin-primary-light));
+    border-radius: 10px;
+}
+
+.device-percentage {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+}
+
+/* ===== ACTION BADGE ===== */
+.action-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.action-badge.purchase {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--admin-success);
+}
+
+.action-badge.signup {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--admin-info);
+}
+
+.action-badge.review {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--admin-warning);
+}
+
+.action-badge.refund {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--admin-danger);
+}
+
+/* ===== ACTION BUTTONS (MISSING STYLES) ===== */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: var(--admin-bg);
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--admin-transition);
+    color: var(--admin-text-muted);
+}
+
+.btn-action:hover {
+    background: var(--admin-primary);
+    color: white;
+}
+
+.btn-action.text-danger:hover {
+    background: var(--admin-danger);
+    color: white;
+}
+
+.btn-action.text-warning:hover {
+    background: var(--admin-warning);
+    color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+    .metric-item {
+        padding: 12px;
+    }
+
+    .metric-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+
+    .metric-content h5 {
+        font-size: 1.25rem;
+    }
+
+    .action-buttons {
+        flex-wrap: wrap;
+    }
+}

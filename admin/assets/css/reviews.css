@@ -1,0 +1,221 @@
+/* ============================================
+   ADMIN REVIEWS PAGE - CSS
+   Add to admin.css file
+   ============================================ */
+
+/* ===== REVIEWS LIST ===== */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+}
+
+.review-item {
+    background: var(--admin-bg-light);
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    padding: 24px;
+    transition: var(--admin-transition);
+}
+
+.review-item:hover {
+    box-shadow: var(--admin-shadow);
+}
+
+/* ===== REVIEW HEADER ===== */
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.reviewer-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.reviewer-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+    margin: 0 0 4px;
+}
+
+.review-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.review-date {
+    font-size: 0.75rem;
+    color: var(--admin-text-muted);
+}
+
+.review-verified {
+    font-size: 0.75rem;
+    color: var(--admin-success);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+}
+
+.review-actions-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ===== REVIEW BODY ===== */
+.review-body {
+    margin-bottom: 16px;
+}
+
+.review-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 12px;
+    color: var(--admin-warning);
+}
+
+.review-rating i {
+    font-size: 1rem;
+}
+
+.review-rating .rating-value {
+    margin-left: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+}
+
+.review-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+    margin: 0 0 12px;
+}
+
+.review-text {
+    font-size: 0.875rem;
+    color: var(--admin-text-muted);
+    line-height: 1.6;
+    margin: 0 0 16px;
+}
+
+.review-product {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    background: var(--admin-bg);
+    border-radius: 8px;
+}
+
+.review-product img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.review-product h6 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+    margin: 0 0 4px;
+}
+
+.review-product p {
+    font-size: 0.75rem;
+    color: var(--admin-text-muted);
+    margin: 0;
+}
+
+/* ===== REVIEW FOOTER ===== */
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--admin-border);
+}
+
+.review-helpful {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-helpful {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--admin-bg);
+    border: 1px solid var(--admin-border);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    cursor: pointer;
+    transition: var(--admin-transition);
+}
+
+.btn-helpful:hover {
+    background: var(--admin-primary);
+    border-color: var(--admin-primary);
+    color: white;
+}
+
+.btn-helpful i {
+    font-size: 0.875rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+    .reviews-list {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .review-item {
+        padding: 16px;
+    }
+
+    .review-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .review-actions-header {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .review-footer {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .review-helpful {
+        justify-content: space-between;
+    }
+}

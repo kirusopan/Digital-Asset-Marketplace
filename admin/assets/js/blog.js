@@ -1,6 +1,6 @@
 /* ============================================
-   ADMIN USERS MANAGEMENT - JAVASCRIPT
-   Add to admin.js or create users.js
+   ADMIN BLOG POSTS PAGE - JAVASCRIPT
+   Add to admin.js or create blog.js
    ============================================ */
 
 (function() {
@@ -11,7 +11,7 @@
         initSearch();
         initFilters();
         initActions();
-        initAddUserForm();
+        initAddPostForm();
     });
 
     // ===== SELECT ALL =====
@@ -26,20 +26,11 @@
                 });
             });
         }
-
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-                if (selectAll) {
-                    selectAll.checked = allChecked;
-                }
-            });
-        });
     }
 
     // ===== SEARCH =====
     function initSearch() {
-        const searchInput = document.getElementById('userSearch');
+        const searchInput = document.getElementById('postSearch');
         const tableRows = document.querySelectorAll('tbody tr');
 
         if (searchInput) {
@@ -56,24 +47,24 @@
 
     // ===== FILTERS =====
     function initFilters() {
-        const roleFilter = document.getElementById('roleFilter');
+        const categoryFilter = document.getElementById('categoryFilter');
         const statusFilter = document.getElementById('statusFilter');
         const tableRows = document.querySelectorAll('tbody tr');
 
-        if (roleFilter) {
-            roleFilter.addEventListener('change', function() {
-                const selectedRole = this.value.toLowerCase();
+        if (categoryFilter) {
+            categoryFilter.addEventListener('change', function() {
+                const selectedCategory = this.value.toLowerCase();
 
                 tableRows.forEach(row => {
-                    if (selectedRole === 'all') {
+                    if (selectedCategory === 'all') {
                         row.style.display = '';
                         return;
                     }
 
-                    const roleBadge = row.querySelector('.role-badge');
-                    if (roleBadge) {
-                        const rowRole = roleBadge.textContent.toLowerCase();
-                        row.style.display = rowRole === selectedRole ? '' : 'none';
+                    const categoryBadge = row.querySelector('.badge');
+                    if (categoryBadge) {
+                        const rowCategory = categoryBadge.textContent.toLowerCase().replace(/\s+/g, '');
+                        row.style.display = rowCategory.includes(selectedCategory) ? '' : 'none';
                     }
                 });
             });
@@ -89,9 +80,9 @@
                         return;
                     }
 
-                    const statusBadge = row.querySelector('.status-badge');
-                    if (statusBadge) {
-                        const rowStatus = statusBadge.textContent.toLowerCase();
+                    const statusSpan = row.querySelector('.post-status');
+                    if (statusSpan) {
+                        const rowStatus = statusSpan.textContent.toLowerCase();
                         row.style.display = rowStatus === selectedStatus ? '' : 'none';
                     }
                 });
@@ -101,46 +92,50 @@
 
     // ===== ACTIONS =====
     function initActions() {
-        // View Profile
+        // View Post
         const viewButtons = document.querySelectorAll('.btn-action:has(.bi-eye)');
         viewButtons.forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
-                const modal = new bootstrap.Modal(document.getElementById('userDetailsModal'));
-                modal.show();
+                const row = this.closest('tr');
+                const postTitle = row.querySelector('.post-title').textContent;
+                
+                if (window.adminPanel && window.adminPanel.showNotification) {
+                    window.adminPanel.showNotification('Opening preview for: ' + postTitle, 'info');
+                }
             });
         });
 
-        // Edit User
+        // Edit Post
         const editButtons = document.querySelectorAll('.btn-action:has(.bi-pencil)');
         editButtons.forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
                 const row = this.closest('tr');
-                const userName = row.querySelector('.user-name').textContent;
+                const postTitle = row.querySelector('.post-title').textContent;
                 
                 if (window.adminPanel && window.adminPanel.showNotification) {
-                    window.adminPanel.showNotification('Opening edit form for ' + userName, 'info');
+                    window.adminPanel.showNotification('Opening editor for: ' + postTitle, 'info');
                 }
             });
         });
 
-        // Delete User
+        // Delete Post
         const deleteButtons = document.querySelectorAll('.btn-action.text-danger');
         deleteButtons.forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
                 const row = this.closest('tr');
-                const userName = row.querySelector('.user-name').textContent;
+                const postTitle = row.querySelector('.post-title').textContent;
                 
                 if (window.adminPanel && window.adminPanel.showConfirm) {
                     window.adminPanel.showConfirm(
-                        'Delete User',
-                        'Are you sure you want to delete ' + userName + '? This action cannot be undone.',
+                        'Delete Post',
+                        'Are you sure you want to delete "' + postTitle + '"? This action cannot be undone.',
                         () => {
                             row.remove();
                             if (window.adminPanel.showNotification) {
-                                window.adminPanel.showNotification('User deleted successfully', 'success');
+                                window.adminPanel.showNotification('Post deleted successfully!', 'success');
                             }
                         }
                     );
@@ -149,27 +144,38 @@
         });
     }
 
-    // ===== ADD USER FORM =====
-    function initAddUserForm() {
-        const form = document.getElementById('addUserForm');
+    // ===== ADD POST FORM =====
+    function initAddPostForm() {
+        const form = document.getElementById('addPostForm');
         
         if (form) {
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
 
-                const formData = new FormData(form);
-                
                 if (window.adminPanel && window.adminPanel.showNotification) {
-                    window.adminPanel.showNotification('Adding new user...', 'info');
+                    window.adminPanel.showNotification('Publishing post...', 'info');
                     
                     setTimeout(() => {
-                        window.adminPanel.showNotification('User added successfully!', 'success');
+                        window.adminPanel.showNotification('Post published successfully!', 'success');
                         
-                        const modal = bootstrap.Modal.getInstance(document.getElementById('addUserModal'));
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('addPostModal'));
                         modal.hide();
                         
                         form.reset();
                     }, 1500);
+                }
+            });
+        }
+
+        // Save as Draft
+        const draftBtn = document.querySelector('.btn-outline-primary');
+        if (draftBtn) {
+            draftBtn.addEventListener('click', function() {
+                if (window.adminPanel && window.adminPanel.showNotification) {
+                    window.adminPanel.showNotification('Post saved as draft!', 'success');
+                    
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('addPostModal'));
+                    modal.hide();
                 }
             });
         }
@@ -180,10 +186,9 @@
     if (exportBtn) {
         exportBtn.addEventListener('click', function() {
             if (window.adminPanel && window.adminPanel.showNotification) {
-                window.adminPanel.showNotification('Exporting users data...', 'info');
-                
+                window.adminPanel.showNotification('Exporting posts data...', 'info');
                 setTimeout(() => {
-                    window.adminPanel.showNotification('Users data exported successfully!', 'success');
+                    window.adminPanel.showNotification('Posts data exported successfully!', 'success');
                 }, 1500);
             }
         });
