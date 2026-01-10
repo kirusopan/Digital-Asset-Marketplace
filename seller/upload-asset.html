@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seller Dashboard - AssetHub</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/upload-assets.css">
 </head>
+
 <body>
-    
+
     <!-- Top Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="dashboard.html">
                 <i class="bi bi-hexagon-fill"></i> AssetHub
             </a>
-            
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarTop">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
@@ -35,7 +38,7 @@
                             <i class="bi bi-globe"></i> Visit Store
                         </a>
                     </li>
-                    
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                             <i class="bi bi-bell"></i>
@@ -43,24 +46,34 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end notification-dropdown">
                             <li class="dropdown-header">Notifications</li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-cart-check text-success"></i> New sale: UI Kit Pro</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-chat-dots text-info"></i> New review received</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-cash text-warning"></i> Withdrawal processed</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-cart-check text-success"></i> New
+                                    sale: UI Kit Pro</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-chat-dots text-info"></i> New review
+                                    received</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-cash text-warning"></i> Withdrawal
+                                    processed</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li><a class="dropdown-item text-center" href="#">View All</a></li>
                         </ul>
                     </li>
-                    
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" data-bs-toggle="dropdown">
-                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=6366f1&color=fff" class="rounded-circle me-2" width="32" height="32">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                            data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=6366f1&color=fff"
+                                class="rounded-circle me-2" width="32" height="32">
                             <span>John Doe</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> My Profile</a></li>
                             <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Settings</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i>
+                                    Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -70,25 +83,25 @@
 
     <!-- Dashboard Container -->
     <div class="dashboard-container">
-        
+
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-inner">
                 <ul class="sidebar-menu">
-                    <li class="menu-item active">
+                    <li class="menu-item">
                         <a href="dashboard.html">
                             <i class="bi bi-speedometer2"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="upload-asset.html">
                             <i class="bi bi-cloud-upload"></i>
                             <span>Upload Asset</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="my-assets.html">
                             <i class="bi bi-box-seam"></i>
@@ -96,28 +109,28 @@
                             <span class="badge bg-primary">12</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="sales.html">
                             <i class="bi bi-cart-check"></i>
                             <span>Sales</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="earnings.html">
                             <i class="bi bi-cash-coin"></i>
                             <span>Earnings</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="withdrawals.html">
                             <i class="bi bi-wallet2"></i>
                             <span>Withdrawals</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="reviews.html">
                             <i class="bi bi-star"></i>
@@ -125,16 +138,16 @@
                             <span class="badge bg-warning">5</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="support.html">
                             <i class="bi bi-life-preserver"></i>
                             <span>Support</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-divider"></li>
-                    
+
                     <li class="menu-item">
                         <a href="profile.html">
                             <i class="bi bi-person-circle"></i>
@@ -147,17 +160,715 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            
-        
+
+            <!-- Upload Asset Form -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Basic Information -->
+                    <div class="card card-hover mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-1">
+                                <i class="bi bi-info-circle me-2"></i>Basic Information
+                            </h5>
+                            <p class="text-muted mb-0 small">Tell us about your asset</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Asset Title <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg"
+                                    placeholder="e.g., Modern Dashboard UI Kit" maxlength="100"
+                                    value="Modern Dashboard UI Kit">
+                                <div class="form-text">
+                                    <i class="bi bi-lightbulb"></i> Choose a clear, descriptive title (Max 100
+                                    characters)
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Description <span
+                                        class="text-danger">*</span></label>
+                                <textarea class="form-control" rows="10" placeholder="Describe your asset in detail...">A modern, professional dashboard UI kit designed for web applications. This comprehensive kit includes over 100+ carefully crafted components, multiple page layouts, and everything you need to build stunning admin panels.
+
+Features:
+• 100+ UI Components
+• 10+ Dashboard Layouts
+• Fully Responsive Design
+• Dark & Light Mode
+• Easy to Customize
+• Bootstrap 5 Framework
+• Well Documented
+• Free Updates
+
+Perfect for developers and designers looking to create professional admin dashboards quickly.</textarea>
+                                <div class="form-text">
+                                    <i class="bi bi-lightbulb"></i> Describe features, what's included, and who it's for
+                                    (Min 200 characters)
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Category <span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-select form-select-lg">
+                                        <option>UI Kits</option>
+                                        <option>Website Templates</option>
+                                        <option>Graphics</option>
+                                        <option>Icons</option>
+                                        <option>Fonts</option>
+                                        <option>Videos</option>
+                                        <option>Audio</option>
+                                        <option>Source Code</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Sub-Category</label>
+                                    <select class="form-select form-select-lg">
+                                        <option>Dashboard Templates</option>
+                                        <option>Admin Templates</option>
+                                        <option>Landing Pages</option>
+                                        <option>E-commerce</option>
+                                        <option>Mobile UI</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing & Licenses -->
+                    <div class="card card-hover mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-1">
+                                <i class="bi bi-tag me-2"></i>Pricing & Licenses
+                            </h5>
+                            <p class="text-muted mb-0 small">Set your pricing strategy</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Asset Type</label>
+                                <div class="btn-group w-100" role="group">
+                                    <input type="radio" class="btn-check" name="assetType" id="paidAsset" checked>
+                                    <label class="btn btn-outline-primary" for="paidAsset">
+                                        <i class="bi bi-currency-dollar"></i> Paid
+                                    </label>
+                                    <input type="radio" class="btn-check" name="assetType" id="freeAsset">
+                                    <label class="btn btn-outline-success" for="freeAsset">
+                                        <i class="bi bi-gift"></i> Free
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div id="pricingSection">
+                                <div class="license-card mb-3">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="form-check me-auto">
+                                            <input class="form-check-input" type="checkbox" id="regularLicense" checked>
+                                            <label class="form-check-label fw-semibold" for="regularLicense">
+                                                Regular License
+                                            </label>
+                                        </div>
+                                        <div class="input-group" style="width: 150px;">
+                                            <span class="input-group-text">$</span>
+                                            <input type="number" class="form-control" value="49" min="1">
+                                        </div>
+                                    </div>
+                                    <p class="text-muted small mb-0">
+                                        <i class="bi bi-info-circle"></i> For single end product (not for resale)
+                                    </p>
+                                </div>
+
+                                <div class="license-card">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="form-check me-auto">
+                                            <input class="form-check-input" type="checkbox" id="extendedLicense"
+                                                checked>
+                                            <label class="form-check-label fw-semibold" for="extendedLicense">
+                                                Extended License
+                                            </label>
+                                        </div>
+                                        <div class="input-group" style="width: 150px;">
+                                            <span class="input-group-text">$</span>
+                                            <input type="number" class="form-control" value="199" min="1">
+                                        </div>
+                                    </div>
+                                    <p class="text-muted small mb-0">
+                                        <i class="bi bi-info-circle"></i> For products for sale to end users
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- File Upload -->
+                    <div class="card card-hover mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-1">
+                                <i class="bi bi-file-earmark-arrow-up me-2"></i>Upload Files
+                            </h5>
+                            <p class="text-muted mb-0 small">Upload your asset files</p>
+                        </div>
+                        <div class="card-body">
+                            <!-- Uploaded Files List (Static - shown by default) -->
+                            <div class="uploaded-files">
+                                <h6 class="mb-3">Uploaded Files</h6>
+                                <div class="file-item">
+                                    <div class="file-icon bg-primary">
+                                        <i class="bi bi-file-earmark-zip"></i>
+                                    </div>
+                                    <div class="file-info">
+                                        <h6 class="mb-0">modern-dashboard-ui-kit.zip</h6>
+                                        <small class="text-muted">45.2 MB • Uploaded 2 hours ago</small>
+                                    </div>
+                                    <div class="file-progress">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                                        </div>
+                                        <small class="text-success"><i class="bi bi-check-circle"></i> Complete</small>
+                                    </div>
+                                    <div class="file-actions">
+                                        <button class="btn btn-sm btn-light" title="Download">
+                                            <i class="bi bi-download"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-light" title="Remove">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="file-item">
+                                    <div class="file-icon bg-info">
+                                        <i class="bi bi-file-earmark-pdf"></i>
+                                    </div>
+                                    <div class="file-info">
+                                        <h6 class="mb-0">documentation.pdf</h6>
+                                        <small class="text-muted">2.8 MB • Uploaded 1 hour ago</small>
+                                    </div>
+                                    <div class="file-progress">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                                        </div>
+                                        <small class="text-success"><i class="bi bi-check-circle"></i> Complete</small>
+                                    </div>
+                                    <div class="file-actions">
+                                        <button class="btn btn-sm btn-light" title="Download">
+                                            <i class="bi bi-download"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-light" title="Remove">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="upload-zone mt-3">
+                                <div class="upload-icon">
+                                    <i class="bi bi-cloud-upload"></i>
+                                </div>
+                                <h5 class="mb-2">Add More Files</h5>
+                                <p class="text-muted mb-3">Drag & drop or click to upload</p>
+                                <button type="button" class="btn btn-primary">
+                                    <i class="bi bi-folder"></i> Browse Files
+                                </button>
+                                <p class="text-muted small mt-3 mb-0">
+                                    <i class="bi bi-info-circle"></i> Accepted: ZIP, RAR, PDF (Max 500MB)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preview Images -->
+                    <div class="card card-hover mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-1">
+                                <i class="bi bi-images me-2"></i>Preview Images
+                            </h5>
+                            <p class="text-muted mb-0 small">Showcase your asset (Min 3, Max 10)</p>
+                        </div>
+                        <div class="card-body">
+                            <!-- Preview Grid (Static) -->
+                            <div class="preview-grid mb-3">
+                                <div class="preview-item">
+                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=300&fit=crop"
+                                        alt="Preview">
+                                    <div class="preview-overlay">
+                                        <button class="btn btn-sm btn-light" title="View Full Size">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-light" title="Set as Main">
+                                            <i class="bi bi-star"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-light" title="Remove">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                    <span class="preview-badge badge bg-primary">Main</span>
+                                </div>
+                                <div class="preview-item">
+                                    <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?w=400&h=300&fit=crop"
+                                        alt="Preview">
+                                    <div class="preview-overlay">
+                                        <button class="btn btn-sm btn-light" title="View Full Size">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-light" title="Set as Main">
+                                            <i class="bi bi-star"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-light" title="Remove">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="preview-item">
+                                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=400&h=300&fit=crop"
+                                        alt="Preview">
+                                    <div class="preview-overlay">
+                                        <button class="btn btn-sm btn-light" title="View Full Size">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-light" title="Set as Main">
+                                            <i class="bi bi-star"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-light" title="Remove">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="preview-item">
+                                    <img src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=400&h=300&fit=crop"
+                                        alt="Preview">
+                                    <div class="preview-overlay">
+                                        <button class="btn btn-sm btn-light" title="View Full Size">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-light" title="Set as Main">
+                                            <i class="bi bi-star"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-light" title="Remove">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="preview-item">
+                                    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=400&h=300&fit=crop"
+                                        alt="Preview">
+                                    <div class="preview-overlay">
+                                        <button class="btn btn-sm btn-light" title="View Full Size">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-light" title="Set as Main">
+                                            <i class="bi bi-star"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-light" title="Remove">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="upload-zone upload-zone-small">
+                                <i class="bi bi-images fs-3 mb-2"></i>
+                                <p class="mb-2">Upload more preview images</p>
+                                <button type="button" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-plus-circle"></i> Add Images
+                                </button>
+                                <p class="text-muted small mt-2 mb-0">JPG, PNG (Max 5MB each)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Details -->
+                    <div class="card card-hover mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-1">
+                                <i class="bi bi-sliders me-2"></i>Additional Details
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Tags</label>
+                                <div class="tag-input-wrapper">
+                                    <div class="tag-container">
+                                        <span class="tag-item">
+                                            dashboard <button type="button" class="tag-remove">×</button>
+                                        </span>
+                                        <span class="tag-item">
+                                            ui kit <button type="button" class="tag-remove">×</button>
+                                        </span>
+                                        <span class="tag-item">
+                                            modern <button type="button" class="tag-remove">×</button>
+                                        </span>
+                                        <span class="tag-item">
+                                            bootstrap <button type="button" class="tag-remove">×</button>
+                                        </span>
+                                        <span class="tag-item">
+                                            admin template <button type="button" class="tag-remove">×</button>
+                                        </span>
+                                        <input type="text" class="tag-input" placeholder="Add tag and press Enter...">
+                                    </div>
+                                </div>
+                                <div class="form-text">
+                                    <i class="bi bi-lightbulb"></i> Add relevant tags to help buyers find your asset
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Compatible With</label>
+                                    <select class="form-select" multiple size="5">
+                                        <option selected>Figma</option>
+                                        <option selected>Sketch</option>
+                                        <option selected>Adobe XD</option>
+                                        <option>Photoshop</option>
+                                        <option>Illustrator</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">File Types Included</label>
+                                    <select class="form-select" multiple size="5">
+                                        <option selected>HTML</option>
+                                        <option selected>CSS</option>
+                                        <option selected>JavaScript</option>
+                                        <option selected>SASS/SCSS</option>
+                                        <option>React</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold">Version</label>
+                                    <input type="text" class="form-control" value="1.0.0">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold">Last Update</label>
+                                    <input type="date" class="form-control" value="2026-01-10">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold">Total File Size</label>
+                                    <input type="text" class="form-control" value="48.0 MB" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documentation -->
+                    <div class="card card-hover mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-1">
+                                <i class="bi bi-file-text me-2"></i>Documentation & Support
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Documentation URL</label>
+                                <input type="url" class="form-control" value="https://docs.modernkit.com"
+                                    placeholder="https://docs.example.com">
+                                <div class="form-text">
+                                    <i class="bi bi-info-circle"></i> Link to your documentation or guide
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Demo URL</label>
+                                <input type="url" class="form-control" value="https://demo.modernkit.com"
+                                    placeholder="https://demo.example.com">
+                                <div class="form-text">
+                                    <i class="bi bi-info-circle"></i> Live preview link for buyers
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="form-label fw-semibold">Support Options</label>
+                                <div class="support-options">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="emailSupport" checked>
+                                        <label class="form-check-label" for="emailSupport">
+                                            <i class="bi bi-envelope me-2"></i>Email Support (6 months included)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="ticketSupport" checked>
+                                        <label class="form-check-label" for="ticketSupport">
+                                            <i class="bi bi-ticket me-2"></i>Ticket System Support
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="liveChat">
+                                        <label class="form-check-label" for="liveChat">
+                                            <i class="bi bi-chat-dots me-2"></i>Live Chat (Premium)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="updates" checked>
+                                        <label class="form-check-label" for="updates">
+                                            <i class="bi bi-arrow-repeat me-2"></i>Lifetime Updates
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Preview Card -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-gradient-primary text-white">
+                            <h5 class="card-title text-white mb-1">
+                                <i class="bi bi-eye me-2"></i>Asset Preview
+                            </h5>
+                            <p class="mb-0 small opacity-90">How buyers will see it</p>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="preview-card-image">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=300&fit=crop"
+                                    alt="Preview">
+                                <div class="preview-card-badge">
+                                    <span class="badge bg-warning">New</span>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <h5 class="mb-2">Modern Dashboard UI Kit</h5>
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="rating-stars me-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                    <span class="text-muted small">(0 reviews)</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div>
+                                        <span class="text-muted small">Regular License</span>
+                                        <h4 class="mb-0 text-success">$49.00</h4>
+                                    </div>
+                                    <div class="text-end">
+                                        <span class="text-muted small">Extended License</span>
+                                        <h4 class="mb-0 text-primary">$199.00</h4>
+                                    </div>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-primary">
+                                        <i class="bi bi-cart-plus"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publishing Options -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">
+                                <i class="bi bi-gear me-2"></i>Publishing Options
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Status</label>
+                                <select class="form-select">
+                                    <option value="draft">Save as Draft</option>
+                                    <option value="pending" selected>Submit for Review</option>
+                                    <option value="published">Publish Immediately</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Visibility</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="visibility" id="public" checked>
+                                    <label class="form-check-label" for="public">
+                                        <i class="bi bi-globe me-1"></i> Public (visible to everyone)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="visibility" id="private">
+                                    <label class="form-check-label" for="private">
+                                        <i class="bi bi-lock me-1"></i> Private (only you can see)
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="info-box bg-light p-3 rounded mb-3">
+                                <h6 class="mb-2"><i class="bi bi-info-circle text-primary"></i> Review Process</h6>
+                                <p class="small text-muted mb-2">Your asset will be reviewed within 2-3 business days
+                                    before going live.</p>
+                                <p class="small text-muted mb-0"><strong>Current Status:</strong> <span
+                                        class="badge bg-warning">Pending Review</span></p>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                                    data-bs-target="#submitModal">
+                                    <i class="bi bi-check-circle me-2"></i>Submit for Review
+                                </button>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="bi bi-save me-2"></i>Save as Draft
+                                </button>
+                                <button class="btn btn-outline-danger">
+                                    <i class="bi bi-trash me-2"></i>Discard Changes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tips & Guidelines -->
+                    <div class="card">
+                        <div class="card-header bg-gradient-success text-white">
+                            <h5 class="card-title text-white mb-0">
+                                <i class="bi bi-lightbulb me-2"></i>Pro Tips
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="tips-list">
+                                <li>
+                                    <i class="bi bi-check-circle text-success"></i>
+                                    <span>Use high-quality preview images (1920x1080 recommended)</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle text-success"></i>
+                                    <span>Write detailed, clear descriptions with bullet points</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle text-success"></i>
+                                    <span>Include comprehensive documentation</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle text-success"></i>
+                                    <span>Add 5-10 relevant tags for better discovery</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle text-success"></i>
+                                    <span>Provide demo/live preview links</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle text-success"></i>
+                                    <span>Keep your files organized and well-structured</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Confirmation Modal (Static) -->
+            <div class="modal fade" id="submitModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title">
+                                <i class="bi bi-send text-primary me-2"></i>
+                                Submit Asset for Review?
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="mb-3">Your asset <strong>"Modern Dashboard UI Kit"</strong> will be submitted for
+                                review.</p>
+
+                            <div class="alert alert-info">
+                                <h6 class="alert-heading"><i class="bi bi-info-circle me-2"></i>What happens next?</h6>
+                                <ul class="mb-0 small">
+                                    <li>Our team will review your asset within 2-3 business days</li>
+                                    <li>You'll receive an email notification once reviewed</li>
+                                    <li>If approved, your asset will go live immediately</li>
+                                    <li>If changes needed, we'll provide detailed feedback</li>
+                                </ul>
+                            </div>
+
+                            <div class="checklist-box p-3 bg-light rounded">
+                                <h6 class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Review
+                                    Checklist:</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check1" checked disabled>
+                                    <label class="form-check-label small" for="check1">Files are properly
+                                        packaged</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check2" checked disabled>
+                                    <label class="form-check-label small" for="check2">Preview images are clear and high
+                                        quality</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check3" checked disabled>
+                                    <label class="form-check-label small" for="check3">Description is complete and
+                                        detailed</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check4" checked disabled>
+                                    <label class="form-check-label small" for="check4">Documentation is included</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                <i class="bi bi-x-circle me-1"></i> Cancel
+                            </button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                                <i class="bi bi-send me-2"></i>Submit Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View Image Modal (Static) -->
+            <div class="modal fade" id="viewImageModal" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title">Preview Image</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center p-0">
+                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&h=800&fit=crop"
+                                alt="Full Preview" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delete Confirmation Modal (Static) -->
+            <div class="modal fade" id="deleteModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title">
+                                <i class="bi bi-exclamation-triangle text-warning me-2"></i>
+                                Confirm Delete
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Are you sure you want to delete this item?</p>
+                            <p class="text-muted small mb-0">This action cannot be undone.</p>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                <i class="bi bi-trash me-1"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </main>
     </div>
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/upload-assets.js"></script>
 </body>
+
 </html>
