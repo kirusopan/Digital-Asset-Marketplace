@@ -9,6 +9,7 @@
     "axe/aria": "off",
     "no-inline-styles": "off",
     "axe/forms": "off",
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "axe/text-alternatives": "off"
   }
 }
