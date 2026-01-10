@@ -434,16 +434,14 @@
             <!-- Assets List -->
             <div class="dashboard-card">
                 <div class="card-header">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <h4 class="card-title">Pending Assets (12)</h4>
-                        <div class="view-toggle">
-                            <button class="btn btn-sm btn-outline-secondary active" data-view="grid">
-                                <i class="bi bi-grid"></i>
-                            </button>
-                            <button class="btn btn-sm btn-outline-secondary" data-view="list">
-                                <i class="bi bi-list"></i>
-                            </button>
-                        </div>
+                    <h4 class="card-title">Pending Assets (12)</h4>
+                    <div class="view-toggle">
+                        <button class="btn btn-sm btn-outline-secondary active" data-view="grid">
+                            <i class="bi bi-grid"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary" data-view="list">
+                            <i class="bi bi-list"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="card-body">
@@ -780,6 +778,89 @@
 
         </main>
 
+        <!-- ===== ASSET DETAILS VIEW MODAL ===== -->
+        <div class="modal fade" id="assetDetailsModal" tabindex="-1">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Asset Details - Dashboard UI Kit</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop"
+                                    alt="Asset" class="asset-preview-image">
+                                <div class="asset-gallery mt-3">
+                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&h=100&fit=crop"
+                                        alt="Preview 1">
+                                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=100&h=100&fit=crop"
+                                        alt="Preview 2">
+                                    <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=100&h=100&fit=crop"
+                                        alt="Preview 3">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="detail-card mb-3">
+                                    <h6 class="detail-title">Asset Information</h6>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Title:</span>
+                                        <span class="detail-value">Dashboard UI Kit</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Category:</span>
+                                        <span class="badge bg-primary">UI Kits</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Price:</span>
+                                        <span class="detail-value text-success"><strong>$49.00</strong></span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Seller:</span>
+                                        <span class="detail-value">John Doe</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Status:</span>
+                                        <span class="badge bg-success">Approved</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Sales:</span>
+                                        <span class="detail-value"><strong>245</strong></span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Rating:</span>
+                                        <span class="detail-value">
+                                            <i class="bi bi-star-fill text-warning"></i> 4.9 (256 reviews)
+                                        </span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Uploaded:</span>
+                                        <span class="detail-value">Jan 5, 2024</span>
+                                    </div>
+                                </div>
+                                <div class="detail-card">
+                                    <h6 class="detail-title">Description</h6>
+                                    <p>Modern dashboard UI kit with 50+ screens and components. Fully customizable and
+                                        production-ready design system built with Figma.</p>
+                                    <h6 class="detail-title mt-3">Files Included</h6>
+                                    <div class="file-list">
+                                        <span class="badge bg-secondary">Figma</span>
+                                        <span class="badge bg-secondary">Sketch</span>
+                                        <span class="badge bg-secondary">Adobe XD</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Approve Asset</button>
+                        <button type="button" class="btn btn-danger">Reject Asset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Footer -->
         <footer class="admin-footer">
             <div class="footer-content">
@@ -793,6 +874,9 @@
             </div>
         </footer>
     </div>
+
+
+
 
     <!-- Sidebar Overlay (for mobile) -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
