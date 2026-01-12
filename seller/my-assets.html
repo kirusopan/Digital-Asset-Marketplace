@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seller Dashboard - AssetHub</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dashboard.css">
-    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/my-assets.css">
 </head>
+
 <body>
-    
+
     <!-- Top Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="dashboard.html">
                 <i class="bi bi-hexagon-fill"></i> AssetHub
             </a>
-            
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarTop">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
@@ -36,7 +38,7 @@
                             <i class="bi bi-globe"></i> Visit Store
                         </a>
                     </li>
-                    
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                             <i class="bi bi-bell"></i>
@@ -44,24 +46,34 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end notification-dropdown">
                             <li class="dropdown-header">Notifications</li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-cart-check text-success"></i> New sale: UI Kit Pro</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-chat-dots text-info"></i> New review received</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-cash text-warning"></i> Withdrawal processed</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-cart-check text-success"></i> New
+                                    sale: UI Kit Pro</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-chat-dots text-info"></i> New review
+                                    received</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-cash text-warning"></i> Withdrawal
+                                    processed</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li><a class="dropdown-item text-center" href="#">View All</a></li>
                         </ul>
                     </li>
-                    
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" data-bs-toggle="dropdown">
-                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=6366f1&color=fff" class="rounded-circle me-2" width="32" height="32">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                            data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=6366f1&color=fff"
+                                class="rounded-circle me-2" width="32" height="32">
                             <span>John Doe</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> My Profile</a></li>
                             <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Settings</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i>
+                                    Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -71,7 +83,7 @@
 
     <!-- Dashboard Container -->
     <div class="dashboard-container">
-        
+
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-inner">
@@ -82,14 +94,14 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="upload-asset.html">
                             <i class="bi bi-cloud-upload"></i>
                             <span>Upload Asset</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="my-assets.html">
                             <i class="bi bi-box-seam"></i>
@@ -97,28 +109,28 @@
                             <span class="badge bg-primary">12</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="sales.html">
                             <i class="bi bi-cart-check"></i>
                             <span>Sales</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="earnings.html">
                             <i class="bi bi-cash-coin"></i>
                             <span>Earnings</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="withdrawals.html">
                             <i class="bi bi-wallet2"></i>
                             <span>Withdrawals</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="reviews.html">
                             <i class="bi bi-star"></i>
@@ -126,16 +138,16 @@
                             <span class="badge bg-warning">5</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="support.html">
                             <i class="bi bi-life-preserver"></i>
                             <span>Support</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-divider"></li>
-                    
+
                     <li class="menu-item">
                         <a href="profile.html">
                             <i class="bi bi-person-circle"></i>
@@ -148,17 +160,752 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            
-        
 
+            <!-- Page Header with Filters -->
+            <div class="page-header-section mb-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h1 class="page-title mb-2">My Assets</h1>
+                        <p class="text-muted mb-0">Manage your digital products</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <button class="btn btn-primary btn-lg" onclick="window.location.href='upload-asset.html'">
+                            <i class="bi bi-cloud-upload me-2"></i>Upload New Asset
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Overview -->
+            <div class="row g-3 mb-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card-mini">
+                        <div class="stat-icon-mini bg-primary">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <div class="stat-content-mini">
+                            <h3 class="mb-0">12</h3>
+                            <p class="text-muted small mb-0">Total Assets</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card-mini">
+                        <div class="stat-icon-mini bg-success">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <div class="stat-content-mini">
+                            <h3 class="mb-0">9</h3>
+                            <p class="text-muted small mb-0">Published</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card-mini">
+                        <div class="stat-icon-mini bg-warning">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <div class="stat-content-mini">
+                            <h3 class="mb-0">2</h3>
+                            <p class="text-muted small mb-0">Pending Review</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card-mini">
+                        <div class="stat-icon-mini bg-secondary">
+                            <i class="bi bi-file-earmark"></i>
+                        </div>
+                        <div class="stat-content-mini">
+                            <h3 class="mb-0">1</h3>
+                            <p class="text-muted small mb-0">Draft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters & Search -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-md-4">
+                            <div class="search-box">
+                                <i class="bi bi-search"></i>
+                                <input type="text" class="form-control" placeholder="Search assets...">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-select">
+                                <option selected>All Status</option>
+                                <option>Published</option>
+                                <option>Pending Review</option>
+                                <option>Draft</option>
+                                <option>Rejected</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-select">
+                                <option selected>All Categories</option>
+                                <option>UI Kits</option>
+                                <option>Templates</option>
+                                <option>Graphics</option>
+                                <option>Icons</option>
+                                <option>Fonts</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-select">
+                                <option selected>Sort: Newest</option>
+                                <option>Sort: Oldest</option>
+                                <option>Sort: Name A-Z</option>
+                                <option>Sort: Name Z-A</option>
+                                <option>Sort: Most Sales</option>
+                                <option>Sort: Highest Price</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-outline-secondary active" title="Grid View">
+                                    <i class="bi bi-grid-3x3-gap"></i>
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary" title="List View">
+                                    <i class="bi bi-list-ul"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assets Grid -->
+            <div class="row g-4">
+                <!-- Asset Card 1 - Published -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="asset-card">
+                        <div class="asset-card-image">
+                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=300&fit=crop"
+                                alt="Asset">
+                            <div class="asset-card-badges">
+                                <span class="badge bg-success">Published</span>
+                                <span class="badge bg-primary">Featured</span>
+                            </div>
+                            <div class="asset-card-overlay">
+                                <button class="btn btn-sm btn-light" title="Preview" data-bs-toggle="modal"
+                                    data-bs-target="#previewModal">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="Edit"
+                                    onclick="window.location.href='edit-asset.html'">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="Analytics">
+                                    <i class="bi bi-graph-up"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="More Options" data-bs-toggle="dropdown">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg me-2"></i>Copy
+                                            Link</a></li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="bi bi-download me-2"></i>Download</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archive</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal"><i class="bi bi-trash me-2"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="d-flex align-items-start justify-content-between mb-2">
+                                <h5 class="asset-card-title mb-0">Modern Dashboard UI Kit</h5>
+                                <button class="btn btn-sm btn-light" title="Quick Stats" data-bs-toggle="tooltip">
+                                    <i class="bi bi-info-circle"></i>
+                                </button>
+                            </div>
+                            <p class="text-muted small mb-3">Category: UI Kits</p>
+
+                            <div class="asset-stats mb-3">
+                                <div class="stat-item">
+                                    <i class="bi bi-cart-check text-success"></i>
+                                    <span>87 sales</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-eye text-info"></i>
+                                    <span>1,245 views</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span>4.9 (23)</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div>
+                                    <span class="text-muted small d-block">Regular</span>
+                                    <h5 class="mb-0 text-success">$49.00</h5>
+                                </div>
+                                <div class="text-end">
+                                    <span class="text-muted small d-block">Extended</span>
+                                    <h5 class="mb-0 text-primary">$199.00</h5>
+                                </div>
+                            </div>
+
+                            <div class="asset-meta">
+                                <small class="text-muted">
+                                    <i class="bi bi-clock me-1"></i>Updated 2 days ago
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asset Card 2 - Pending Review -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="asset-card">
+                        <div class="asset-card-image">
+                            <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?w=400&h=300&fit=crop"
+                                alt="Asset">
+                            <div class="asset-card-badges">
+                                <span class="badge bg-warning">Pending Review</span>
+                            </div>
+                            <div class="asset-card-overlay">
+                                <button class="btn btn-sm btn-light" title="Preview" data-bs-toggle="modal"
+                                    data-bs-target="#previewModal">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="Edit">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="Analytics">
+                                    <i class="bi bi-graph-up"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="More Options" data-bs-toggle="dropdown">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg me-2"></i>Copy
+                                            Link</a></li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="bi bi-download me-2"></i>Download</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archive</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal"><i class="bi bi-trash me-2"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="d-flex align-items-start justify-content-between mb-2">
+                                <h5 class="asset-card-title mb-0">Admin Dashboard Pro</h5>
+                                <button class="btn btn-sm btn-light" title="Quick Stats">
+                                    <i class="bi bi-info-circle"></i>
+                                </button>
+                            </div>
+                            <p class="text-muted small mb-3">Category: Templates</p>
+
+                            <div class="alert alert-warning small mb-3">
+                                <i class="bi bi-clock-history me-1"></i>
+                                Submitted for review 3 hours ago
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div>
+                                    <span class="text-muted small d-block">Regular</span>
+                                    <h5 class="mb-0 text-success">$79.00</h5>
+                                </div>
+                                <div class="text-end">
+                                    <span class="text-muted small d-block">Extended</span>
+                                    <h5 class="mb-0 text-primary">$299.00</h5>
+                                </div>
+                            </div>
+
+                            <div class="asset-meta">
+                                <small class="text-muted">
+                                    <i class="bi bi-clock me-1"></i>Created 1 day ago
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asset Card 3 - Published -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="asset-card">
+                        <div class="asset-card-image">
+                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=400&h=300&fit=crop"
+                                alt="Asset">
+                            <div class="asset-card-badges">
+                                <span class="badge bg-success">Published</span>
+                            </div>
+                            <div class="asset-card-overlay">
+                                <button class="btn btn-sm btn-light" title="Preview" data-bs-toggle="modal"
+                                    data-bs-target="#previewModal">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="Edit">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="Analytics">
+                                    <i class="bi bi-graph-up"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="More Options" data-bs-toggle="dropdown">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg me-2"></i>Copy
+                                            Link</a></li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="bi bi-download me-2"></i>Download</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archive</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal"><i class="bi bi-trash me-2"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="d-flex align-items-start justify-content-between mb-2">
+                                <h5 class="asset-card-title mb-0">E-Commerce Website Kit</h5>
+                                <button class="btn btn-sm btn-light" title="Quick Stats">
+                                    <i class="bi bi-info-circle"></i>
+                                </button>
+                            </div>
+                            <p class="text-muted small mb-3">Category: Templates</p>
+
+                            <div class="asset-stats mb-3">
+                                <div class="stat-item">
+                                    <i class="bi bi-cart-check text-success"></i>
+                                    <span>54 sales</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-eye text-info"></i>
+                                    <span>892 views</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span>4.7 (18)</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div>
+                                    <span class="text-muted small d-block">Regular</span>
+                                    <h5 class="mb-0 text-success">$99.00</h5>
+                                </div>
+                                <div class="text-end">
+                                    <span class="text-muted small d-block">Extended</span>
+                                    <h5 class="mb-0 text-primary">$399.00</h5>
+                                </div>
+                            </div>
+
+                            <div class="asset-meta">
+                                <small class="text-muted">
+                                    <i class="bi bi-clock me-1"></i>Updated 5 days ago
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asset Card 4 - Draft -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="asset-card">
+                        <div class="asset-card-image">
+                            <img src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=400&h=300&fit=crop"
+                                alt="Asset">
+                            <div class="asset-card-badges">
+                                <span class="badge bg-secondary">Draft</span>
+                            </div>
+                            <div class="asset-card-overlay">
+                                <button class="btn btn-sm btn-light" title="Preview" data-bs-toggle="modal"
+                                    data-bs-target="#previewModal">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="Edit">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="Submit">
+                                    <i class="bi bi-send"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="More Options" data-bs-toggle="dropdown">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-send me-2"></i>Submit for
+                                            Review</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-files me-2"></i>Duplicate</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal"><i class="bi bi-trash me-2"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="d-flex align-items-start justify-content-between mb-2">
+                                <h5 class="asset-card-title mb-0">Premium Icon Pack</h5>
+                                <button class="btn btn-sm btn-light" title="Quick Stats">
+                                    <i class="bi bi-info-circle"></i>
+                                </button>
+                            </div>
+                            <p class="text-muted small mb-3">Category: Icons</p>
+
+                            <div class="alert alert-secondary small mb-3">
+                                <i class="bi bi-file-earmark me-1"></i>
+                                Not yet submitted
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div>
+                                    <span class="text-muted small d-block">Regular</span>
+                                    <h5 class="mb-0 text-success">$29.00</h5>
+                                </div>
+                                <div class="text-end">
+                                    <span class="text-muted small d-block">Extended</span>
+                                    <h5 class="mb-0 text-primary">$99.00</h5>
+                                </div>
+                            </div>
+
+                            <div class="asset-meta">
+                                <small class="text-muted">
+                                    <i class="bi bi-clock me-1"></i>Saved 2 hours ago
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asset Card 5 - Published -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="asset-card">
+                        <div class="asset-card-image">
+                            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=400&h=300&fit=crop"
+                                alt="Asset">
+                            <div class="asset-card-badges">
+                                <span class="badge bg-success">Published</span>
+                            </div>
+                            <div class="asset-card-overlay">
+                                <button class="btn btn-sm btn-light" title="Preview" data-bs-toggle="modal"
+                                    data-bs-target="#previewModal">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="Edit">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="Analytics">
+                                    <i class="bi bi-graph-up"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="More Options" data-bs-toggle="dropdown">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg me-2"></i>Copy
+                                            Link</a></li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="bi bi-download me-2"></i>Download</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archive</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal"><i class="bi bi-trash me-2"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="d-flex align-items-start justify-content-between mb-2">
+                                <h5 class="asset-card-title mb-0">Minimal Logo Collection</h5>
+                                <button class="btn btn-sm btn-light" title="Quick Stats">
+                                    <i class="bi bi-info-circle"></i>
+                                </button>
+                            </div>
+                            <p class="text-muted small mb-3">Category: Graphics</p>
+
+                            <div class="asset-stats mb-3">
+                                <div class="stat-item">
+                                    <i class="bi bi-cart-check text-success"></i>
+                                    <span>38 sales</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-eye text-info"></i>
+                                    <span>567 views</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span>4.6 (12)</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div>
+                                    <span class="text-muted small d-block">Regular</span>
+                                    <h5 class="mb-0 text-success">$39.00</h5>
+                                </div>
+                                <div class="text-end">
+                                    <span class="text-muted small d-block">Extended</span>
+                                    <h5 class="mb-0 text-primary">$149.00</h5>
+                                </div>
+                            </div>
+
+                            <div class="asset-meta">
+                                <small class="text-muted">
+                                    <i class="bi bi-clock me-1"></i>Updated 1 week ago
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asset Card 6 - Pending -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="asset-card">
+                        <div class="asset-card-image">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop"
+                                alt="Asset">
+                            <div class="asset-card-badges">
+                                <span class="badge bg-warning">Pending Review</span>
+                            </div>
+                            <div class="asset-card-overlay">
+                                <button class="btn btn-sm btn-light" title="Preview" data-bs-toggle="modal"
+                                    data-bs-target="#previewModal">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="Edit">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="Analytics">
+                                    <i class="bi bi-graph-up"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" title="More Options" data-bs-toggle="dropdown">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg me-2"></i>Copy
+                                            Link</a></li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="bi bi-download me-2"></i>Download</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archive</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal"><i class="bi bi-trash me-2"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="asset-card-body">
+                            <div class="d-flex align-items-start justify-content-between mb-2">
+                                <h5 class="asset-card-title mb-0">Mobile App UI Kit</h5>
+                                <button class="btn btn-sm btn-light" title="Quick Stats">
+                                    <i class="bi bi-info-circle"></i>
+                                </button>
+                            </div>
+                            <p class="text-muted small mb-3">Category: UI Kits</p>
+
+                            <div class="alert alert-warning small mb-3">
+                                <i class="bi bi-clock-history me-1"></i>
+                                Under review (1 day remaining)
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div>
+                                    <span class="text-muted small d-block">Regular</span>
+                                    <h5 class="mb-0 text-success">$59.00</h5>
+                                </div>
+                                <div class="text-end">
+                                    <span class="text-muted small d-block">Extended</span>
+                                    <h5 class="mb-0 text-primary">$249.00</h5>
+                                </div>
+                            </div>
+
+                            <div class="asset-meta">
+                                <small class="text-muted">
+                                    <i class="bi bi-clock me-1"></i>Submitted 2 days ago
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="d-flex justify-content-between align-items-center mt-5">
+                <p class="text-muted mb-0">Showing 6 of 12 assets</p>
+                <nav>
+                    <ul class="pagination mb-0">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Preview Modal -->
+            <div class="modal fade" id="previewModal" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Asset Preview</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop"
+                                        class="img-fluid rounded mb-3" alt="Preview">
+                                    <div class="preview-gallery">
+                                        <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?w=150&h=100&fit=crop"
+                                            class="img-thumbnail me-2" alt="Thumb">
+                                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=150&h=100&fit=crop"
+                                            class="img-thumbnail me-2" alt="Thumb">
+                                        <img src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=150&h=100&fit=crop"
+                                            class="img-thumbnail me-2" alt="Thumb">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <h3 class="mb-3">Modern Dashboard UI Kit</h3>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rating-stars me-2">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                        </div>
+                                        <span class="text-muted">4.9 (23 reviews)</span>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div>
+                                                <small class="text-muted d-block">Regular License</small>
+                                                <h4 class="text-success mb-0">$49.00</h4>
+                                            </div>
+                                            <div class="text-end">
+                                                <small class="text-muted d-block">Extended License</small>
+                                                <h4 class="text-primary mb-0">$199.00</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="stats-grid mb-4">
+                                        <div class="stat-box">
+                                            <i class="bi bi-cart-check text-success"></i>
+                                            <div>
+                                                <h5 class="mb-0">87</h5>
+                                                <small class="text-muted">Sales</small>
+                                            </div>
+                                        </div>
+                                        <div class="stat-box">
+                                            <i class="bi bi-eye text-info"></i>
+                                            <div>
+                                                <h5 class="mb-0">1,245</h5>
+                                                <small class="text-muted">Views</small>
+                                            </div>
+                                        </div>
+                                        <div class="stat-box">
+                                            <i class="bi bi-currency-dollar text-primary"></i>
+                                            <div>
+                                                <h5 class="mb-0">$4,263</h5>
+                                                <small class="text-muted">Revenue</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <strong class="d-block mb-2">Category:</strong>
+                                        <span class="badge bg-primary">UI Kits</span>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <strong class="d-block mb-2">Tags:</strong>
+                                        <span class="badge bg-light text-dark me-1">dashboard</span>
+                                        <span class="badge bg-light text-dark me-1">ui kit</span>
+                                        <span class="badge bg-light text-dark me-1">modern</span>
+                                        <span class="badge bg-light text-dark">bootstrap</span>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <strong class="d-block mb-2">Status:</strong>
+                                        <span class="badge bg-success">Published</span>
+                                    </div>
+
+                                    <div class="d-grid gap-2">
+                                        <a href="#" class="btn btn-primary">
+                                            <i class="bi bi-box-arrow-up-right me-2"></i>View on Store
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary">
+                                            <i class="bi bi-pencil me-2"></i>Edit Asset
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Delete Modal -->
+            <div class="modal fade" id="deleteModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title">
+                                <i class="bi bi-exclamation-triangle text-danger me-2"></i>
+                                Delete Asset
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Are you sure you want to delete this asset?</p>
+                            <div class="alert alert-danger">
+                                <strong>Warning:</strong> This action cannot be undone. All associated data, sales
+                                history, and customer access will be permanently removed.
+                            </div>
+                            <p class="text-muted mb-0">Asset: <strong>Modern Dashboard UI Kit</strong></p>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                <i class="bi bi-trash me-2"></i>Delete Permanently
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/my-assets.js"></script>
 </body>
+
 </html>
