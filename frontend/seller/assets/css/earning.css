@@ -1,0 +1,316 @@
+/* Earnings Page Styles */
+
+/* Earning Cards */
+.earning-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.earning-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: var(--primary);
+    opacity: 0.05;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+
+.earning-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.earning-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.earning-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: white;
+}
+
+.earning-card-body {
+    position: relative;
+    z-index: 1;
+}
+
+.earning-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+}
+
+.earning-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.earning-trend.positive {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.earning-trend.negative {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+}
+
+.earning-trend.neutral {
+    background: var(--gray-100);
+    color: var(--gray-600);
+}
+
+.earning-trend i {
+    font-size: 1rem;
+}
+
+/* Badge Variants */
+.badge-success-soft {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.badge-warning-soft {
+    background: rgba(245, 158, 11, 0.1);
+    color: #d97706;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.badge-info-soft {
+    background: rgba(59, 130, 246, 0.1);
+    color: #2563eb;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.badge-primary-soft {
+    background: rgba(99, 102, 241, 0.1);
+    color: #4f46e5;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+/* Earnings Breakdown */
+.earning-breakdown-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.earning-breakdown-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.earning-breakdown-item h6 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+.earning-breakdown-item h5,
+.earning-breakdown-item h4 {
+    font-weight: 700;
+}
+
+/* Withdrawal Table */
+.withdrawal-table thead th {
+    background: var(--gray-50);
+    color: var(--gray-700);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 16px;
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.withdrawal-table tbody td {
+    padding: 16px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.withdrawal-table tbody tr {
+    transition: all 0.2s;
+}
+
+.withdrawal-table tbody tr:hover {
+    background: var(--gray-50);
+}
+
+/* Payment Method Cards */
+.payment-method-card {
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: 14px;
+    padding: 20px;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.payment-method-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method-card.active {
+    border-color: var(--success);
+    background: rgba(16, 185, 129, 0.02);
+}
+
+.payment-method-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.payment-method-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.payment-method-body h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.payment-method-body .flex-1 {
+    flex: 1;
+}
+
+/* Modal Styles */
+.withdrawal-summary {
+    font-size: 0.95rem;
+}
+
+.withdrawal-summary hr {
+    margin: 12px 0;
+    opacity: 0.1;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.detail-row span {
+    font-size: 0.9rem;
+}
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    padding: 20px;
+    background: var(--gray-50);
+    border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .earning-card {
+        padding: 20px;
+    }
+    
+    .earning-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.5rem;
+    }
+    
+    .earning-amount {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .earning-card::before {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .earning-amount {
+        font-size: 1.5rem;
+    }
+    
+    .earning-trend {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    
+    /* Mobile Table */
+    .withdrawal-table thead {
+        display: none;
+    }
+    
+    .withdrawal-table tbody tr {
+        display: block;
+        margin-bottom: 16px;
+        border: 1px solid var(--gray-200);
+        border-radius: 12px;
+        overflow: hidden;
+        background: white;
+    }
+    
+    .withdrawal-table tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .withdrawal-table tbody td:last-child {
+        border-bottom: none;
+    }
+    
+    .withdrawal-table tbody td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--gray-600);
+        margin-right: 16px;
+    }
+    
+    .payment-method-card {
+        margin-bottom: 16px;
+    }
+}
