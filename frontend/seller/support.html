@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seller Dashboard - AssetHub</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dashboard.css">
-    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/support.css">
 </head>
+
 <body>
-    
+
     <!-- Top Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="dashboard.html">
                 <i class="bi bi-hexagon-fill"></i> AssetHub
             </a>
-            
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarTop">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
@@ -36,7 +38,7 @@
                             <i class="bi bi-globe"></i> Visit Store
                         </a>
                     </li>
-                    
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                             <i class="bi bi-bell"></i>
@@ -44,24 +46,34 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end notification-dropdown">
                             <li class="dropdown-header">Notifications</li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-cart-check text-success"></i> New sale: UI Kit Pro</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-chat-dots text-info"></i> New review received</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-cash text-warning"></i> Withdrawal processed</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-cart-check text-success"></i> New
+                                    sale: UI Kit Pro</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-chat-dots text-info"></i> New review
+                                    received</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-cash text-warning"></i> Withdrawal
+                                    processed</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li><a class="dropdown-item text-center" href="#">View All</a></li>
                         </ul>
                     </li>
-                    
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" data-bs-toggle="dropdown">
-                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=6366f1&color=fff" class="rounded-circle me-2" width="32" height="32">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                            data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=6366f1&color=fff"
+                                class="rounded-circle me-2" width="32" height="32">
                             <span>John Doe</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> My Profile</a></li>
                             <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Settings</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i>
+                                    Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -71,7 +83,7 @@
 
     <!-- Dashboard Container -->
     <div class="dashboard-container">
-        
+
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-inner">
@@ -82,14 +94,14 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="upload-asset.html">
                             <i class="bi bi-cloud-upload"></i>
                             <span>Upload Asset</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="my-assets.html">
                             <i class="bi bi-box-seam"></i>
@@ -97,28 +109,28 @@
                             <span class="badge bg-primary">12</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="sales.html">
                             <i class="bi bi-cart-check"></i>
                             <span>Sales</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="earnings.html">
                             <i class="bi bi-cash-coin"></i>
                             <span>Earnings</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="withdrawals.html">
                             <i class="bi bi-wallet2"></i>
                             <span>Withdrawals</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="reviews.html">
                             <i class="bi bi-star"></i>
@@ -126,16 +138,16 @@
                             <span class="badge bg-warning">5</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item">
                         <a href="support.html">
                             <i class="bi bi-life-preserver"></i>
                             <span>Support</span>
                         </a>
                     </li>
-                    
+
                     <li class="menu-divider"></li>
-                    
+
                     <li class="menu-item">
                         <a href="profile.html">
                             <i class="bi bi-person-circle"></i>
@@ -148,17 +160,468 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            
-        
+
+            <!-- Page Header -->
+            <div class="page-header-section mb-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h1 class="page-title mb-2">Support Tickets</h1>
+                        <p class="text-muted mb-0">Manage your customer support requests</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newTicketModal">
+                            <i class="bi bi-plus-circle me-2"></i>New Ticket
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Overview -->
+            <div class="row g-3 mb-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="ticket-stat-card">
+                        <div class="ticket-stat-icon bg-gradient-warning">
+                            <i class="bi bi-hourglass-split"></i>
+                        </div>
+                        <div>
+                            <h3 class="mb-0">8</h3>
+                            <p class="text-muted small mb-0">Open Tickets</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="ticket-stat-card">
+                        <div class="ticket-stat-icon bg-gradient-info">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
+                        <div>
+                            <h3 class="mb-0">3</h3>
+                            <p class="text-muted small mb-0">In Progress</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="ticket-stat-card">
+                        <div class="ticket-stat-icon bg-gradient-success">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="mb-0">45</h3>
+                            <p class="text-muted small mb-0">Resolved</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="ticket-stat-card">
+                        <div class="ticket-stat-icon bg-gradient-primary">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <div>
+                            <h3 class="mb-0">2.5h</h3>
+                            <p class="text-muted small mb-0">Avg Response</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-md-4">
+                            <div class="search-box">
+                                <i class="bi bi-search"></i>
+                                <input type="text" class="form-control" placeholder="Search tickets...">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-select">
+                                <option selected>All Status</option>
+                                <option>Open</option>
+                                <option>In Progress</option>
+                                <option>Resolved</option>
+                                <option>Closed</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-select">
+                                <option selected>All Priority</option>
+                                <option>High</option>
+                                <option>Medium</option>
+                                <option>Low</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-select">
+                                <option selected>Sort: Newest</option>
+                                <option>Sort: Oldest</option>
+                                <option>Sort: Priority</option>
+                                <option>Sort: Updated</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-outline-secondary active">
+                                    <i class="bi bi-list-ul"></i>
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary">
+                                    <i class="bi bi-grid-3x3-gap"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tickets List -->
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="tickets-list-container">
+                        <!-- Ticket Item 1 -->
+                        <div class="ticket-item active" data-ticket="1">
+                            <div class="ticket-item-header">
+                                <div class="d-flex align-items-start justify-content-between mb-2">
+                                    <span class="badge bg-danger">High Priority</span>
+                                    <span class="ticket-id">#TK-1024</span>
+                                </div>
+                                <h6 class="ticket-title">Payment not received for order #10342</h6>
+                            </div>
+                            <div class="ticket-item-body">
+                                <p class="text-muted small mb-2">Customer reported payment issue after purchasing...</p>
+                                <div class="ticket-meta">
+                                    <span class="badge badge-warning-soft">Open</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i>2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="ticket-item-footer">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://i.pravatar.cc/150?img=1" class="rounded-circle me-2" width="24"
+                                        height="24">
+                                    <span class="small">Sarah Johnson</span>
+                                </div>
+                                <span class="badge bg-light text-dark"><i class="bi bi-chat-dots me-1"></i>3</span>
+                            </div>
+                        </div>
+
+                        <!-- Ticket Item 2 -->
+                        <div class="ticket-item" data-ticket="2">
+                            <div class="ticket-item-header">
+                                <div class="d-flex align-items-start justify-content-between mb-2">
+                                    <span class="badge bg-warning">Medium</span>
+                                    <span class="ticket-id">#TK-1023</span>
+                                </div>
+                                <h6 class="ticket-title">Download link not working</h6>
+                            </div>
+                            <div class="ticket-item-body">
+                                <p class="text-muted small mb-2">Unable to download purchased files. Link expires...</p>
+                                <div class="ticket-meta">
+                                    <span class="badge badge-info-soft">In Progress</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i>5 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="ticket-item-footer">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://i.pravatar.cc/150?img=12" class="rounded-circle me-2" width="24"
+                                        height="24">
+                                    <span class="small">Mike Chen</span>
+                                </div>
+                                <span class="badge bg-light text-dark"><i class="bi bi-chat-dots me-1"></i>5</span>
+                            </div>
+                        </div>
+
+                        <!-- Ticket Item 3 -->
+                        <div class="ticket-item" data-ticket="3">
+                            <div class="ticket-item-header">
+                                <div class="d-flex align-items-start justify-content-between mb-2">
+                                    <span class="badge bg-secondary">Low</span>
+                                    <span class="ticket-id">#TK-1022</span>
+                                </div>
+                                <h6 class="ticket-title">Question about license terms</h6>
+                            </div>
+                            <div class="ticket-item-body">
+                                <p class="text-muted small mb-2">Can I use this in multiple client projects with...</p>
+                                <div class="ticket-meta">
+                                    <span class="badge badge-warning-soft">Open</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i>1 day ago</span>
+                                </div>
+                            </div>
+                            <div class="ticket-item-footer">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://i.pravatar.cc/150?img=26" class="rounded-circle me-2" width="24"
+                                        height="24">
+                                    <span class="small">Emma Wilson</span>
+                                </div>
+                                <span class="badge bg-light text-dark"><i class="bi bi-chat-dots me-1"></i>2</span>
+                            </div>
+                        </div>
+
+                        <!-- Ticket Item 4 -->
+                        <div class="ticket-item" data-ticket="4">
+                            <div class="ticket-item-header">
+                                <div class="d-flex align-items-start justify-content-between mb-2">
+                                    <span class="badge bg-warning">Medium</span>
+                                    <span class="ticket-id">#TK-1021</span>
+                                </div>
+                                <h6 class="ticket-title">Refund request for UI Kit</h6>
+                            </div>
+                            <div class="ticket-item-body">
+                                <p class="text-muted small mb-2">Product doesn't match the description. Requesting...
+                                </p>
+                                <div class="ticket-meta">
+                                    <span class="badge badge-success-soft">Resolved</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i>2 days ago</span>
+                                </div>
+                            </div>
+                            <div class="ticket-item-footer">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://i.pravatar.cc/150?img=33" class="rounded-circle me-2" width="24"
+                                        height="24">
+                                    <span class="small">David Lee</span>
+                                </div>
+                                <span class="badge bg-light text-dark"><i class="bi bi-chat-dots me-1"></i>8</span>
+                            </div>
+                        </div>
+
+                        <!-- Ticket Item 5 -->
+                        <div class="ticket-item" data-ticket="5">
+                            <div class="ticket-item-header">
+                                <div class="d-flex align-items-start justify-content-between mb-2">
+                                    <span class="badge bg-danger">High Priority</span>
+                                    <span class="ticket-id">#TK-1020</span>
+                                </div>
+                                <h6 class="ticket-title">Files corrupted after download</h6>
+                            </div>
+                            <div class="ticket-item-body">
+                                <p class="text-muted small mb-2">Downloaded files are showing corruption errors...</p>
+                                <div class="ticket-meta">
+                                    <span class="badge badge-info-soft">In Progress</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i>3 days ago</span>
+                                </div>
+                            </div>
+                            <div class="ticket-item-footer">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://i.pravatar.cc/150?img=44" class="rounded-circle me-2" width="24"
+                                        height="24">
+                                    <span class="small">Lisa Anderson</span>
+                                </div>
+                                <span class="badge bg-light text-dark"><i class="bi bi-chat-dots me-1"></i>6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ticket Details -->
+                <div class="col-lg-8">
+                    <div class="card ticket-details-card">
+                        <div class="ticket-details-header">
+                            <div class="d-flex align-items-start justify-content-between mb-3">
+                                <div>
+                                    <div class="d-flex align-items-center gap-2 mb-2">
+                                        <span class="badge bg-danger">High Priority</span>
+                                        <span class="text-muted">#TK-1024</span>
+                                    </div>
+                                    <h4 class="mb-0">Payment not received for order #10342</h4>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn btn-light btn-sm" data-bs-toggle="dropdown">
+                                        <i class="bi bi-three-dots-vertical"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#"><i
+                                                    class="bi bi-check-circle me-2"></i>Mark as Resolved</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-x-circle me-2"></i>Close
+                                                Ticket</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item text-danger" href="#"><i
+                                                    class="bi bi-trash me-2"></i>Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ticket-details-meta">
+                                <div class="meta-item">
+                                    <i class="bi bi-person-circle"></i>
+                                    <div>
+                                        <small class="text-muted d-block">Customer</small>
+                                        <strong>Sarah Johnson</strong>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-envelope"></i>
+                                    <div>
+                                        <small class="text-muted d-block">Email</small>
+                                        <strong>sarah.j@email.com</strong>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-calendar"></i>
+                                    <div>
+                                        <small class="text-muted d-block">Created</small>
+                                        <strong>Jan 08, 2026 10:30 AM</strong>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-hourglass-split"></i>
+                                    <div>
+                                        <small class="text-muted d-block">Status</small>
+                                        <span class="badge badge-warning-soft">Open</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ticket-conversation">
+                            <!-- Message 1 - Customer -->
+                            <div class="message-item customer-message">
+                                <img src="https://i.pravatar.cc/150?img=1" class="message-avatar" alt="Customer">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <strong>Sarah Johnson</strong>
+                                        <span class="text-muted small">2 hours ago</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p>Hi, I purchased the Modern Dashboard UI Kit (Order #10342) yesterday and made
+                                            the payment via PayPal. The payment was deducted from my account but I
+                                            haven't received the download link yet.</p>
+                                        <p class="mb-0">Could you please check and provide the download link? My PayPal
+                                            transaction ID is: TXN-20260108-123456</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Message 2 - You -->
+                            <div class="message-item seller-message">
+                                <img src="https://ui-avatars.com/api/?name=John+Doe&size=80&background=6366f1&color=fff"
+                                    class="message-avatar" alt="You">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <strong>You</strong>
+                                        <span class="text-muted small">1 hour ago</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p class="mb-0">Hi Sarah, thank you for reaching out. I'm checking your order
+                                            now and will get back to you shortly with the download link.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Message 3 - Customer -->
+                            <div class="message-item customer-message">
+                                <img src="https://i.pravatar.cc/150?img=1" class="message-avatar" alt="Customer">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <strong>Sarah Johnson</strong>
+                                        <span class="text-muted small">30 minutes ago</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p class="mb-0">Thank you! I appreciate your quick response. Looking forward to
+                                            using the UI kit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ticket-reply-form">
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Type your reply..."></textarea>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <i class="bi bi-paperclip"></i> Attach
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <i class="bi bi-emoji-smile"></i>
+                                    </button>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-success">
+                                        <i class="bi bi-check-circle me-1"></i>Resolve & Reply
+                                    </button>
+                                    <button class="btn btn-primary">
+                                        <i class="bi bi-send me-1"></i>Send Reply
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Ticket Modal -->
+            <div class="modal fade" id="newTicketModal" tabindex="-1">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Create New Ticket</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Customer Email</label>
+                                <input type="email" class="form-control" placeholder="customer@email.com">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Related Order (Optional)</label>
+                                <select class="form-select">
+                                    <option selected>Select order...</option>
+                                    <option>#ORD-10342 - Modern Dashboard UI Kit</option>
+                                    <option>#ORD-10341 - Admin Template Pro</option>
+                                    <option>#ORD-10340 - Premium Icon Pack</option>
+                                </select>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Priority</label>
+                                    <select class="form-select">
+                                        <option>Low</option>
+                                        <option selected>Medium</option>
+                                        <option>High</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Category</label>
+                                    <select class="form-select">
+                                        <option>Technical Issue</option>
+                                        <option selected>Payment Issue</option>
+                                        <option>Download Problem</option>
+                                        <option>License Question</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Subject</label>
+                                <input type="text" class="form-control" placeholder="Brief description of the issue">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Message</label>
+                                <textarea class="form-control" rows="5"
+                                    placeholder="Describe the issue in detail..."></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                                <i class="bi bi-plus-circle me-2"></i>Create Ticket
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </main>
     </div>
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/support.js"></script>
 </body>
+
 </html>
